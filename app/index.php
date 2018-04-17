@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="libs/superfish/superfish.css" />
 	<link rel="stylesheet" href="libs/superfish/megafish.css" />
 	<link rel="stylesheet" href="css/hard_style.css">
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
 </head>	
 <body>
 <header class="top_header">
@@ -39,5 +40,6 @@
 	<script src="libs/superfish/superfish.min.js"></script>
   	<script src="libs/mobilemenu/jquery.mmenu.min.all.js"></script>
 	<script src="js/common.js"></script>
+  	<script src="libs/bootstrap/bootstrap.min.js"></script>
 </body>
 </html>
