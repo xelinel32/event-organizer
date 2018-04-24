@@ -56,7 +56,7 @@
                 </ul>
                   </li>
                   <li><a href="#">Submit your events</a></li>
-                  <li><a href="#">News</a></li>
+                  <li><a href="#">Blog</a></li>
                 </ul>
                 <div class="search_menu">
                   <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>

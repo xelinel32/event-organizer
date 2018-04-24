@@ -29,6 +29,7 @@
 </header>
 <div class="main_content">	
 	<?php require_once("include/main.php") ?>
+	<?php require_once("include/event-bar.php") ?>
 </div>	
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>

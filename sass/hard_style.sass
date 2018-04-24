@@ -1,0 +1,60 @@
+$mainblock: #3a4e61
+$gray: #9fb0c0
+$green: #1dd2af
+
+.SearchMenuMain
+	background-color: $mainblock
+.SearchMenu-Holidays
+	font-family: "RobotoRegular"
+	color: $gray
+	font-size: 17px
+	p
+		float: right
+		border-right: 1px solid $gray
+		padding-right: 10px 
+		margin-bottom: 0px
+		padding-top: 15px
+		padding-bottom: 20px
+	&::after
+		content: ""
+		position: absolute
+		width: 10px
+		height: 10px
+		background-color: $mainblock
+		border-left: 1px solid $gray
+		border-top: 1px solid $gray
+		display: block
+		transform: rotate(135deg)
+		bottom: 31px
+		right: 10px
+	span:last-child
+		text-transform: uppercase
+		color: #ffffff 
+.SearchMenu-Search
+	font-family: "RobotoLight"
+	font-size: 17px
+	color: $gray
+	display: flex
+	flex-wrap: nowrap
+	p
+		margin-left: 20px
+		margin-right: 20px
+		margin-top: 8px
+	input
+		width: 300px
+		height: 41px
+		outline: none
+		border: 1px solid $gray
+.SearchMenu-Button
+	font-family: "RobotoRegular"
+	font-size: 17px
+	color: #ffffff
+	border: none
+	outline: none
+	background-color: $green
+	padding: 11px
+	padding-right: 16px
+	padding-left: 16px
+	margin-bottom: 2px
+button
+    cursor: pointer    

@@ -2,14 +2,14 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  .location_event{
-    display: none;
-  }
 }
 /* ipad */
 @media only screen and (max-width: 1024px) {
   .main_menu {
     margin-left: 265px;
+  }
+  .LocationSearchEvent {
+    display: none;
   }
 }
 
@@ -42,6 +42,12 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
+  .slider-btn{
+    margin-left: 12px;
+  }
+  .slider-btn a{
+    margin-right: 12px;
+  }
 }
 
 /*==========  Mobile First Method  ==========*/
