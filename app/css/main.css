@@ -293,6 +293,7 @@ img {
   text-align: center;
   color: #626262;
   font-family: "RobotoRegular";
+  text-transform: none;
 }
 .EventPageBig{
   padding-top: 54px;
