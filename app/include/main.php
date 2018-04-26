@@ -68,13 +68,15 @@
   </div>
   <div class="col-lg-6">
     <div class="SearchMenu-Search">
-    <p>Where</p><input type="text" placeholder="  distination">
-    <p>When</p><input type="text" placeholder="  select date">
+      <form action="#" method="post"></form>
+    <p>Where</p><input type="text" name="dest" placeholder="  distination">
+    <p>When</p><input type="text" name="date" placeholder="  select date">
+    </form>
   </div>
   </div>
   <div class="col-lg-1">
     <div>
-    <button class="SearchMenu-Button">Search</button>
+    <button type="submit" value="Submit" class="SearchMenu-Button">Search</button>
     </div>
   </div>
   

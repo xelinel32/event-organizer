@@ -2,6 +2,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+  .EeventPageSmall{
+    margin-top: 10px;
+  }
 }
 /* ipad */
 @media only screen and (max-width: 1024px) {
@@ -10,6 +13,12 @@
   }
   .LocationSearchEvent {
     display: none;
+  }
+  .MoreEventCategory{
+    margin-top: 0;
+  }
+  .HolidaysType{
+    margin-top: 0;
   }
 }
 
@@ -31,12 +40,37 @@
   .main_menu {
     display: none;
   }
+  .EventPageBig{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .MoreEventCategory{
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+  }
+  .EventCategory{
+    height: 1700px;
+  }
+  .SingEventCategory{
+    margin-top: 80px;
+  }
+  .but_prev{
+    display: none;
+  }
+  .but_next{
+    display: none;
+  }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .slider-btn{
     margin-left: 30px;
+  }
+  .MoreEventCategory{
+    flex-direction: column;
   }
 }
 
