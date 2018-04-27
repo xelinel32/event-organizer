@@ -57,17 +57,17 @@
                     <div class="MoreEventCategory">
                     <div class="SingEventCategory">
                         <a href="#"><i class="fa fa-ship" aria-hidden="true"></i>
-                        <span>Adventures</span>
+                        <span id="left">Cruise</span>
                     </a>
                      </div>
                      <div class="SingEventCategory">
                         <a href="#"><i class="fa fa-car" aria-hidden="true"></i>
-                        <span>Adventures</span>
+                        <span>CityBreaks</span>
                     </a>
                      </div>
                      <div class="SingEventCategory">
                          <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>
-                         <span>Adventures</span>
+                         <span>Honemoon</span>
                         </a>
                      </div>
                      <div class="SingEventCategory">
@@ -77,12 +77,12 @@
                      </div>
                      <div class="SingEventCategory">
                         <a href="#"><i class="fa fa-bed" aria-hidden="true"></i>
-                        <span>Adventures</span>
+                        <span id="left">Safari</span>
                     </a>
                      </div>
                      <div class="SingEventCategory">
                         <a href="#"><i class="fa fa-safari" aria-hidden="true"></i>
-                        <span>Adventures</span>
+                        <span id="left">Beach</span>
                     </a>
                      </div>
                 </div>
