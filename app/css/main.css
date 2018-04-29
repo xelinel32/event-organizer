@@ -383,7 +383,7 @@ img {
   font-family: "RobotoRegular";
   text-transform: none;
 }
-.MoreEventCategory{
+.MoreEventCategory {
   margin: auto;
   margin-top: 70px;
   display: flex;
@@ -400,21 +400,21 @@ img {
   margin-right: 27px;
   margin-top: 10px;
 }
-.SingEventCategory a{
+.SingEventCategory a {
   font-size: 5.5em;
   padding-left: 27px;
   padding-top: 18px;
   position: absolute;
   color: #ffffff;
 }
-.SingEventCategory:hover{
+.SingEventCategory:hover {
   border: solid 5px #1dd2af;
 }
-.SingEventCategory a:hover{
+.SingEventCategory a:hover {
   color: #1dd2af;
   text-decoration: none;
 }
-.SingEventCategory span{
+.SingEventCategory span {
   position: absolute;
   padding-top: 50px;
   font-family: "RobotoRegular";
@@ -422,14 +422,14 @@ img {
   line-height: 2.9;
   color: #9dafc0;
 }
-.SingEventCategory span:hover{
+.SingEventCategory span:hover {
   color: #1dd2af;
 }
-#left{
+#left {
   margin-left: 17px;
 }
 /* NewsOther */
-.NewsOther{
+.NewsOther {
   margin-top: 69px;
 }
 .HappyClients {
@@ -453,14 +453,14 @@ img {
   text-transform: none;
 }
 /* comment */
-.CommentEventBlock{
+.CommentEventBlock {
   padding-top: 51px;
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
 }
-.CommentEventOne{
+.CommentEventOne {
   width: 475px;
   height: 179px;
   margin-left: 11px;
@@ -469,7 +469,7 @@ img {
   background-color: #ffffff;
   border: solid 1px #dedede;
 }
-.CommentEventOne p{
+.CommentEventOne p {
   margin: 19px;
   margin-top: 32px;
   font-family: "RobotoRegular";
@@ -478,24 +478,25 @@ img {
   text-align: left;
   color: #4d4d4d;
 }
-.CommentEventOne b{
+.CommentEventOne b {
   font-size: 15px;
   line-height: 1.39;
   color: rgba(29, 210, 175, 0.5);
 }
-.CommentEventOne span{
+.CommentEventOne span {
   font-size: 13px;
   line-height: 1.92;
   text-align: left;
   color: rgba(178, 178, 178, 0.5);
 }
-.CommentEventOne:hover{
+.CommentEventOne:hover {
   border-top: solid 5px #1dd2af;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
   opacity: unset;
 }
-.CommentEventOne::after, .CommentEventOne::before {
-  content: ''; 
+.CommentEventOne::after,
+.CommentEventOne::before {
+  content: "";
   position: absolute;
   bottom: -50px;
   margin-left: 280px;
@@ -503,21 +504,21 @@ img {
   border-top: 30px solid gray;
   transform: skewX(340deg);
 }
-.CommentEventOne::after{
+.CommentEventOne::after {
   border-top: 30px solid white;
   bottom: -50px;
 }
 /* footer */
-footer{
-  width: 100%;
+footer {
+  max-width: 100%;
   height: 470px;
   margin-top: 126px;
   background-color: #2c3e50;
 }
-.FooterContent{
+.FooterContent {
   padding-top: 63px;
 }
-.FooterContent h3{
+.FooterContent h3 {
   font-family: "RobotoBold";
   font-size: 25px;
   font-weight: bold;
@@ -525,14 +526,14 @@ footer{
   text-align: left;
   color: #1dd2af;
 }
-.Newslatter p{
+.Newslatter p {
   font-family: "RobotoRegular";
   font-size: 13px;
   line-height: 1.69;
   text-align: left;
   color: #ffffff;
 }
-.Newslatter input[type='text']{
+.Newslatter input[type="text"] {
   width: 149px;
   height: 33px;
   border-radius: 3px;
@@ -540,12 +541,12 @@ footer{
   border: solid 1px #19242e;
   color: #626262;
 }
-.Newslatter input[placeholder]{
+.Newslatter input[placeholder] {
   font-size: 13px;
   line-height: 1.92;
-  text-align: center;
+  padding-left: 10px;
 }
-.Newslatter input[type='submit']{
+.Newslatter input[type="submit"] {
   width: 49px;
   height: 33px;
   color: white;
@@ -553,18 +554,18 @@ footer{
   border: solid 1px #004437;
   cursor: pointer;
 }
-.LatestNews a{
+.LatestNews a {
   font-family: "RobotoRegular";
   font-size: 13px;
   line-height: 1.69;
   text-align: left;
   color: #ffffff;
 }
-.LatestNews a:hover{
+.LatestNews a:hover {
   text-decoration: none;
   color: gray;
 }
-.LatestNews span{
+.LatestNews span {
   font-family: "RobotoLight";
   font-size: 12px;
   font-weight: 300;
@@ -572,12 +573,12 @@ footer{
   color: #1dd2af;
   margin-left: 45px;
 }
-.LatestNews img{
+.LatestNews img {
   background-color: #2c3e50;
   border: solid 1px #ffffff;
   margin-right: 13px;
 }
-.Tags a{
+.Tags a {
   padding: 7px 15px;
   border: solid 1px #ffffff;
   font-family: "RobotoRegular";
@@ -586,31 +587,31 @@ footer{
   color: #ffffff;
   background-color: #2c3e50;
 }
-.Tags a:hover{
+.Tags a:hover {
   text-decoration: none;
   color: #1dd2af;
 }
-.AddressFoo p{
+.AddressFoo p {
   font-family: "RobotoRegular";
   font-size: 13px;
   line-height: 2;
   text-align: left;
   color: #ffffff;
 }
-.AddressFoo span{
+.AddressFoo span {
   color: #1dd2af;
 }
-.FooterSocial a{
+.FooterSocial a {
   margin-right: 20px;
   font-size: 25px;
   line-height: 1.2;
   text-align: left;
   color: #ffffff;
 }
-.FooterSocial a:hover{
+.FooterSocial a:hover {
   color: #1dd2af;
 }
-#hrev{
+#hrev {
   background-color: #394c5f;
   height: 2px;
 }
@@ -618,33 +619,33 @@ footer{
   font-family: "RobotoRegular";
   text-align: center;
 }
-.navfoo{
-  display:flex;
+.navfoo {
+  display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.navfoo li{
+.navfoo li {
   display: inline;
   color: white;
 }
-.navfoo a{
+.navfoo a {
   font-size: 15px;
   text-align: left;
   color: #ffffff;
 }
-.navfoo a:hover{
+.navfoo a:hover {
   text-decoration: none;
-  color: #1dd2af
-}
-.navfoo .active{
   color: #1dd2af;
 }
-.FooterMenu span{
+.navfoo .active {
+  color: #1dd2af;
+}
+.FooterMenu span {
   font-size: 13px;
   text-align: left;
   color: #9dafc0;
 }
-.Triq a{
+.Triq a {
   position: absolute;
   margin: 7px;
   margin-top: 38px;
@@ -654,14 +655,110 @@ footer{
   cursor: pointer;
   z-index: 1;
 }
-.Triq a:hover{
+.Triq a:hover {
   text-decoration: none;
   color: white;
 }
-.Triq::after{
-  content: ''; 
+.Triq::after {
+  content: "";
   position: absolute;
-  left: 540px; bottom: -72px;
-  border: 48px solid transparent;	
+  left: 540px;
+  bottom: -72px;
+  border: 48px solid transparent;
   border-bottom: 52px solid #1dd2af;
+}
+/* PAGES CASS STYLE  PAGES CASS STYLE PAGES CASS STYLE PAGES CASS STYLE PAGES CASS STYLE */
+/* error 404 */
+.error_page {
+  flex: 1;
+  padding-top: 50px;
+}
+.error_page h2 {
+  font-size: 28px;
+  font-family: "Tahoma", serif;
+}
+.error_page h4 {
+  padding-top: 30px;
+  padding-bottom: 35px;
+  font-size: 20px;
+}
+.error_page span {
+  color: #a6a6a6;
+  font-size: 28px;
+}
+.error_page a {
+  font-size: 16px;
+  color: blue;
+}
+.error_page a:hover {
+  text-decoration: none;
+  color: #1dd2af;
+}
+.error_page p {
+  padding-bottom: 15px;
+}
+/* Main content news page */
+.main_content_news{
+  margin-top: 70px;
+}
+.main_content p {
+  line-height: 1.6em;
+  margin-bottom: 15px;
+}
+.box_news{
+  padding: 1px 30px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(168, 172, 185, 0.62);
+}
+h2.post_title{
+  font-size: 26px;
+  margin-top: 30px;
+}
+.post_meta ul{
+  margin-top: 10px;
+  padding: 0;
+}
+.post_meta ul li{
+  display: inline;
+  font-size: 12px;
+  color: #bbb;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+.mini_log{
+  padding-bottom: 10px;
+}
+.post_meta a{
+  color: #bbb;
+}
+.post_meta a:hover{
+  color: #bbb;
+  text-decoration: none;
+}
+.news_content{
+  margin-bottom: 50px ;
+}
+/* pagination news page */
+/* pagination */
+.paginations{
+  margin: auto;
+}
+.paginations a{
+  text-align: center;
+  background: #dfdfdf;
+  display: inline-block;
+  line-height: 30px;
+  width: 30px;
+  border-radius: 4px;
+  color: #999999;
+  margin-left: 5px;
+}
+.paginations a:hover{
+  text-decoration: none;
+  background: #1dd2af;
+  color: white;
+}
+.paginations .active{
+  background: #1dd2af;
+  color: white;
 }

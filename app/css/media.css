@@ -2,7 +2,7 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  .EeventPageSmall{
+  .EeventPageSmall {
     margin-top: 10px;
   }
 }
@@ -14,10 +14,10 @@
   .LocationSearchEvent {
     display: none;
   }
-  .MoreEventCategory{
+  .MoreEventCategory {
     margin-top: 0;
   }
-  .HolidaysType{
+  .HolidaysType {
     margin-top: 0;
   }
 }
@@ -40,46 +40,70 @@
   .main_menu {
     display: none;
   }
-  .EventPageBig{
+  .EventPageBig {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
-  .MoreEventCategory{
+  .MoreEventCategory {
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
   }
-  .EventCategory{
+  .EventCategory {
     height: 1700px;
   }
-  .SingEventCategory{
+  .SingEventCategory {
     margin-top: 80px;
   }
-  .but_prev{
+  .but_prev {
     display: none;
   }
-  .but_next{
+  .but_next {
     display: none;
+  }
+  .Triq {
+    display: none;
+  }
+  .Tags a {
+    padding: 0;
+    border: none;
+    line-height: 0;
+  }
+  .CommentEventBlock {
+    flex-wrap: wrap;
+  }
+  .CommentEventOne::after,
+  .CommentEventOne::before {
+    display: none;
+  }
+  .FooterMenu {
+    display: none;
+  }
+  .FooterContent {
+    padding: 0;
+  }
+  .FooterContent h3 {
+    line-height: 1.2;
   }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  .slider-btn{
+  .slider-btn {
     margin-left: 30px;
   }
-  .MoreEventCategory{
+  .MoreEventCategory {
     flex-direction: column;
   }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  .slider-btn{
+  .slider-btn {
     margin-left: 12px;
   }
-  .slider-btn a{
+  .slider-btn a {
     margin-right: 12px;
   }
 }
@@ -95,7 +119,7 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width: 768px ) and (min-width: 769px) {
+@media only screen and (min-width: 768px) and (min-width: 769px) {
   .toggle-mnu {
     display: none;
   }

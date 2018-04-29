@@ -38,11 +38,11 @@
             <div class="row">
               <a href="#mobile-menu" class="toggle-mnu"><span></span></a>
               <!-- logo -->
-              <a href="#" class="logo_site">COL<span>E</span>VENTS</a>
+              <a href="../index.php" class="logo_site">COL<span>E</span>VENTS</a>
               <!-- menu -->
               <div class="main_menu">
                 <ul class="sf-menu">
-                  <li class="active"><a href="#">Home</a></li>
+                  <li class="active"><a href="../index.php">Home</a></li>
                   <li><a href="#">Calendar</a>
                 <ul class="submenu">
                   <li><a href="#">Normal calendar</a></li>
@@ -56,7 +56,7 @@
                 </ul>
                   </li>
                   <li><a href="#">Submit your events</a></li>
-                  <li><a href="#">News</a></li>
+                  <li><a href="../pages/news.php">News</a></li>
                 </ul>
                 <div class="search_menu">
                   <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>

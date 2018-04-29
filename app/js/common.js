@@ -45,4 +45,9 @@ $(document).ready(function() {
   api.bind("closed", function() {
     $(".toggle-mnu").removeClass("on");
   });
+  //Кнопка "Наверх".
+  $(".Triq a").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, 300);
+    return false;
+  });
 });

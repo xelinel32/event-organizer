@@ -7,7 +7,7 @@ var gulp = require("gulp"),
   concat = require("gulp-concat"),
   uglify = require("gulp-uglify");
 
-gulp.task("browser-sync", ["scripts"], function() {
+gulp.task("browser-sync", ["css__scripts"], function() {
   browserSync.init({
     proxy: "colevents.com.ua",
     notify: false
@@ -16,25 +16,26 @@ gulp.task("browser-sync", ["scripts"], function() {
 gulp.task("sass", function() {
   // Создаем таск "sass"
   return gulp
-    .src(["sass/**/*.sass", "sass/**/*.scss"]) // Берем источник
-    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError)) // Преобразуем Sass в CSS посредством gulp-sass
-    .pipe(gulp.dest("app/css")); // Выгружаем результата в папку css
+    .src(["sass/**/*.sass", "sass/**/*.scss"])
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(gulp.dest("app/css"));
 });
 
-gulp.task("scripts", function() {
+gulp.task("css__scripts", function() {
   return gulp.src([
     "./app/css/fonts.css",
     "./app/css/main.css",
     "./app/css/media.css",
-    "./app/css/hard_style.css"
+    "./app/css/hard_style.css",
+    "./app/js/common.js"
   ]);
 });
 
 gulp.task("watch", function() {
-  gulp.watch("app/libs/**/*.js", ["scripts"]);
+  gulp.watch("app/libs/**/*.js", ["css__scripts"]);
   gulp.watch("app/js/*.js").on("change", browserSync.reload);
-  gulp.watch("app/**/*.php").on("change", browserSync.reload);
-  gulp.watch("app/**/*.html").on("change", browserSync.reload);
+  gulp.watch("app/**/**/*.php").on("change", browserSync.reload);
+  gulp.watch("app/**/**/*.html").on("change", browserSync.reload);
   gulp.watch("app/css/*.css").on("change", browserSync.reload);
   gulp
     .watch(["sass/**/*.sass", "sass/**/*.scss"], ["sass"])
