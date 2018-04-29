@@ -68,15 +68,15 @@
   </div>
   <div class="col-lg-6">
     <div class="SearchMenu-Search">
-      <form action="#" method="post"></form>
+      <form action="#" method="post">
     <p>Where</p><input type="text" name="dest" placeholder="  distination">
     <p>When</p><input type="text" name="date" placeholder="  select date">
-    </form>
   </div>
   </div>
   <div class="col-lg-1">
     <div>
     <button type="submit" value="Submit" class="SearchMenu-Button">Search</button>
+    </form>
     </div>
   </div>
   

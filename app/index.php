@@ -31,7 +31,10 @@
 	<?php require_once("include/main.php") ?>
 	<?php require_once("include/event-bar.php") ?>
 	<?php require_once("include/news.php") ?>
-</div>	
+</div>
+<footer>
+	<?php require_once("include/footer.php") ?>
+</footer>	
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>
