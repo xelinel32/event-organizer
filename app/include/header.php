@@ -12,15 +12,15 @@
               <div class="login_contact">
               <p>
                <i class="fa fa-user-o" aria-hidden="true"></i>
-                  <a id="logadm" href="#">Admin Login</a>
+                  <a id="logadm" data-toggle="modal" data-target="#AdminModal" href="#">Admin Login</a>
                 </p>
               <p>
                <i class="fa fa-user-o" aria-hidden="true"></i>
-                  <a id="logadm" href="#">Customer Login</a>
+                  <a id="logadm" data-toggle="modal" data-target="#CustomerModal" href="#">Customer Login</a>
                 </p>
               <p>
                <i class="fa fa-file-o" aria-hidden="true"></i> Not a Member?
-                  <a href="#">Register</a>
+                  <a data-toggle="modal" data-target="#RegisterModal" href="#">Register</a>
                 </p>
               <p>
                 <span>
@@ -53,6 +53,8 @@
                   <li><a href="#">Event categories</a></li>
                   <li><a href="#">Location</a></li>
                   <li><a href="#">My Bookings</a></li>
+                  <li><a data-toggle="modal" data-target="#CustomerModal" href="#">Login</a></li>
+                  <li><a data-toggle="modal" data-target="#RegisterModal" href="#">Register</a></li>
                 </ul>
                   </li>
                   <li><a href="#">Submit your events</a></li>

@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="libs/superfish/megafish.css" />
 	<link rel="stylesheet" href="css/hard_style.css">
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
-</head>	
+</head>
 <body>
 <header class="top_header">
 	<?php require_once("include/header.php") ?>
@@ -47,4 +47,5 @@
 	<script src="js/common.js"></script>
   	<script src="libs/bootstrap/bootstrap.min.js"></script>
 </body>
+	<?php require_once("modal_window.php") ?>
 </html>

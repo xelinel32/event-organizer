@@ -5,8 +5,10 @@
       <h3>Newslatter</h3>
       <div class="Newslatter">
       <p>One of three columnsOne of three columnsOne of three columnsOne of three columns</p>
+      <form>
       <input type="text" placeholder="Subscribe...">
       <input type="submit" value="GO">
+      </form>
       </div>
     </div>
     <div class="col-sm">
@@ -62,14 +64,14 @@
                 <div class="col-md-12">
                     <div class="navfoo">
                     <ul>
-                        <li><a class="active" href="index.php">Home</a> ::</li>
+                        <li><a class="active" href="../index.php">Home</a> ::</li>
                         <li><a href="#">Calendar</a> ::</li>
                         <li><a href="#">Events</a> ::</li>
                         <li><a href="#">Submit your events</a> ::</li>
                         <li><a href="../pages/news.php">News</a></li>
                     </ul>
                     </div>
-                    <span>Copyright @colevents. All Right Reserved.</span>
+                    <span>Copyright &copy Colevents. All Right Reserved.</span>
                     <div class="Triq"><a href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div>
                 </div>
             </div>

@@ -11,7 +11,7 @@
     <p>You Don't Need Magic to Disappear. All you need is a destination</p>
     <div class="slider-btn">
         <a href="#">Show on the location</a>
-        <a href="#">More Info</a>
+        <a href="../pages/moreinfo.php">More Info</a>
       </div>
       </div>
         </div>
@@ -23,7 +23,7 @@
     <p>You Don't Need Magic to Disappear. All you need is a destination</p>
     <div class="slider-btn">
         <a href="#">Show on the location</a>
-        <a href="#">More Info</a>
+        <a href="../pages/moreinfo.php">More Info</a>
       </div>
       </div>
         </div>
@@ -35,7 +35,7 @@
     <p>You Don't Need Magic to Disappear. All you need is a destination</p>
     <div class="slider-btn">
         <a href="#">Show on the location</a>
-        <a href="#">More Info</a>
+        <a href="../pages/moreinfo.php">More Info</a>
       </div>
       </div>
         </div>

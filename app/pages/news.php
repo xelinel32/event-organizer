@@ -76,8 +76,9 @@
 	<![endif]-->
 	<script src="../libs/jquery/jquery-3.3.1.min.js"></script>
 	<script src="../libs/superfish/superfish.min.js"></script>
-  	<script src="../libs/mobilemenu/jquery.mmenu.min.all.js"></script>
+  <script src="../libs/mobilemenu/jquery.mmenu.min.all.js"></script>
 	<script src="../js/common.js"></script>
-  	<script src="../libs/bootstrap/bootstrap.min.js"></script>
+  <script src="../libs/bootstrap/bootstrap.min.js"></script>
 </body>
+  <?php require_once("../modal_window.php") ?>
 </html>

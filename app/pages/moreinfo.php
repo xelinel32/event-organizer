@@ -27,14 +27,16 @@
 <header class="top_header">
 	<?php require_once("../include/header.php") ?>
 </header>
-    <div class="error_page">
-          <div class="container">
-              <h2>Error: <span>404</span></h2>
-              <h4>Unfortunately, there is no such page. Probably it was removed from the server, or it has never been here.</h4>
-              <p><a href="#">Go to home page</a></p>
-              <p><a href="#">Go to event list</a></p>
-          </div>          
-      </div>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row padding:10px;">
+                <h3>Information or site</h3>
+            </div>
+        </div>
+	</div>
+<footer>
+	<?php require_once("../include/footer.php") ?>
+</footer>	
 	<!--[if lt IE 9]>
 	<script src="../libs/html5shiv/es5-shim.min.js"></script>
 	<script src="../libs/html5shiv/html5shiv.min.js"></script>
