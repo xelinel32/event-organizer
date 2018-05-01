@@ -69,7 +69,7 @@
   <div class="col-lg-6">
     <div class="SearchMenu-Search">
       <form action="#" method="post">
-    <p>Назва</p><input type="text" name="dest" placeholder="  нахва заходу">
+    <p>Назва</p><input type="text" name="dest" placeholder="  назва заходу">
     <p>Дата</p><input type="text" name="date" placeholder="  дата">
   </div>
   </div>

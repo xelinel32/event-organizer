@@ -27,7 +27,20 @@
 <header class="top_header">
 	<?php require_once("../include/header.php") ?>
 </header>
-    add event user
+    <div class="SearchResult">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="FormSearchResult">
+		            <form class="FormRegisterModal" method="post">
+				    <input type="search" name="search" id="search_inp" placeholder="Що бажаэте знайти?">
+				    <button type="submit">Шукати</button>
+		            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <footer>
 	<?php require_once("../include/footer.php") ?>
 </footer>	
