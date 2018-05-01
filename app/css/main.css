@@ -9,6 +9,10 @@ body {
   padding: 0;
   margin: 0;
 }
+/* global style */
+button[type='submit'], input[type='submit']{
+  border: none;
+}
 img {
   width: auto;
   max-width: 100%;
@@ -426,7 +430,10 @@ img {
   color: #1dd2af;
 }
 #left {
-  margin-left: 17px;
+  margin-left: 16px;
+}
+#lefts {
+  margin-left: 26px;
 }
 /* NewsOther */
 .NewsOther {
@@ -554,16 +561,13 @@ footer {
   border: solid 1px #004437;
   cursor: pointer;
 }
-.LatestNews a {
+.LatestNews b {
   font-family: "RobotoRegular";
   font-size: 13px;
   line-height: 1.69;
   text-align: left;
   color: #ffffff;
-}
-.LatestNews a:hover {
-  text-decoration: none;
-  color: gray;
+  cursor: default;
 }
 .LatestNews span {
   font-family: "RobotoLight";
@@ -709,9 +713,16 @@ footer {
   background: #fff;
   box-shadow: 0 4px 8px rgba(168, 172, 185, 0.62);
 }
+.box_news a{
+  color: black;
+}
 h2.post_title{
   font-size: 26px;
   margin-top: 30px;
+}
+.post_title a:hover{
+  text-decoration: none;
+  color: #1dd2af;
 }
 .post_meta ul{
   margin-top: 10px;
@@ -732,10 +743,45 @@ h2.post_title{
 }
 .post_meta a:hover{
   color: #bbb;
-  text-decoration: none;
 }
 .news_content{
-  margin-bottom: 50px ;
+  margin-bottom: 50px;
+}
+.myinfobars{
+  padding-top: 60px;
+}
+.myinfobars h3{
+  text-transform: uppercase;
+  margin: auto;
+}
+.inf {
+  padding-top: 40px;
+}
+.inf h1{
+  font-size: 25px;
+}
+.infinp{
+  width: 200px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 10px;
+}
+.inf textarea{
+  width: 500px;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 10px;
+}
+.inf input[type="submit"]{
+  margin: 10px;
+  width: 130px;
+  height: 40px;
+  border-radius: 4px;
+  background: #1dd2af;
+  color: white;
+  cursor: pointer; 
 }
 /* pagination news page */
 /* pagination */
@@ -760,4 +806,78 @@ h2.post_title{
 .paginations .active{
   background: #1dd2af;
   color: white;
+}
+/* EVENT PAGE */
+.LocationEventPage a{
+  color: #1dd2af;
+}
+.LocationEventPage a:hover{
+  text-decoration: none;
+  color: #1dd2af;
+}
+.LocMap {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.CommentsToEventPage{
+  margin-bottom: 20px;
+}
+.CommentsToEventPage label{
+  font-family: "RobotoRegular";
+  color: gray;
+  font-size: 20px;
+  padding-top: 5px;
+  line-height: 1.4;
+}
+.CommentsToEventPage input{
+  width: 200px;
+  height: 30px;
+}
+.CommentsToEventPage input[placeholder]{
+  line-height: 1.5;
+  padding-left: 5px;
+  color: #8a8a8a;
+}
+.CommentsToEventPage button{
+  font-family: "RobotoRegular";
+  font-size: 17px;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  background-color: #1dd2af;
+  padding: 10px;
+  margin-top: 10px;
+}
+/* SIDEBAR */
+.sidebar_my{
+  margin-left: 40px;
+  padding-left: 30px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(168, 172, 185, 0.62);
+}
+.sidebar_my h3{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.sidebareventsmall{
+  padding-bottom: 20px;
+}
+.sidebareventsmall ul li{
+  list-style: none;
+  margin-left: 40px;
+  color: black;
+  font-family: "RobotoLight";
+  font-size: 17px;
+}
+.sidebareventsmall a{
+  color: #1dd2af;
+}
+.sidebareventsmall a:hover{
+  text-decoration: none;
+  color: #1dd2af;
+}
+.sidebareventsmall img{
+  width: 55px;
+  height: 55px;
+  float: left;
 }

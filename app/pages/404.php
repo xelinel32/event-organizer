@@ -7,7 +7,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>COLEVENTS - Site for educational work and organization of events</title>
+	<title>COLEVENTS - Сайт з виховноі роботи та органцізації заходів</title>
 	<meta name="description" content="Site for educational work and organization of events" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,10 +29,10 @@
 </header>
     <div class="error_page">
           <div class="container">
-              <h2>Error: <span>404</span></h2>
-              <h4>Unfortunately, there is no such page. Probably it was removed from the server, or it has never been here.</h4>
-              <p><a href="#">Go to home page</a></p>
-              <p><a href="#">Go to event list</a></p>
+              <h2>Помилка: <span>404</span></h2>
+              <h4>Вибачте, такої сторінки чи запиту не їснує.</h4>
+              <p><a href="../index.php">Перейти на головну</a></p>
+              <p><a href="#">Дивитися місця заходів</a></p>
           </div>          
       </div>
 	<!--[if lt IE 9]>

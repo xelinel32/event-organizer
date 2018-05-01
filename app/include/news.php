@@ -4,29 +4,19 @@
             <div class="row">
                 <div class="HappyClients">
                     <p>
-                        <span>Happy Clients</span><br>
-                        <span>what customer say about us and why love our services!</span>
+                        <span>Задоволені клієнти</span><br>
+                        <span>Розкажіть як ви любите наш сервіс!</span>
                     </p>
                 </div>
                 <div class="CommentEventBlock">
-                <div class="CommentEventOne">
-                    <p>What customer say about us and why love our serviceswhat customer say about us and why love our serviceswhat customer say about us and why love our services
-                    <br><b>Client Name</b>
-                    <br><span>United States</span>
+                <?php for ($i=0; $i < 3; $i++) { 
+                    echo '<div class="CommentEventOne">
+                    <p>Нам дуже сподобався цей сервісНам дуже сподобався цей сервісНам дуже сподобався цей сервіс
+                    <br><b>Клієнт</b>
+                    <br><span>Місце евенту</span>
                     </p>
-                </div>
-                <div class="CommentEventOne">
-                    <p>What customer say about us and why love our serviceswhat customer say about us and why love our serviceswhat customer say about us and why love our services
-                    <br><b>Client Name</b>
-                    <br><span>United States</span>
-                    </p>
-                </div>
-                <div class="CommentEventOne">
-                    <p>What customer say about us and why love our serviceswhat customer say about us and why love our serviceswhat customer say about us and why love our services
-                    <br><b>Client Name</b>
-                    <br><span>United States</span>
-                    </p>
-                </div>
+                </div>';
+                } ?>
                 </div>
             </div>
         </div>

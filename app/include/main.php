@@ -10,8 +10,8 @@
     <div class="slider-info"><h3>To travel is to live</h3>
     <p>You Don't Need Magic to Disappear. All you need is a destination</p>
     <div class="slider-btn">
-        <a href="#">Show on the location</a>
-        <a href="../pages/moreinfo.php">More Info</a>
+        <a href="../pages/location.php">Дивитися місця заходів</a>
+        <a href="../pages/moreinfo.php">Контакти</a>
       </div>
       </div>
         </div>
@@ -22,8 +22,8 @@
     <div class="slider-info"><h3>To travel is to live</h3>
     <p>You Don't Need Magic to Disappear. All you need is a destination</p>
     <div class="slider-btn">
-        <a href="#">Show on the location</a>
-        <a href="../pages/moreinfo.php">More Info</a>
+        <a href="../pages/location.php">Дивитися місця заходів</a>
+        <a href="../pages/moreinfo.php">Контакти</a>
       </div>
       </div>
         </div>
@@ -34,8 +34,8 @@
     <div class="slider-info"><h3>To travel is to live</h3>
     <p>You Don't Need Magic to Disappear. All you need is a destination</p>
     <div class="slider-btn">
-        <a href="#">Show on the location</a>
-        <a href="../pages/moreinfo.php">More Info</a>
+        <a href="../pages/location.php">Дивитися місця заходів</a>
+        <a href="../pages/moreinfo.php">Контакти</a>
       </div>
       </div>
         </div>
@@ -61,21 +61,21 @@
   <div class="col-lg-1">
     <div class="SearchMenu-Holidays">
     <p>
-      <span>Find your</span><br>
-      <span>holidays</span>
+      <span>Знайти</span><br>
+      <span>захід</span>
     </p>
   </div>
   </div>
   <div class="col-lg-6">
     <div class="SearchMenu-Search">
       <form action="#" method="post">
-    <p>Where</p><input type="text" name="dest" placeholder="  distination">
-    <p>When</p><input type="text" name="date" placeholder="  select date">
+    <p>Назва</p><input type="text" name="dest" placeholder="  нахва заходу">
+    <p>Дата</p><input type="text" name="date" placeholder="  дата">
   </div>
   </div>
   <div class="col-lg-1">
     <div>
-    <button type="submit" value="Submit" class="SearchMenu-Button">Search</button>
+    <button type="submit" value="Submit" class="SearchMenu-Button">Знайти</button>
     </form>
     </div>
   </div>

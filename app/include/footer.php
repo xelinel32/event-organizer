@@ -2,48 +2,48 @@
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      <h3>Newslatter</h3>
+      <h3>Новостний канал</h3>
       <div class="Newslatter">
-      <p>One of three columnsOne of three columnsOne of three columnsOne of three columns</p>
+      <p>Підпишися на розсилку новостей та не пропусти кращих заходів</p>
       <form>
-      <input type="text" placeholder="Subscribe...">
+      <input type="text" placeholder="Підписатися...">
       <input type="submit" value="GO">
       </form>
       </div>
     </div>
     <div class="col-sm">
-        <h3>Latest News</h3>
+        <h3>Останні новини</h3>
         <div class="LatestNews">
         <img src="../img/ava.jpg" alt="ava">
-        <a href="#">One of three columnsOne</a>
+        <b>Назва новини</b>
             <br><span>December 12:39, 22.05.2018</span>
             <br><img src="../img/ava.jpg" alt="ava">
-        <a href="#">One of three columnsOnesd</a>
+        <b>Назва новини</b>
             <br><span>December 12:39, 22.05.2018</span>
         </div>
     </div>
     <div class="col-sm">
-        <h3>Tags</h3>
+        <h3>Теги</h3>
         <div class="Tags">
         <p>
-            <a href="#">Admin Login</a>
-            <a href="#">Customer Login</a>
-            <a href="#">Not a Member?</a>
-            <a href="#">Contact</a>
-            <a href="#">Tags</a>
-            <a href="#">News</a>
-            <a href="#">Event</a>
-            <a href="#">Nice</a>
-            <a href="#">Some</a>
-            <a href="#">My bookings</a>
+            <a data-toggle="modal" data-target="#AdminModal" href="#">Адміністрація</a>
+            <a data-toggle="modal" data-target="#CustomerModal" href="#">Простий Юзер</a>
+            <a data-toggle="modal" data-target="#RegisterModal" href="#">Не зареєстровані?</a>
+            <a href="../pages/moreinfo.php">Контакти</a>
+            <a href="../index.php">Теги</a>
+            <a href="../pages/news.php">Новини</a>
+            <a href="../pages/events.php">Заходи</a>
+            <a href="#">Чудово</a>
+            <a href="../pages/location.php">Місце</a>
+            <a href="../pages/my_booking.php">Мій захід</a>
 </p> 
         </div>
     </div>
     <div class="col-sm">
-        <h3>Address</h3>
+        <h3>Адреса</h3>
         <div class="AddressFoo">
-            <p>Shevchenko 53V<br>
-            Chernighiv, Ukraine<br>
+            <p>Шевченко 53В<br>
+            Чернігів, Україна<br>
             <span>E-mail:</span>
             xelinel32@outlook.com
         </p>
@@ -64,14 +64,14 @@
                 <div class="col-md-12">
                     <div class="navfoo">
                     <ul>
-                        <li><a class="active" href="../index.php">Home</a> ::</li>
-                        <li><a href="#">Calendar</a> ::</li>
-                        <li><a href="#">Events</a> ::</li>
-                        <li><a href="#">Submit your events</a> ::</li>
-                        <li><a href="../pages/news.php">News</a></li>
+                        <li><a class="active" href="../index.php">Головна</a> ::</li>
+                        <li><a href="../pages/full_calendar.php">Календар</a> ::</li>
+                        <li><a href="../pages/events.php">Заходи</a> ::</li>
+                        <li><a href="../pages/add_event_user.php">Додати захід</a> ::</li>
+                        <li><a href="../pages/news.php">Новини</a></li>
                     </ul>
                     </div>
-                    <span>Copyright &copy Colevents. All Right Reserved.</span>
+                    <span>Copyright &copy Colevents. Всі права захищені 2018.</span>
                     <div class="Triq"><a href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div>
                 </div>
             </div>
