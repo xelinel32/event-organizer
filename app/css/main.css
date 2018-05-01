@@ -13,6 +13,9 @@ body {
 button[type='submit'], input[type='submit']{
   border: none;
 }
+li{
+  list-style: none;
+}
 img {
   width: auto;
   max-width: 100%;

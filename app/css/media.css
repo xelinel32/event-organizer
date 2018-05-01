@@ -134,6 +134,9 @@
   html.mm-opening .mm-slideout {
     transform: translate(0px, 0px);
   }
+  #log_mob{
+    display: none;
+  }
 }
 
 /* Medium Devices, Desktops */

@@ -30,8 +30,8 @@
     <!-- Content -->
   <div class="main_content_news">
     <div class="container">
-      <div class="col-md-12">
-        <div class="row">
+    <div class="row">
+      <div class="col-md-8">
           <!-- main -->
     <?php 
         for ($i=0; $i < 5 ; $i++) { 
@@ -50,8 +50,11 @@
             </div>
           </div>';}?>
             </div>
+          <!-- Sidebar -->
+            <?php require_once("../include/sidebar.php"); ?>
+          <!-- Sidebar -->
         </div>
-        <div class="col-md-12">
+        <div class="col-md-8">
         <div class="row">
         <div class="paginations"> 
             <a class="active" href="#">1</a>
@@ -61,7 +64,7 @@
             <a href="#">5</a>
           </div>
         </div>
-      </div>  
+      </div> 
     </div>
 </div>
 <!-- nav --> 

@@ -62,7 +62,7 @@
                 </li>
                   <li><a href="../pages/location.php">Місця</a></li>
                   <li><a href="../pages/my_booking.php">Мої заходи</a></li>
-                  <li><a data-toggle="modal" data-target="#CustomerModal" href="#">Вхід</a></li>
+                  <li><a id="log_mob" data-toggle="modal" data-target="#CustomerModal" href="#">Вхід</a></li>
                 </ul>
                   </li>
                   <li><a href="../pages/add_event_user.php">Додати захід</a></li>
