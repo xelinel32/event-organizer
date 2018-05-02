@@ -6,7 +6,7 @@
                 <div class="SpecialOffers">
                     <p>
                         <span>Кращі заходи</span><br>
-                        <span>Кращі заходи за голосуванням!</span>
+                        <span>Кращі заходи за 2018 рік!</span>
                     </p>
                 </div>
                 <div class="EventPageBig">

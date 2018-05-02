@@ -25,7 +25,7 @@
 </head>	
 <body>
 <header class="top_header">
-	<?php require_once("../include/header.php") ?>
+	<?php include("../include/header.php") ?>
 </header>
 <div class="myinfobars">
     <div class="container">
@@ -59,7 +59,7 @@ if (isset ($_POST['message'])) {
 	</div>
 </div>	
 <footer>
-	<?php require_once("../include/footer.php") ?>
+	<?php include("../include/footer.php") ?>
 </footer>	
 	<!--[if lt IE 9]>
 	<script src="../libs/html5shiv/es5-shim.min.js"></script>
@@ -73,5 +73,5 @@ if (isset ($_POST['message'])) {
 	<script src="../js/common.js"></script>
   	<script src="../libs/bootstrap/bootstrap.min.js"></script>
 </body>
-	<?php require_once("../modal_window.php") ?>
+	<?php include("../modal_window.php") ?>
 </html>

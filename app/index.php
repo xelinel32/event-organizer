@@ -25,15 +25,15 @@
 </head>
 <body>
 <header class="top_header">
-	<?php require_once("include/header.php") ?>
+	<?php include("include/header.php") ?>
 </header>
 <div class="main_content">	
-	<?php require_once("include/main.php") ?>
-	<?php require_once("include/event-bar.php") ?>
-	<?php require_once("include/news.php") ?>
+	<?php include("include/main.php") ?>
+	<?php include("include/event-bar.php") ?>
+	<?php include("include/news.php") ?>
 </div>
 <footer>
-	<?php require_once("include/footer.php") ?>
+	<?php include("include/footer.php") ?>
 </footer>	
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -47,5 +47,5 @@
 	<script src="js/common.js"></script>
   	<script src="libs/bootstrap/bootstrap.min.js"></script>
 </body>
-	<?php require_once("modal_window.php") ?>
+	<?php include("modal_window.php") ?>
 </html>

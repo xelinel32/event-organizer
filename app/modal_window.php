@@ -7,14 +7,14 @@
 	  		<h3>Реєстрація</h3><br>
 		<form class="FormRegisterModal" method="post">
 			<label>Ім'я:</label><br>
-			<input type="text" name="name" id="reg_name" placeholder="firstname"><br>
+			<input type="text" name="name" id="reg_name" required placeholder="firstname"><br>
 			<label>Логін:</label><br>
-			<input type="text" name="username" id="reg_username" placeholder="username"><br>
+			<input type="text" name="username" id="reg_username" required placeholder="username"><br>
 			<label>Пошта:</label><br>
-			<input type="email" name="email" id="reg_email" placeholder="email"><br>
+			<input type="email" name="email" id="reg_email" required placeholder="email"><br>
 			<label>Пароль:</label><br>
-			<input type="password" name="password" id="reg_password" placeholder="password"><br>
-			<input type="submit" name="submit" id="reg_submit" value="Реєстр">
+			<input type="password" name="password" id="reg_password" required placeholder="password"><br>
+			<input type="submit" name="submit" id="reg_submit_reg" value="Реєстрація">
 		</form>
 		<span>Зареєстровані? Перейдіть на <a href="../index.php">Головну</a> та авторизуйтесь.</span>
 		</div>
@@ -31,9 +31,9 @@
 	  		<h3>Простий юзер</h3><br>
 		<form class="FormRegisterModal" method="post">
 			<label>Логін:</label><br>
-			<input type="text" name="username" id="reg_username" placeholder="username"><br>
+			<input type="text" name="username" id="reg_username" required placeholder="username"><br>
 			<label>Пароль:</label><br>
-			<input type="password" name="password" id="reg_password" placeholder="password"><br>
+			<input type="password" name="password" id="reg_password" required placeholder="password"><br>
 			<input type="submit" name="submit" id="reg_submit" value="Увійти">
 		</form>
 		<span>Не зареєстровані? Перейдіть на <a href="../index.php">Головну</a> та зареєструйтесь.</span>
@@ -50,7 +50,7 @@
 	  	<div class="RegisterModal">
 	  		<h3>Пошук по сайту</h3><br>
 		<form class="FormRegisterModal" method="post">
-				<input type="search" name="search" id="search_inp" placeholder="Що бажаэте знайти?">
+				<input type="search" name="search" id="search_inp" required placeholder="Що бажаэте знайти?">
 				<button type="submit">Шукати</button>
 		</form>
 		</div>
@@ -67,9 +67,9 @@
 	  		<h3>Адміністрація</h3><br>
 		<form class="FormRegisterModal" method="post">
 			<label>Логін:</label><br>
-			<input type="text" name="username" id="reg_username" placeholder="username"><br>
+			<input type="text" name="username" id="reg_username" required placeholder="username"><br>
 			<label>Пароль:</label><br>
-			<input type="password" name="password" id="reg_password" placeholder="password"><br>
+			<input type="password" name="password" id="reg_password" required placeholder="password"><br>
 			<input type="submit" name="submit" id="reg_submit" value="Увійти">
 		</form>
 		</div>

@@ -1,4 +1,13 @@
-  <!-- topline -->
+<?php
+function activemenu($activemenu)
+{
+    $menuitem = basename($_SERVER['SCRIPT_NAME']);  //суперглобальный массив с информацие где будет наш стайл.заголовок
+    if ($activemenu == $menuitem) { 
+        return "style=\"color:#1dd2af;\""; 
+    }
+}
+?>
+<!-- topline -->
 <div class="header_topline">
         <div class="container">
           <div class="row">
@@ -42,13 +51,9 @@
               <!-- menu -->
               <div class="main_menu">
                 <ul class="sf-menu">
-                  <li class="active"><a href="../index.php">Головна</a></li>
-                  <li><a href="../pages/small_calendar.php">Календар</a>
-                <ul class="submenu">
-                  <li><a href="../pages/full_calendar.php">Великий календар</a></li>
-                </ul>
-                  </li>
-                  <li><a href="../pages/events.php">Заходи</a>
+                  <li><a <?=activemenu("index.php")?> href="../index.php">Головна</a></li>
+                  <li><a <?=activemenu("full_calendar.php")?> href="../pages/full_calendar.php">Календар</a></li>
+                  <li><a <?=activemenu("events.php")?> href="../pages/events.php">Заходи</a>
                 <ul class="submenu">
                   <li><a href="../pages/categories.php">Категорії заходів</a>
                     <ul class="submenu">
@@ -65,8 +70,8 @@
                   <li><a id="log_mob" data-toggle="modal" data-target="#CustomerModal" href="#">Вхід</a></li>
                 </ul>
                   </li>
-                  <li><a href="../pages/add_event_user.php">Додати захід</a></li>
-                  <li><a href="../pages/news.php">Новини</a></li>
+                  <li><a <?=activemenu("add_event_user.php")?> href="../pages/add_event_user.php">Додати захід</a></li>
+                  <li><a <?=activemenu("news.php")?> href="../pages/news.php">Новини</a></li>
                 </ul>
                 <div class="search_menu">
                   <a data-toggle="modal" data-target="#SearchModal" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>

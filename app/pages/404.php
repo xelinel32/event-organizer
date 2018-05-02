@@ -25,7 +25,7 @@
 </head>	
 <body>
 <header class="top_header">
-	<?php require_once("../include/header.php") ?>
+	<?php include("../include/header.php") ?>
 </header>
     <div class="error_page">
           <div class="container">
@@ -47,5 +47,5 @@
 	<script src="../js/common.js"></script>
   	<script src="../libs/bootstrap/bootstrap.min.js"></script>
 </body>
-	<?php require_once("../modal_window.php") ?>
+	<?php include("../modal_window.php") ?>
 </html>
