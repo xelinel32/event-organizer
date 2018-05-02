@@ -1,7 +1,7 @@
 <?php
 function activemenu($activemenu)
 {
-    $menuitem = basename($_SERVER['SCRIPT_NAME']);  //суперглобальный массив с информацие где будет наш стайл.заголовок
+    $menuitem = basename($_SERVER['SCRIPT_NAME']);
     if ($activemenu == $menuitem) { 
         return "style=\"color:#1dd2af;\""; 
     }
@@ -47,31 +47,22 @@ function activemenu($activemenu)
             <div class="row">
               <a href="#mobile-menu" class="toggle-mnu"><span></span></a>
               <!-- logo -->
-              <a href="../index.php" class="logo_site">COL<span>E</span>VENTS</a>
+              <a href="../index" class="logo_site">COL<span>E</span>VENTS</a>
               <!-- menu -->
               <div class="main_menu">
                 <ul class="sf-menu">
-                  <li><a <?=activemenu("index.php")?> href="../index.php">Головна</a></li>
-                  <li><a <?=activemenu("full_calendar.php")?> href="../pages/full_calendar.php">Календар</a></li>
-                  <li><a <?=activemenu("events.php")?> href="../pages/events.php">Заходи</a>
+                  <li><a <?=activemenu("index.php")?> href="../index">Головна</a></li>
+                  <li><a <?=activemenu("full_calendar.php")?> href="../pages/full_calendar">Календар</a></li>
+                  <li><a <?=activemenu("events.php")?> href="../pages/events">Заходи</a>
                 <ul class="submenu">
-                  <li><a href="../pages/categories.php">Категорії заходів</a>
-                    <ul class="submenu">
-                      <li><a href="../pages/singl_categories.php">Спорт</a></li>
-                      <li><a href="../pages/singl_categories.php">Музика</a></li>
-                      <li><a href="../pages/singl_categories.php">ИТ</a></li>
-                      <li><a href="../pages/singl_categories.php">Города</a></li>
-                      <li><a href="../pages/singl_categories.php">Подорожі</a></li>
-                      <li><a href="../pages/singl_categories.php">Інше</a></li>
-                  </ul>
-                </li>
-                  <li><a href="../pages/location.php">Місця</a></li>
-                  <li><a href="../pages/my_booking.php">Мої заходи</a></li>
+                  <li><a href="../pages/categories">Категорії заходів</a></li>
+                  <li><a href="../pages/location">Місця</a></li>
+                  <li><a href="../pages/my_booking">Мої заходи</a></li>
                   <li><a id="log_mob" data-toggle="modal" data-target="#CustomerModal" href="#">Вхід</a></li>
                 </ul>
                   </li>
-                  <li><a <?=activemenu("add_event_user.php")?> href="../pages/add_event_user.php">Додати захід</a></li>
-                  <li><a <?=activemenu("news.php")?> href="../pages/news.php">Новини</a></li>
+                  <li><a <?=activemenu("add_event_user.php")?> href="../pages/add_event_user">Додати захід</a></li>
+                  <li><a <?=activemenu("news.php")?> href="../pages/news">Новини</a></li>
                 </ul>
                 <div class="search_menu">
                   <a data-toggle="modal" data-target="#SearchModal" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>

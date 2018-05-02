@@ -6,7 +6,7 @@
             echo '<div class="sidebareventsmall">
             <img src="../img/sidebar_event_prev.jpg" alt="">
             <ul>
-                <li><a href="../pages/big_events.php">Назва заходу</a></li>
+                <li><a href="../pages/big_events">Назва заходу</a></li>
                 <li>24.05.2018</li>
                 <li>Місце</li>
             </ul>
@@ -18,7 +18,7 @@
             echo '<div class="sidebareventsmall">
             <img src="../img/sidebar_event_prev.jpg" alt="">
             <ul>
-                <li><a href="../pages/singl_location.php">Назва місця</a></li>
+                <li><a href="../pages/singl_location">Назва місця</a></li>
                 <li>Адреса</li>
                 <li>Категорія</li>
             </ul>

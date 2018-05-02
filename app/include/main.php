@@ -61,7 +61,7 @@
   <div class="col-lg-1">
     <div class="SearchMenu-Holidays">
     <p>
-      <span>Знайти</span><br>
+      <span>Знайди</span><br>
       <span>захід</span>
     </p>
   </div>

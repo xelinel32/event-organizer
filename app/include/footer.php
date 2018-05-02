@@ -29,13 +29,13 @@
             <a data-toggle="modal" data-target="#AdminModal" href="#">Адміністрація</a>
             <a data-toggle="modal" data-target="#CustomerModal" href="#">Простий Юзер</a>
             <a data-toggle="modal" data-target="#RegisterModal" href="#">Не зареєстровані?</a>
-            <a href="../pages/moreinfo.php">Контакти</a>
-            <a href="../index.php">Теги</a>
-            <a href="../pages/news.php">Новини</a>
-            <a href="../pages/events.php">Заходи</a>
+            <a href="../pages/moreinfo">Контакти</a>
+            <a href="../index">Теги</a>
+            <a href="../pages/news">Новини</a>
+            <a href="../pages/events">Заходи</a>
             <a href="#">Чудово</a>
-            <a href="../pages/location.php">Місце</a>
-            <a href="../pages/my_booking.php">Мій захід</a>
+            <a href="../pages/location">Місце</a>
+            <a href="../pages/my_booking">Мій захід</a>
 </p> 
         </div>
     </div>
@@ -64,11 +64,11 @@
                 <div class="col-md-12">
                     <div class="navfoo">
                     <ul>
-                        <li><a class="active" href="../index.php">Головна</a> ::</li>
-                        <li><a href="../pages/full_calendar.php">Календар</a> ::</li>
-                        <li><a href="../pages/events.php">Заходи</a> ::</li>
-                        <li><a href="../pages/add_event_user.php">Додати захід</a> ::</li>
-                        <li><a href="../pages/news.php">Новини</a></li>
+                        <li><a <?=activemenu("index.php")?> href="../index">Головна</a> ::</li>
+                        <li><a <?=activemenu("full_calendar.php")?> href="../pages/full_calendar">Календар</a> ::</li>
+                        <li><a <?=activemenu("events.php")?> href="../pages/events">Заходи</a> ::</li>
+                        <li><a <?=activemenu("add_event_user.php")?> href="../pages/add_event_user">Додати захід</a> ::</li>
+                        <li><a <?=activemenu("news.php")?> href="../pages/news">Новини</a></li>
                     </ul>
                     </div>
                     <span>Copyright &copy Colevents. Всі права захищені 2018.</span>

@@ -2,21 +2,23 @@
 <div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+		<div class="modalbg">
       <div class="modal-body">
 	  	<div class="RegisterModal">
 	  		<h3>Реєстрація</h3><br>
 		<form class="FormRegisterModal" method="post">
 			<label>Ім'я:</label><br>
-			<input type="text" name="name" id="reg_name" required placeholder="firstname"><br>
+			<input type="text" name="name" id="reg_name" required placeholder="Ім'я"><br>
 			<label>Логін:</label><br>
-			<input type="text" name="username" id="reg_username" required placeholder="username"><br>
+			<input type="text" name="username" id="reg_username" required placeholder="Логін"><br>
 			<label>Пошта:</label><br>
-			<input type="email" name="email" id="reg_email" required placeholder="email"><br>
+			<input type="email" name="email" id="reg_email" required placeholder="E-mail"><br>
 			<label>Пароль:</label><br>
-			<input type="password" name="password" id="reg_password" required placeholder="password"><br>
+			<input type="password" name="password" id="reg_password" required placeholder="Пароль"><br>
 			<input type="submit" name="submit" id="reg_submit_reg" value="Реєстрація">
 		</form>
 		<span>Зареєстровані? Перейдіть на <a href="../index.php">Головну</a> та авторизуйтесь.</span>
+		</div>
 		</div>
       </div>
     </div>
@@ -26,17 +28,19 @@
 <div class="modal fade" id="CustomerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+		<div class="modalbg">
       <div class="modal-body">
 	  	<div class="RegisterModal">
 	  		<h3>Простий юзер</h3><br>
 		<form class="FormRegisterModal" method="post">
 			<label>Логін:</label><br>
-			<input type="text" name="username" id="reg_username" required placeholder="username"><br>
+			<input type="text" name="username" id="reg_username" required placeholder="Логін"><br>
 			<label>Пароль:</label><br>
-			<input type="password" name="password" id="reg_password" required placeholder="password"><br>
+			<input type="password" name="password" id="reg_password" required placeholder="Пароль"><br>
 			<input type="submit" name="submit" id="reg_submit" value="Увійти">
 		</form>
 		<span>Не зареєстровані? Перейдіть на <a href="../index.php">Головну</a> та зареєструйтесь.</span>
+		</div>
 		</div>
       </div>
     </div>
@@ -46,6 +50,7 @@
 <div class="modal fade" id="SearchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+		<div class="modalbg">
       <div class="modal-body">
 	  	<div class="RegisterModal">
 	  		<h3>Пошук по сайту</h3><br>
@@ -53,6 +58,7 @@
 				<input type="search" name="search" id="search_inp" required placeholder="Що бажаэте знайти?">
 				<button type="submit">Шукати</button>
 		</form>
+		</div>
 		</div>
       </div>
     </div>
@@ -62,16 +68,19 @@
 <div class="modal fade" id="AdminModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+		<div class="modalbg">
       <div class="modal-body">
 	  	<div class="RegisterModal">
 	  		<h3>Адміністрація</h3><br>
 		<form class="FormRegisterModal" method="post">
 			<label>Логін:</label><br>
-			<input type="text" name="username" id="reg_username" required placeholder="username"><br>
+			<input type="text" name="username" id="reg_username" required placeholder="Логін"><br>
 			<label>Пароль:</label><br>
-			<input type="password" name="password" id="reg_password" required placeholder="password"><br>
+			<input type="password" name="password" id="reg_password" required placeholder="Пароль"><br>
 			<input type="submit" name="submit" id="reg_submit" value="Увійти">
 		</form>
+		</div>
+		</div>
 		</div>
       </div>
     </div>

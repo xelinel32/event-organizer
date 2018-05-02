@@ -42,7 +42,7 @@
                     <img src="../img/event_page.jpg" alt="logo_event">
                     <p>Назва заходу<br> 
                     <span>Опис заходу</span>
-                    <a href="../pages/big_events.php"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <a href="../pages/big_events"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
                     </p>
                 </div>';
                 } ?>

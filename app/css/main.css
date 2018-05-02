@@ -764,27 +764,30 @@ h2.post_title{
   font-size: 25px;
 }
 .infinp{
-  width: 200px;
+  width: 240px;
   height: 30px;
   border: 1px solid black;
-  border-radius: 4px;
   margin: 10px;
 }
 .inf textarea{
   width: 500px;
   height: 80px;
   border: 1px solid black;
-  border-radius: 4px;
   margin: 10px;
+}
+.inf textarea[placeholder]{
+  padding-left: 10px;
 }
 .inf input[type="submit"]{
   margin: 10px;
   width: 130px;
   height: 40px;
-  border-radius: 4px;
   background: #1dd2af;
   color: white;
   cursor: pointer; 
+}
+.inf input[placeholder]{
+  padding-left: 10px;
 }
 /* pagination news page */
 /* pagination */
