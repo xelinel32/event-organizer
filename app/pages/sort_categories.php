@@ -27,7 +27,31 @@
 <header class="top_header">
 	<?php include("../include/header.php") ?>
 </header>
-    add event user
+<div class="EventBarMore">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="SpecialOffers">
+                    <p>
+                        <span>Категорія - Інше</span><br>
+                    </p>
+                </div>
+                <div class="EventPageBig">
+                <?php for ($i=0; $i < 16; $i++) { 
+                    echo '<div class="EeventPageSmall">
+                    <img src="../img/event_page.jpg" alt="logo_event">
+                    <p>Назва заходу<br> 
+                    <span>Опис заходу</span>
+                    <a href="../pages/big_events"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    </p>
+                </div>';
+                } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- nav --> 
 <footer>
 	<?php include("../include/footer.php") ?>
 </footer>	
@@ -39,9 +63,9 @@
 	<![endif]-->
 	<script src="../libs/jquery/jquery-3.3.1.min.js"></script>
 	<script src="../libs/superfish/superfish.min.js"></script>
-  	<script src="../libs/mobilemenu/jquery.mmenu.min.all.js"></script>
+  <script src="../libs/mobilemenu/jquery.mmenu.min.all.js"></script>
 	<script src="../js/common.js"></script>
-  	<script src="../libs/bootstrap/bootstrap.min.js"></script>
+  <script src="../libs/bootstrap/bootstrap.min.js"></script>
 </body>
-	<?php include("../modal_window.php") ?>
+  <?php include("../modal_window.php") ?>
 </html>

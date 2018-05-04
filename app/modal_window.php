@@ -13,6 +13,14 @@
 			<input type="text" name="username" id="reg_username" required placeholder="Логін"><br>
 			<label>Пошта:</label><br>
 			<input type="email" name="email" id="reg_email" required placeholder="E-mail"><br>
+			<label>Дата народження:</label><br>
+			<input type="date" name="date" id="reg_date" required><br>
+			<label>Місто:</label><br>
+			<input type="text" name="city" id="reg_city" required placeholder="Місто"><br>
+			<label>Адреса:</label><br>
+			<input type="text" name="address" id="reg_address" required placeholder="Адреса"><br>
+			<label>Номер телефону:</label><br>
+			<input type="text" name="number" id="reg_number" required placeholder="Телефон"><br>
 			<label>Пароль:</label><br>
 			<input type="password" name="password" id="reg_password" required placeholder="Пароль"><br>
 			<input type="submit" name="submit" id="reg_submit_reg" value="Реєстрація">

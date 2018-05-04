@@ -605,6 +605,9 @@ footer {
   text-align: left;
   color: #ffffff;
 }
+.FooterAdress{
+  margin-left: 50px;
+}
 .AddressFoo span {
   color: #1dd2af;
 }
@@ -831,7 +834,7 @@ h2.post_title{
 .CommentsToEventPage label{
   font-family: "RobotoRegular";
   color: gray;
-  font-size: 20px;
+  font-size: 16px;
   padding-top: 5px;
   line-height: 1.4;
 }
@@ -908,4 +911,43 @@ h2.post_title{
   background-color: #1dd2af;
   padding: 15px;
   margin-left: 10px	;
+}
+/* loca page vents  */
+.location_event_bit_page{
+  display: block;
+  list-style: none;
+  padding: 0;
+}
+.location_event_bit_page span{
+  margin-left: 20px;
+  float: right;
+  font-size: 13px;
+  font-family: "RobotoLight";
+  color: gray;
+}
+.location_event_bit_page a{
+  color: #1dd2af;
+  font-size: 18px;
+}
+.location_event_bit_page a:hover{
+  text-decoration: underline;
+  color: #1dd2af;
+}
+/* profile_user   */
+.profile_user{
+  padding-top: 20px;
+}
+.profile_user span{
+  font-size: 16px;
+  font-family: "RobotoLight";
+  color: gray;
+}
+.profile_user img{
+  width: 140px;
+  padding-bottom: 20px;
+}
+.profile_user ul{
+  float: right;
+  padding-top: 20px;
+  margin-right: 200px;
 }

@@ -40,6 +40,7 @@
         </div>
     </div>
     <div class="col-sm">
+    <div class="FooterAdress">
         <h3>Адреса</h3>
         <div class="AddressFoo">
             <p>Шевченко 53В<br>
@@ -52,6 +53,7 @@
     <a target="_blank" href="https://www.facebook.com/artem.sedlyar"><i class="fa fa-facebook" aria-hidden="true"></i></a>
     <a target="_blank" href="https://twitter.com/ArtemSedlar"><i class="fa fa-twitter" aria-hidden="true"></i></a>
     <a target="_blank" href="https://plus.google.com/u/0/103334064496844281082"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+        </div>
         </div>
         </div>
     </div>
@@ -67,7 +69,7 @@
                         <li><a <?=activemenu("index.php")?> href="../index">Головна</a> ::</li>
                         <li><a <?=activemenu("full_calendar.php")?> href="../pages/full_calendar">Календар</a> ::</li>
                         <li><a <?=activemenu("events.php")?> href="../pages/events">Заходи</a> ::</li>
-                        <li><a <?=activemenu("add_event_user.php")?> href="../pages/add_event_user">Додати захід</a> ::</li>
+                        <li><a <?=activemenu("profile.php")?> href="../pages/profile">Додати захід</a> ::</li>
                         <li><a <?=activemenu("news.php")?> href="../pages/news">Новини</a></li>
                     </ul>
                     </div>

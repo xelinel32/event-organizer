@@ -57,11 +57,10 @@ function activemenu($activemenu)
                 <ul class="submenu">
                   <li><a href="../pages/categories">Категорії заходів</a></li>
                   <li><a href="../pages/location">Місця</a></li>
-                  <li><a href="../pages/my_booking">Мої заходи</a></li>
                   <li><a id="log_mob" data-toggle="modal" data-target="#CustomerModal" href="#">Вхід</a></li>
                 </ul>
                   </li>
-                  <li><a <?=activemenu("add_event_user.php")?> href="../pages/add_event_user">Додати захід</a></li>
+                  <li><a <?=activemenu("profile.php")?> href="../pages/profile">Додати захід</a></li>
                   <li><a <?=activemenu("news.php")?> href="../pages/news">Новини</a></li>
                 </ul>
                 <div class="search_menu">

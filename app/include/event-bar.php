@@ -15,7 +15,7 @@
                     <img src="../img/event_page.jpg" alt="logo_event">
                     <p>Назва заходу<br> 
                     <span>Місце заходу</span>
-                    <a href="../pages/big_events.php"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <a href="../pages/big_events"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
                     </p>
                 </div>';
                 } ?>
@@ -37,32 +37,32 @@
                 </div>
                     <div class="MoreEventCategory">
                     <div class="SingEventCategory">
-                        <a href="../pages/singl_categories.php"><i class="fa fa-ship" aria-hidden="true"></i>
+                        <a href="../pages/sort_categories"><i class="fa fa-ship" aria-hidden="true"></i>
                         <span id="left">Спорт</span>
                     </a>
                      </div>
                      <div class="SingEventCategory">
-                        <a href="../pages/singl_categories.php"><i class="fa fa-car" aria-hidden="true"></i>
+                        <a href="../pages/sort_categories"><i class="fa fa-car" aria-hidden="true"></i>
                         <span id="left">Музика</span>
                     </a>
                      </div>
                      <div class="SingEventCategory">
-                         <a href="../pages/singl_categories.php"><i class="fa fa-heart" aria-hidden="true"></i>
+                         <a href="../pages/sort_categories"><i class="fa fa-heart" aria-hidden="true"></i>
                          <span id="lefts">ИТ</span>
                         </a>
                      </div>
                      <div class="SingEventCategory">
-                            <a href="../pages/singl_categories.php"><i class="fa fa-eercast" aria-hidden="true"></i>
+                            <a href="../pages/sort_categories"><i class="fa fa-eercast" aria-hidden="true"></i>
                         <span id="left">Города</span>
                         </a>
                      </div>
                      <div class="SingEventCategory">
-                        <a href="../pages/singl_categories.php"><i class="fa fa-bed" aria-hidden="true"></i>
+                        <a href="../pages/sort_categories"><i class="fa fa-bed" aria-hidden="true"></i>
                         <span id="left">Подорожі</span>
                     </a>
                      </div>
                      <div class="SingEventCategory">
-                        <a href="../pages/singl_categories.php"><i class="fa fa-safari" aria-hidden="true"></i>
+                        <a href="../pages/sort_categories"><i class="fa fa-safari" aria-hidden="true"></i>
                         <span id="left">Інше</span>
                     </a>
                      </div>

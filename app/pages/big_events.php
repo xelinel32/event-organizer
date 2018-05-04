@@ -35,7 +35,7 @@
           <!-- main event-->
         <div class="news_content">
             <div class="box_news">
-              <h2 class="post_title"><a href="#">Назва заходу</a></h2>
+              <h2 class="post_title">Назва заходу</h2>
               <div class="post_meta">
                 <ul>
                   <li><a href="#">Категорія</a></li>
@@ -57,11 +57,32 @@
                     <form method="post">
                       <label>Ім'я:</label><br>
                       <input type="text" name="coment_input" id="com_inp" required placeholder="Ваше ім'я"><br>
+                      <label>Дата:</label><br>
+                      <input type="text" name="coment_input" disabled placeholder="<?php echo date("F j, Y, g:i a"); ?>" id="date_inp"><br>
                       <label>Коментар:</label><br>
                       <textarea name="coment_txtarea" id="coment_txtarea" cols="50" rows="5" required placeholder="Ваш коментар"></textarea><br>
                       <button type="submit">Додати</button>
                     </form>
                   </div> 
+                  <div class="SharedEvent">
+                  <div class="social_button">
+                  <h3>Поділитися з друзями:</h3>
+                  <p><script type="text/javascript">(function() {
+                    if (window.pluso)if (typeof window.pluso.start == "function") return;
+                    if (window.ifpluso==undefined) { window.ifpluso = 1;
+                      var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                      s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                      s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                      var h=d[g]('body')[0];
+                      h.appendChild(s);
+                    }})();</script>
+                    <div class="pluso" data-background="none;" data-options="big,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,tumblr,myspace"></div></p>
+                  </div>
+                  <form action="" method="get">
+                  <input class="reg_event_but" type="button" value="Зареєструватися">
+                  <input class="buy_event_but" type="button" value="Придбати білет">
+                  </form>
+                  </div>
                 </div>
             </div>
           </div>

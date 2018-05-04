@@ -27,7 +27,35 @@
 <header class="top_header">
 	<?php include("../include/header.php") ?>
 </header>
-        <h2>Профіль</h2>
+          <!-- Content -->
+  <div class="main_content_news">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+          <!-- main -->
+<div class="news_content">
+            <div class="box_news">
+              <h2 class="post_title">Профіль - User</h2>
+              <div class="profile_user">
+								<img src="../img/world.png" alt="user_logo">
+								<ul>
+									<li>Дата народження - <span>20.02.1999</span></li>
+									<li>Місто - <span>Чернігів</span></li>
+									<li>Ім'я - <span>Артем</span></li>
+									<li>Адреса - <span>Шевченко 53В, кв 37</span></li>
+									<li>Номер телефону - <span>+380935039351</span></li>
+								</ul>
+								<h4>Функціонал профілю</h4>
+							</div>
+						</div>
+          </div>
+            </div>
+          <!-- Sidebar -->
+            <?php include("../include/sidebar.php"); ?>
+          <!-- Sidebar -->
+        </div>
+    </div>
+</div>
 <!-- nav --> 
 <footer>
 	<?php include("../include/footer.php") ?>

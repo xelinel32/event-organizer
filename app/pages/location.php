@@ -43,7 +43,7 @@
                     <p>Назва місця<br> 
                     <span>Опис малий</span>
                     <a href="../pages/singl_location"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                    </p>
+					</p>
                 </div>';
                 } ?>
                 </div>

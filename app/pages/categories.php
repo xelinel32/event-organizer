@@ -38,12 +38,12 @@
             <h2 class="post_title">Всі категорії</h2>
             <div class="cat_all_page">
             <ul>
-            <li><a href="../pages/singl_categories">Спорт</a></li>
-            <li><a href="../pages/singl_categories">Музика</a></li>
-            <li><a href="../pages/singl_categories">ИТ</a></li>
-            <li><a href="../pages/singl_categories">Города</a></li>
-            <li><a href="../pages/singl_categories">Подорожі</a></li>
-            <li><a href="../pages/singl_categories">Інше</a></li>
+            <li><a href="../pages/sort_categories">Спорт</a></li>
+            <li><a href="../pages/sort_categories">Музика</a></li>
+            <li><a href="../pages/sort_categories">ИТ</a></li>
+            <li><a href="../pages/sort_categories">Города</a></li>
+            <li><a href="../pages/sort_categories">Подорожі</a></li>
+            <li><a href="../pages/sort_categories">Інше</a></li>
                 </ul>
                 </div>
               </div>
