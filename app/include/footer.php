@@ -5,20 +5,20 @@
       <h3>Новостний канал</h3>
       <div class="Newslatter">
       <p>Підпишися на розсилку новостей та не пропусти кращих заходів</p>
-      <form>
-      <input type="text" placeholder="Підписатися...">
+      <form action="" method="POST">
+      <input type="text" required placeholder="Підписатися...">
       <input type="submit" value="GO">
       </form>
       </div>
     </div>
     <div class="col-sm">
-        <h3>Останні новини</h3>
+        <h3>Останні заходи</h3>
         <div class="LatestNews">
         <img src="../img/ava.jpg" alt="ava">
-        <b>Назва новини</b>
+        <b>Назва заходу</b>
             <br><span>December 12:39, 22.05.2018</span>
             <br><img src="../img/ava.jpg" alt="ava">
-        <b>Назва новини</b>
+        <b>Назва заходу</b>
             <br><span>December 12:39, 22.05.2018</span>
         </div>
     </div>
@@ -69,7 +69,7 @@
                         <li><a <?=activemenu("index.php")?> href="../index">Головна</a> ::</li>
                         <li><a <?=activemenu("full_calendar.php")?> href="../pages/full_calendar">Календар</a> ::</li>
                         <li><a <?=activemenu("events.php")?> href="../pages/events">Заходи</a> ::</li>
-                        <li><a <?=activemenu("profile.php")?> href="../pages/profile">Додати захід</a> ::</li>
+                        <li><a <?=activemenu("profile.php")?> href="../pages/profile">Місця</a> ::</li>
                         <li><a <?=activemenu("news.php")?> href="../pages/news">Новини</a></li>
                     </ul>
                     </div>

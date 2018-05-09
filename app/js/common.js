@@ -25,7 +25,7 @@ $(document).ready(function() {
         "pagedim-black"
       ],
       navbar: {
-        title: "Menu"
+        title: "Меню сайта"
       },
       navbars: {
         content: ["searchfield"]

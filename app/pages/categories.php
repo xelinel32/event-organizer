@@ -28,32 +28,52 @@
 	<?php include("../include/header.php") ?>
 </header>
     <!-- Content -->
-  <div class="main_content_news">
-    <div class="container">
+<div class="catagory_block">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-8">
-          <!-- main -->
-        <div class="news_content">
-            <div class="box_news">
-            <h2 class="post_title">Всі категорії</h2>
-            <div class="cat_all_page">
-            <ul>
-            <li><a href="../pages/sort_categories">Спорт</a></li>
-            <li><a href="../pages/sort_categories">Музика</a></li>
-            <li><a href="../pages/sort_categories">ИТ</a></li>
-            <li><a href="../pages/sort_categories">Города</a></li>
-            <li><a href="../pages/sort_categories">Подорожі</a></li>
-            <li><a href="../pages/sort_categories">Інше</a></li>
-                </ul>
-                </div>
-              </div>
-          </div>
-            </div>
-          <!-- Sidebar -->
-            <?php include("../include/sidebar.php"); ?>
-          <!-- Sidebar -->
+      <div class="col-md-12">
+        <div class="list_catagory">
+        <ul>
+          <li><a href="#">Спорт</a></li>
+          <li><a href="#">Змагання</a></li>
+          <li><a href="#">Олімпіади</a></li>
+          <li><a href="#">Футбол</a></li>
+          <li><a href="#">Ширка</a></li>
+          <li><a href="#">Захід</a></li>
+          <li><a href="#">Олімпіади</a></li>
+          <li><a href="#">Футбол</a></li>
+          <li><a href="#">Ширка</a></li>
+          <li><a href="#">Захід</a></li>
+          <li><a href="#">Ширка</a></li>
+          <li><a href="#">Захід</a></li>
+        </ul>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="catagory_event_list">
+          <h3>Категорія - Спорт</h3>
+          <div class="catagory_event_list_sort">
+          <?php 
+            for ($i=0; $i < 9; $i++) { 
+              echo '<div class="catagory_event_list_singl">
+              <img src="../img/event_page.jpg" alt="logo_event">
+              <div class="catagory_event_list_desc">
+              <a href="../pages/big_events.php">Назва заходу</a><br>
+                  <span>Дата - 12.04.2018</span><br>
+                  <span>Місце заходу</span>
+                </div>
+              </div>';
+            }
+          ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
 </div>
 <!-- nav --> 
 <footer>

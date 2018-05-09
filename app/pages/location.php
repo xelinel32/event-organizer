@@ -27,30 +27,29 @@
 <header class="top_header">
 	<?php include("../include/header.php") ?>
 </header>
-<div class="EventBarMore">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="SpecialOffers">
-                    <p>
-                        <span>Місця проходження заходів</span><br>
-                    </p>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="catagory_event_list">
+				<h3>Місця проходження заходів</h3>
+				<p>подивись більше про місця заходів</p>
+          <div class="catagory_event_list_sort">
+          <?php 
+            for ($i=0; $i < 9; $i++) { 
+              echo '<div class="catagory_event_list_singl">
+              <img src="../img/event_page.jpg" alt="logo_event">
+              <div class="catagory_event_list_desc">
+              <a href="../pages/singl_location.php">Назва місця</a><br>
+                  <span>Опис Опис Опис Опис </span>
                 </div>
-                <div class="EventPageBig">
-                <?php for ($i=0; $i < 16; $i++) { 
-                    echo '<div class="EeventPageSmall">
-                    <img src="../img/event_page.jpg" alt="logo_event">
-                    <p>Назва місця<br> 
-                    <span>Опис малий</span>
-                    <a href="../pages/singl_location"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-					</p>
-                </div>';
-                } ?>
-                </div>
-            </div>
+              </div>';
+            }
+          ?>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>  
 <!-- nav --> 
 <footer>
 	<?php include("../include/footer.php") ?>

@@ -39,7 +39,7 @@
 		<div class="modalbg">
       <div class="modal-body">
 	  	<div class="RegisterModal">
-	  		<h3>Простий юзер</h3><br>
+	  		<h3>Авторизація</h3><br>
 		<form class="FormRegisterModal" method="post">
 			<label>Логін:</label><br>
 			<input type="text" name="username" id="reg_username" required placeholder="Логін"><br>
@@ -62,32 +62,10 @@
       <div class="modal-body">
 	  	<div class="RegisterModal">
 	  		<h3>Пошук по сайту</h3><br>
-		<form class="FormRegisterModal" method="post">
+		<form action="" class="FormRegisterModal" method="post">
 				<input type="search" name="search" id="search_inp" required placeholder="Що бажаэте знайти?">
 				<button type="submit">Шукати</button>
 		</form>
-		</div>
-		</div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal Admin-->
-<div class="modal fade" id="AdminModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-		<div class="modalbg">
-      <div class="modal-body">
-	  	<div class="RegisterModal">
-	  		<h3>Адміністрація</h3><br>
-		<form class="FormRegisterModal" method="post">
-			<label>Логін:</label><br>
-			<input type="text" name="username" id="reg_username" required placeholder="Логін"><br>
-			<label>Пароль:</label><br>
-			<input type="password" name="password" id="reg_password" required placeholder="Пароль"><br>
-			<input type="submit" name="submit" id="reg_submit" value="Увійти">
-		</form>
-		</div>
 		</div>
 		</div>
       </div>

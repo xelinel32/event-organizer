@@ -21,11 +21,7 @@ function activemenu($activemenu)
               <div class="login_contact">
               <p>
                <i class="fa fa-user-o" aria-hidden="true"></i>
-                  <a id="logadm" data-toggle="modal" data-target="#AdminModal" href="#">Адміністрація</a>
-                </p>
-              <p>
-               <i class="fa fa-user-o" aria-hidden="true"></i>
-                  <a id="logadm" data-toggle="modal" data-target="#CustomerModal" href="#">Простий Юзер</a>
+                  <a id="logadm" data-toggle="modal" data-target="#CustomerModal" href="#">Авторизація</a>
                 </p>
               <p>
                <i class="fa fa-file-o" aria-hidden="true"></i> Нема аккаунту?
@@ -54,13 +50,9 @@ function activemenu($activemenu)
                   <li><a <?=activemenu("index.php")?> href="../index">Головна</a></li>
                   <li><a <?=activemenu("full_calendar.php")?> href="../pages/full_calendar">Календар</a></li>
                   <li><a <?=activemenu("events.php")?> href="../pages/events">Заходи</a>
-                <ul class="submenu">
-                  <li><a href="../pages/categories">Категорії заходів</a></li>
-                  <li><a href="../pages/location">Місця</a></li>
                   <li><a id="log_mob" data-toggle="modal" data-target="#CustomerModal" href="#">Вхід</a></li>
-                </ul>
                   </li>
-                  <li><a <?=activemenu("profile.php")?> href="../pages/profile">Додати захід</a></li>
+                  <li><a <?=activemenu("location.php")?> href="../pages/location">Місця</a></li>
                   <li><a <?=activemenu("news.php")?> href="../pages/news">Новини</a></li>
                 </ul>
                 <div class="search_menu">

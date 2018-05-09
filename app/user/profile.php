@@ -27,27 +27,37 @@
 <header class="top_header">
 	<?php include("../include/header.php") ?>
 </header>
-<div class="EventBarMore">
+          <!-- Content -->
+  <div class="main_content_news">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="SpecialOffers">
-                    <p>
-                        <span>Мої заходи</span><br>
-                    </p>
-                </div>
-                <div class="EventPageBig">
-                <?php for ($i=0; $i < 2; $i++) { 
-                    echo '<div class="EeventPageSmall">
-                    <img src="../img/event_page.jpg" alt="logo_event">
-                    <p>Назва заходу<br> 
-                    <span>Опис заходу</span>
-                    <a href="../pages/big_events"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                    </p>
-                </div>';
-                } ?>
-                </div>
+    <div class="row">
+      <div class="col-md-8">
+          <!-- main -->
+<div class="news_content">
+            <div class="box_news">
+              <h2 class="post_title">Профіль - User</h2>
+              <div class="profile_user">
+								<img src="../img/world.png" alt="user_logo">
+								<ul>
+									<li>Дата народження - <span>20.02.1999</span></li>
+									<li>Місто - <span>Чернігів</span></li>
+									<li>Ім'я - <span>Артем</span></li>
+									<li>Адреса - <span>Шевченко 53В, кв 37</span></li>
+									<li>Номер телефону - <span>+380935039351</span></li>
+								</ul>
+							</div>
+							<div class="func_profile_page">
+							<h4>Функціонал профілю</h4>
+								1. Редактор профиля(Изменить)
+								2. Добавить ивент
+								3. Добавить категорию
+							</div>
+						</div>
+          </div>
             </div>
+          <!-- Sidebar -->
+            <?php include("../include/sidebar.php"); ?>
+          <!-- Sidebar -->
         </div>
     </div>
 </div>

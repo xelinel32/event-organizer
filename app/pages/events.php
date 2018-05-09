@@ -34,14 +34,15 @@
                 <div class="SpecialOffers">
                     <p>
                         <span>Всі заходи</span><br>
+						<span>вибери свій захід та відвідай його в своєму місті</span>
                     </p>
                 </div>
                 <div class="EventPageBig">
                 <?php for ($i=0; $i < 16; $i++) { 
-                    echo '<div class="EeventPageSmall">
+					echo '<div class="EeventPageSmall">
                     <img src="../img/event_page.jpg" alt="logo_event">
                     <p>Назва заходу<br> 
-                    <span>Опис заходу</span>
+					<span>Опис заходу</span>
                     <a href="../pages/big_events"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
                     </p>
                 </div>';
