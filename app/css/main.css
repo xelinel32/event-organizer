@@ -154,7 +154,7 @@ img {
   box-shadow: 0px 3px 1px 0 rgba(0, 0, 0, 0.25);
 }
 .main_menu .sf-menu {
-  margin: 8px 17px 0 50px;
+  margin: 8px 17px 0 0;
 }
 .main_menu .sf-menu a {
   background: #fff;
@@ -423,14 +423,16 @@ img {
   padding-top: 50px;
   font-family: "RobotoRegular";
   font-size: 19px;
-  line-height: 2.9;
   color: #9dafc0;
 }
 .SingEventCategory span:hover {
   color: #1dd2af;
 }
 #left {
-  margin-left: 16px;
+  margin-left: 10px;
+}
+#lefti{
+  margin-left: 0;
 }
 #lefts {
   margin-left: 26px;
@@ -561,13 +563,17 @@ footer {
   border: solid 1px #004437;
   cursor: pointer;
 }
-.LatestNews b {
+.LatestNews b a{
   font-family: "RobotoRegular";
   font-size: 13px;
   line-height: 1.69;
   text-align: left;
   color: #ffffff;
   cursor: default;
+}
+.LatestNews a:hover{
+  text-decoration: none;
+  cursor: pointer;
 }
 .LatestNews span {
   font-family: "RobotoLight";
@@ -815,6 +821,25 @@ h2.post_title{
   color: white;
 }
 /* EVENT PAGE */
+.read_more {
+  text-align: center;
+  padding-top: 27px;
+  padding-bottom: 47px;
+}
+.read_more a{
+  background: #f2f2f2;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #999999;
+  padding: 6px 20px;
+  border-radius: 4px;
+}
+.read_more a:hover{
+  text-decoration: none;
+  color: #fff;
+  background: #1dd2af;
+  transition: all 0.3s ease;
+}
 .LocationEventPage a{
   color: #1dd2af;
 }

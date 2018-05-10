@@ -48,22 +48,22 @@
                      </div>
                      <div class="SingEventCategory">
                          <a href="../pages/categories.php"><i class="fa fa-heart" aria-hidden="true"></i>
-                         <span id="lefts">ИТ</span>
+                         <span id="left">Подорожі</span>
                         </a>
                      </div>
                      <div class="SingEventCategory">
                             <a href="../pages/categories.php"><i class="fa fa-eercast" aria-hidden="true"></i>
-                        <span id="left">Города</span>
+                        <span id="lefti">Олімппіади</span>
                         </a>
                      </div>
                      <div class="SingEventCategory">
                         <a href="../pages/categories.php"><i class="fa fa-bed" aria-hidden="true"></i>
-                        <span id="left">Подорожі</span>
+                        <span id="left">Концерти</span>
                     </a>
                      </div>
                      <div class="SingEventCategory">
                         <a href="../pages/categories.php"><i class="fa fa-safari" aria-hidden="true"></i>
-                        <span id="left">Інше</span>
+                        <span id="left">Весілля</span>
                     </a>
                      </div>
                 </div>

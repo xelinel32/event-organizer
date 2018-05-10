@@ -7,8 +7,8 @@
     <div class="carousel-item active">
       <img src="../img/travel.jpg" alt="Los Angeles">
       <div class="carousel-caption">
-    <div class="slider-info"><h3>To travel is to live</h3>
-    <p>You Don't Need Magic to Disappear. All you need is a destination</p>
+    <div class="slider-info"><h3>Подорожувати - це жити</h3>
+    <p>Вам не потрібна магія зникнути. Все, що вам потрібно, це місце призначення</p>
     <div class="slider-btn">
         <a href="../pages/location.php">Дивитися місця заходів</a>
         <a href="../pages/moreinfo.php">Контакти</a>
@@ -19,8 +19,8 @@
     <div class="carousel-item">
       <img src="../img/travel_1.jpg" alt="Chicago">
       <div class="carousel-caption">
-    <div class="slider-info"><h3>To travel is to live</h3>
-    <p>You Don't Need Magic to Disappear. All you need is a destination</p>
+    <div class="slider-info"><h3>Подорожувати - це жити</h3>
+    <p>Вам не потрібна магія зникнути. Все, що вам потрібно, це місце призначення</p>
     <div class="slider-btn">
         <a href="../pages/location.php">Дивитися місця заходів</a>
         <a href="../pages/moreinfo.php">Контакти</a>
@@ -31,8 +31,8 @@
     <div class="carousel-item">
       <img src="../img/travel_2.jpg" alt="New York">
       <div class="carousel-caption">
-    <div class="slider-info"><h3>To travel is to live</h3>
-    <p>You Don't Need Magic to Disappear. All you need is a destination</p>
+    <div class="slider-info"><h3>Подорожувати - це жити</h3>
+    <p>Вам не потрібна магія зникнути. Все, що вам потрібно, це місце призначення</p>
     <div class="slider-btn">
         <a href="../pages/location.php">Дивитися місця заходів</a>
         <a href="../pages/moreinfo.php">Контакти</a>

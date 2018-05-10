@@ -54,6 +54,7 @@ function activemenu($activemenu)
                   </li>
                   <li><a <?=activemenu("location.php")?> href="../pages/location">Місця</a></li>
                   <li><a <?=activemenu("news.php")?> href="../pages/news">Новини</a></li>
+                  <li><a <?=activemenu("moreinfo.php")?> href="../pages/moreinfo">Інше</a></li>
                 </ul>
                 <div class="search_menu">
                   <a data-toggle="modal" data-target="#SearchModal" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>

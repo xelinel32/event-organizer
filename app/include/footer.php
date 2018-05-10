@@ -15,10 +15,10 @@
         <h3>Останні заходи</h3>
         <div class="LatestNews">
         <img src="../img/ava.jpg" alt="ava">
-        <b>Назва заходу</b>
+        <b><a href="../pages/big_events.php">Назва заходу</a></b>
             <br><span>December 12:39, 22.05.2018</span>
             <br><img src="../img/ava.jpg" alt="ava">
-        <b>Назва заходу</b>
+        <b><a href="../pages/big_events.php">Назва заходу</a></b>
             <br><span>December 12:39, 22.05.2018</span>
         </div>
     </div>
@@ -70,7 +70,8 @@
                         <li><a <?=activemenu("full_calendar.php")?> href="../pages/full_calendar">Календар</a> ::</li>
                         <li><a <?=activemenu("events.php")?> href="../pages/events">Заходи</a> ::</li>
                         <li><a <?=activemenu("profile.php")?> href="../pages/profile">Місця</a> ::</li>
-                        <li><a <?=activemenu("news.php")?> href="../pages/news">Новини</a></li>
+                        <li><a <?=activemenu("news.php")?> href="../pages/news">Новини</a> ::</li>
+                        <li><a <?=activemenu("moreinfo.php")?> href="../pages/moreinfo">Інше</a></li>
                     </ul>
                     </div>
                     <span>Copyright &copy Colevents. Всі права захищені 2018.</span>

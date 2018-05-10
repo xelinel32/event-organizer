@@ -33,11 +33,16 @@
         <div class="catagory_event_list">
 				<h3>Місця проходження заходів</h3>
 				<p>подивись більше про місця заходів</p>
+				<div class="sorting">
+					<span>Сортування:</span>
+					<a href="#">Дата</a> |
+					<a href="#">Назва</a>
+				</div>
           <div class="catagory_event_list_sort">
           <?php 
             for ($i=0; $i < 9; $i++) { 
               echo '<div class="catagory_event_list_singl">
-              <img src="../img/event_page.jpg" alt="logo_event">
+              <img src="../img/location.jpg" alt="logo_event">
               <div class="catagory_event_list_desc">
               <a href="../pages/singl_location.php">Назва місця</a><br>
                   <span>Опис Опис Опис Опис </span>

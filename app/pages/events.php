@@ -35,8 +35,13 @@
                     <p>
                         <span>Всі заходи</span><br>
 						<span>вибери свій захід та відвідай його в своєму місті</span>
-                    </p>
-                </div>
+					</p>
+				</div>
+				<div class="sorting">
+					<span>Сортування:</span>
+					<a href="#">Дата</a> |
+					<a href="#">Назва</a>
+				</div>
                 <div class="EventPageBig">
                 <?php for ($i=0; $i < 16; $i++) { 
 					echo '<div class="EeventPageSmall">
