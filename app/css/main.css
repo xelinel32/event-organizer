@@ -154,15 +154,15 @@ img {
   box-shadow: 0px 3px 1px 0 rgba(0, 0, 0, 0.25);
 }
 .main_menu .sf-menu {
-  margin: 8px 17px 0 0;
+  margin: 8px 17px 0 25px;
 }
 .main_menu .sf-menu a {
   background: #fff;
   color: #5d6e80;
   font-size: 15px;
-  font-family: "RobotoMedium", sans-serif;
+  font-family: "RobotoMedium";
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 500;
 }
 .main_menu .sf-menu a:hover {
   color: #1dd2af;
@@ -200,11 +200,15 @@ img {
 }
 .search_menu a {
   color: #2c3e50;
-  margin-top: 10px;
+  display: block;
 }
 .search_menu a:hover {
   color: #1dd2af;
-  transition: all 0.4s ease;
+  transition: color 0.4s;
+}
+.search_menu:hover {
+  border-color: #1dd2af;
+  transition: border 0.4s;
 }
 /* slider */
 .slider {
@@ -268,6 +272,7 @@ img {
   text-align: left;
   color: #ffffff;
   margin-right: 28px;
+  font-weight: 500;
 }
 .slider-btn > a:hover {
   background-color: #1dd2af;
@@ -424,6 +429,7 @@ img {
   font-family: "RobotoRegular";
   font-size: 19px;
   color: #9dafc0;
+  line-height: 2.9;
 }
 .SingEventCategory span:hover {
   color: #1dd2af;
@@ -534,6 +540,7 @@ footer {
   line-height: 2.32;
   text-align: left;
   color: #1dd2af;
+  cursor: default;
 }
 .Newslatter p {
   font-family: "RobotoRegular";
@@ -683,8 +690,12 @@ footer {
 /* PAGES CASS STYLE  PAGES CASS STYLE PAGES CASS STYLE PAGES CASS STYLE PAGES CASS STYLE */
 /* error 404 */
 .error_page {
-  flex: 1;
-  padding-top: 50px;
+  text-align: center;
+  padding-top: 250px;
+}
+.error_page p{
+  display: inline;
+  margin: 10px;
 }
 .error_page h2 {
   font-size: 28px;
@@ -729,6 +740,7 @@ h2.post_title{
   font-size: 26px;
   margin-top: 30px;
   margin-bottom: 10px;
+  cursor: default;
 }
 .post_title a:hover{
   text-decoration: none;
@@ -854,6 +866,12 @@ h2.post_title{
 .CommentsToEventPage{
   margin-bottom: 20px;
 }
+.CommentsToEventPage h4{
+  padding-top: 15px;
+  text-align: center;
+  font-family: "RobotoRegular" ,serif;
+  color: rgb(54, 50, 50);
+}
 .CommentsToEventPage label{
   font-family: "RobotoRegular";
   color: gray;
@@ -890,6 +908,8 @@ h2.post_title{
 .sidebar_my h3{
   padding-top: 20px;
   padding-bottom: 20px;
+  cursor: default;
+  font-size: 25px;
 }
 .sidebareventsmall{
   padding-bottom: 20px;
@@ -1042,4 +1062,31 @@ h2.post_title{
 .catagory_event_list_singl a:hover{
   text-decoration: none;
   color: #1dd2af;
+}
+/* calendar sidebar */
+#calendar2 {
+  width: 250px;
+  line-height: 2em;
+  font-size: 15px;
+  text-align: center;
+}
+#calendar2 thead tr:last-child {
+  font-size: small;
+  color: rgb(85, 85, 85);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+  color: rgb(50, 50, 50);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+#calendar2 tbody td {
+  color: rgb(44, 86, 122);
+}
+#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+  color: rgb(231, 140, 92);
+}
+#calendar2 tbody td.today {
+  background: rgb(220, 0, 0);
+  color: #fff;
 }

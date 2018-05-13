@@ -1,4 +1,5 @@
 <?php
+// menu active
 function activemenu($activemenu)
 {
     $menuitem = basename($_SERVER['SCRIPT_NAME']);
@@ -53,7 +54,7 @@ function activemenu($activemenu)
                   <li><a id="log_mob" data-toggle="modal" data-target="#CustomerModal" href="#">Вхід</a></li>
                   </li>
                   <li><a <?=activemenu("location.php")?> href="../pages/location">Місця</a></li>
-                  <li><a <?=activemenu("news.php")?> href="../pages/news">Новини</a></li>
+                  <li><a <?=activemenu("news.php")?> href="../pages/news">Блог</a></li>
                   <li><a <?=activemenu("moreinfo.php")?> href="../pages/moreinfo">Інше</a></li>
                 </ul>
                 <div class="search_menu">

@@ -7,7 +7,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>COLEVENTS - Сайт з виховноі роботи та органцізації заходів</title>
+	<title>COLEVENTS - 404 помилка</title>
 	<meta name="description" content="Site for educational work and organization of events" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,15 +24,12 @@
 	<link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
 </head>	
 <body>
-<header class="top_header">
-	<?php include("../include/header.php") ?>
-</header>
     <div class="error_page">
           <div class="container">
               <h2>Помилка: <span>404</span></h2>
               <h4>Вибачте, такої сторінки чи запиту не їснує.</h4>
               <p><a href="../index">Перейти на головну</a></p>
-              <p><a href="#">Дивитися місця заходів</a></p>
+              <p><a href="../pages/location.php">Дивитися місця заходів</a></p>
           </div>          
       </div>
 	<!--[if lt IE 9]>

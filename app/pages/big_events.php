@@ -7,7 +7,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>COLEVENTS - Site for educational work and organization of events</title>
+	<title>COLEVENTS - Заходи</title>
 	<meta name="description" content="Site for educational work and organization of events" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,19 +54,18 @@
                 <div class="LocMap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79486.25876056503!2d31.22049845166032!3d51.49586601793379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d5488971ee3597%3A0x2a2348d3e76038b5!2sChernihiv%2C+Chernihivs&#39;ka+oblast%2C+14039!5e0!3m2!1sen!2sua!4v1525164647573" width="670" height="450" frameborder="0" allowfullscreen></iframe>
                   </div> 
                   <div class="CommentsToEventPage">
+                  <h4>Залиште свій відгук про захід!</h4>
                     <form method="post">
-                      <label>Ім'я:</label><br>
-                      <input type="text" name="coment_input" id="com_inp" required placeholder="Ваше ім'я"><br>
-                      <label>Дата:</label><br>
-                      <input type="text" name="coment_input" disabled placeholder="<?php echo date("F j, Y, g:i a"); ?>" id="date_inp"><br>
-                      <label>Коментар:</label><br>
-                      <textarea name="coment_txtarea" id="coment_txtarea" cols="50" rows="5" required placeholder="Ваш коментар"></textarea><br>
+                      <label>Ваше ім'я:</label><br>
+                      <input type="text" name="coment_input" id="com_inp" required placeholder="ім'я"><br>
+                      <label>Ваш відгук про захід:</label><br>
+                      <textarea name="coment_txtarea" id="coment_txtarea" cols="50" rows="5" required placeholder="Розкажіть щось?"></textarea><br>
                       <button type="submit">Додати</button>
                     </form>
                   </div> 
                   <div class="SharedEvent">
                   <div class="social_button">
-                  <h3>Поділитися з друзями:</h3>
+                  <h4>Поділитися з друзями:</h4>
                   <p><script type="text/javascript">(function() {
                     if (window.pluso)if (typeof window.pluso.start == "function") return;
                     if (window.ifpluso==undefined) { window.ifpluso = 1;
@@ -78,10 +77,6 @@
                     }})();</script>
                     <div class="pluso" data-background="none;" data-options="big,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,tumblr,myspace"></div></p>
                   </div>
-                  <form action="" method="get">
-                  <input class="reg_event_but" type="button" value="Зареєструватися">
-                  <input class="buy_event_but" type="button" value="Придбати білет">
-                  </form>
                   </div>
                 </div>
             </div>

@@ -29,7 +29,8 @@ $green: #1dd2af
 		right: 10px
 	span:last-child
 		text-transform: uppercase
-		color: #ffffff 
+		color: #ffffff
+		font-weight: bold 
 .SearchMenu-Search
 	font-family: "RobotoLight"
 	font-size: 17px
@@ -98,6 +99,14 @@ button
 		width: 200px
 		height: 30px
 		border: 1px solid $gray
+	input[type='date']
+		width: 200px
+		height: 30px
+		border: 1px solid $gray	
+	input[type='tel']
+		width: 200px
+		height: 30px
+		border: 1px solid $gray	
 	label
 		font-family: "RobotoRegular"
 		font-size: 16px
@@ -136,14 +145,15 @@ button
 	background-color: #3a4e61
 .SharedEvent
 	padding-bottom: 30px
-	.reg_event_but, .buy_event_but
-		font-family: "RobotoRegular"
-		font-size: 17px
-		color: #ffffff
-		border: none
-		outline: none
-		background-color: $green
-		padding: 13px
-		cursor: pointer
-	.buy_event_but
-		float: right
+	h4
+ 		font-family: "RobotoRegular" ,serif
+  		color: rgb(54, 50, 50)
+// sorting
+.sorting
+	margin-top: 20px
+	cursor: default
+	a
+		color: grey
+		&:hover
+			color: $green
+			text-decoration: none

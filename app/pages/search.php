@@ -7,7 +7,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>COLEVENTS - Site for educational work and organization of events</title>
+	<title>COLEVENTS - Пошук</title>
 	<meta name="description" content="Site for educational work and organization of events" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +33,7 @@
                 <div class="col-md-12">
                     <div class="FormSearchResult">
 		            <form class="FormRegisterModal" method="post">
-				    <input type="search" name="search" id="search_inp" placeholder="Що бажаэте знайти?">
+				    <input type="search" name="search" pattern="[A-Za-zА-Яа-яЁё]{2,}" id="search_inp" placeholder="Що бажаэте знайти?">
 				    <button type="submit">Шукати</button>
 		            </form>
                     </div>

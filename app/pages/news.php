@@ -7,7 +7,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>COLEVENTS - Site for educational work and organization of events</title>
+	<title>COLEVENTS - Блог</title>
 	<meta name="description" content="Site for educational work and organization of events" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,11 +37,11 @@
         for ($i=0; $i < 5 ; $i++) { 
             echo '<div class="news_content">
             <div class="box_news">
-              <h2 class="post_title"><a href="../pages/big_news">Назва новини Назва новини Назва</a></h2>
+              <h2 class="post_title"><a href="../pages/big_news">Назва статті</a></h2>
               <div class="post_meta">
                 <ul>
                   <li>Admin</li>
-                  <li>Дата додавання новини - 9 dec 2018</li>
+                  <li>Дата додавання статті - 9 dec 2018</li>
                 </ul>
               </div>
               <img class="mini_log" src="../img/news_prev.jpg" alt="post_image">

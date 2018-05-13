@@ -69,8 +69,8 @@
                         <li><a <?=activemenu("index.php")?> href="../index">Головна</a> ::</li>
                         <li><a <?=activemenu("full_calendar.php")?> href="../pages/full_calendar">Календар</a> ::</li>
                         <li><a <?=activemenu("events.php")?> href="../pages/events">Заходи</a> ::</li>
-                        <li><a <?=activemenu("profile.php")?> href="../pages/profile">Місця</a> ::</li>
-                        <li><a <?=activemenu("news.php")?> href="../pages/news">Новини</a> ::</li>
+                        <li><a <?=activemenu("location.php")?> href="../pages/location">Місця</a> ::</li>
+                        <li><a <?=activemenu("news.php")?> href="../pages/news">Блог</a> ::</li>
                         <li><a <?=activemenu("moreinfo.php")?> href="../pages/moreinfo">Інше</a></li>
                     </ul>
                     </div>

@@ -26,43 +26,54 @@
         } ?>
         <h3>Малий календар</h3>
         <div class="sidebareventsmall">
-        <table id="calendar1" style="margin-left:50px;">
+        <table id="calendar2">
   <thead>
-    <tr><td colspan="4"><td colspan="3">
+    <tr><td>‹<td colspan="5"><td>›
     <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
   <tbody>
 </table>
+
 <script>
-var D1 = new Date(),
-    D1last = new Date(D1.getFullYear(),D1.getMonth()+1,0).getDate(), // последний день месяца
-    D1Nlast = new Date(D1.getFullYear(),D1.getMonth(),D1last).getDay(), // день недели последнего дня месяца
-    D1Nfirst = new Date(D1.getFullYear(),D1.getMonth(),1).getDay(), // день недели первого дня месяца
-    calendar1 = '<tr>',
-    month=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"]; // название месяца, вместо цифр 0-11
-// пустые клетки до первого дня текущего месяца
-if (D1Nfirst != 0) {
-  for(var  i = 1; i < D1Nfirst; i++) calendar1 += '<td>';
-}else{ // если первый день месяца выпадает на воскресенье, то требуется 7 пустых клеток 
-  for(var  i = 0; i < 6; i++) calendar1 += '<td>';
+function Calendar2(id, year, month) {
+var Dlast = new Date(year,month+1,0).getDate(),
+    D = new Date(year,month,Dlast),
+    DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+    DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+    calendar = '<tr>',
+    month=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+if (DNfirst != 0) {
+  for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+}else{
+  for(var  i = 0; i < 6; i++) calendar += '<td>';
 }
-// дни месяца
-for(var  i = 1; i <= D1last; i++) {
-  if (i != D1.getDate()) {
-    calendar1 += '<td>' + i;
+for(var  i = 1; i <= Dlast; i++) {
+  if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+    calendar += '<td class="today">' + i;
   }else{
-    calendar1 += '<td id="today">' + i;  // сегодняшней дате можно задать стиль CSS
+    calendar += '<td>' + i;
   }
-  if (new Date(D1.getFullYear(),D1.getMonth(),i).getDay() == 0) {  // если день выпадает на воскресенье, то перевод строки
-    calendar1 += '<tr>';
+  if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+    calendar += '<tr>';
   }
 }
-// пустые клетки после последнего дня месяца
-if (D1Nlast != 0) {
-  for(var  i = D1Nlast; i < 7; i++) calendar1 += '<td>';
+for(var  i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+document.querySelector('#'+id+' tbody').innerHTML = calendar;
+document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+    document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
 }
-document.querySelector('#calendar1 tbody').innerHTML = calendar1;
-document.querySelector('#calendar1 thead td:last-child').innerHTML = D1.getFullYear();
-document.querySelector('#calendar1 thead td:first-child').innerHTML = month[D1.getMonth()];
+}
+Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
+// переключатель минус месяц
+document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
+}
+// переключатель плюс месяц
+document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
+}
 </script>
         </div>
     </div>       
