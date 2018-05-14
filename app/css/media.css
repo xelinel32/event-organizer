@@ -86,10 +86,25 @@
   .FooterContent h3 {
     line-height: 1.2;
   }
+  .sidebar_my{
+    display: none;
+  }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .FooterSocial{
+    display: none;
+  }
+  .Newslatter p {
+    display: none;
+  }
+  .sorting {
+    text-align: center;
+  }
+  .slider-btn > a {
+    padding: 15px 10px;
+  }
   .slider-btn {
     margin-left: 30px;
   }

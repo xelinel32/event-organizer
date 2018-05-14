@@ -32,11 +32,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="FormSearchResult">
-		            <form class="FormRegisterModal" method="post">
-				    <input type="search" name="search" pattern="[A-Za-zА-Яа-яЁё]{2,}" id="search_inp" placeholder="Що бажаэте знайти?">
-				    <button type="submit">Шукати</button>
-		            </form>
-                    </div>
+						<h5>Результати пошуку</h5>		
                 </div>
             </div>
         </div>
