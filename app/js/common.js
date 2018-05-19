@@ -50,4 +50,16 @@ $(document).ready(function() {
     $("html, body").animate({ scrollTop: 0 }, 300);
     return false;
   });
+  //Кнопка "Наверх для правой кнопки".
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 500) {
+      $('.up_button img').fadeIn();
+    } else {
+      $('.up_button img').fadeOut();
+    }
+  });
+  $(".up_button img").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, 300);
+    return false;
+  });
 });

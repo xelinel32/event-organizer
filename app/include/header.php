@@ -22,11 +22,11 @@ function activemenu($activemenu)
               <div class="login_contact">
               <p>
                <i class="fa fa-user-o" aria-hidden="true"></i>
-                  <a id="logadm" data-toggle="modal" data-target="#CustomerModal" href="#">Авторизація</a>
+                  <a id="logadm" data-toggle="modal" data-target="#CustomerModal" href="">Авторизація</a>
                 </p>
               <p>
                <i class="fa fa-file-o" aria-hidden="true"></i> Нема аккаунту?
-                  <a data-toggle="modal" data-target="#RegisterModal" href="#">Реєстрація</a>
+                  <a data-toggle="modal" data-target="#RegisterModal" href="">Реєстрація</a>
                 </p>
               <p>
                 <span>
