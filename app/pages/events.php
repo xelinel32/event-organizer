@@ -57,7 +57,7 @@
 					<a href="#">Назва</a>
 				</div>
                 <div class="EventPageBig">
-                <?php for ($i=0; $i < 12; $i++) { 
+                <?php for ($i=0; $i < 8; $i++) { 
 					echo '<div class="EeventPageSmall">
                     <img src="../img/event_page.jpg" alt="logo_event">
                     <p>Назва заходу<br> 
