@@ -37,13 +37,27 @@
 						<span>вибери свій захід та відвідай його в своєму місті</span>
 					</p>
 				</div>
+				<div class="category">
+					<div class="category_prev">
+						<h3>- Категорії -</h3>
+					</div>
+					<div class="category_item">
+						<a href="#">Всі</a>
+						<a href="#">Спорт</a>
+						<a href="#">Музика</a>
+						<a href="#">Подорожі</a>
+						<a href="#">Оліпміади</a>
+						<a href="#">Концерти</a>
+						<a href="#">Весілля</a>
+					</div>
+				</div>
 				<div class="sorting">
 					<span>Сортування:</span>
 					<a href="#">Дата</a> |
 					<a href="#">Назва</a>
 				</div>
                 <div class="EventPageBig">
-                <?php for ($i=0; $i < 16; $i++) { 
+                <?php for ($i=0; $i < 12; $i++) { 
 					echo '<div class="EeventPageSmall">
                     <img src="../img/event_page.jpg" alt="logo_event">
                     <p>Назва заходу<br> 
@@ -51,7 +65,20 @@
                     <a href="../pages/big_events"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
                     </p>
                 </div>';
-                } ?>
+				} ?>
+				 <div class="col-md-12">
+        				<div class="row">
+        					<div class="paginations">
+								<div class="paginations_event_location"> 
+								<a class="active" href="#">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+								</div>
+          					</div>
+        				</div>
+      				</div> 
                 </div>
             </div>
         </div>

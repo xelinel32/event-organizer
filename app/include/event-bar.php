@@ -37,32 +37,32 @@
                 </div>
                     <div class="MoreEventCategory">
                     <div class="SingEventCategory">
-                        <a href="../pages/categories.php"><i class="fa fa-ship" aria-hidden="true"></i>
+                        <a href="../pages/events"><i class="fa fa-ship" aria-hidden="true"></i>
                         <span id="left">Спорт</span>
                     </a>
                      </div>
                      <div class="SingEventCategory">
-                        <a href="../pages/categories.php"><i class="fa fa-car" aria-hidden="true"></i>
+                        <a href="../pages/events"><i class="fa fa-car" aria-hidden="true"></i>
                         <span id="left">Музика</span>
                     </a>
                      </div>
                      <div class="SingEventCategory">
-                         <a href="../pages/categories.php"><i class="fa fa-heart" aria-hidden="true"></i>
+                         <a href="../pages/events"><i class="fa fa-heart" aria-hidden="true"></i>
                          <span id="left">Подорожі</span>
                         </a>
                      </div>
                      <div class="SingEventCategory">
-                            <a href="../pages/categories.php"><i class="fa fa-eercast" aria-hidden="true"></i>
+                            <a href="../pages/events"><i class="fa fa-eercast" aria-hidden="true"></i>
                         <span id="lefti">Олімппіади</span>
                         </a>
                      </div>
                      <div class="SingEventCategory">
-                        <a href="../pages/categories.php"><i class="fa fa-bed" aria-hidden="true"></i>
+                        <a href="../pages/events"><i class="fa fa-bed" aria-hidden="true"></i>
                         <span id="left">Концерти</span>
                     </a>
                      </div>
                      <div class="SingEventCategory">
-                        <a href="../pages/categories.php"><i class="fa fa-safari" aria-hidden="true"></i>
+                        <a href="../pages/events"><i class="fa fa-safari" aria-hidden="true"></i>
                         <span id="left">Весілля</span>
                     </a>
                      </div>

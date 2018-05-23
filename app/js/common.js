@@ -31,8 +31,8 @@ $(document).ready(function() {
         content: ["searchfield"]
       },
       searchfield: {
-        noResults: "Sorry, info is missins",
-        placeholder: "Search"
+        noResults: "Вибачте, в меню нічого немає",
+        placeholder: "Пошук..."
       }
     });
 
