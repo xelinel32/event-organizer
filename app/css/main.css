@@ -1082,4 +1082,5 @@ h2.post_title{
   background-color: #1dd2af;
   color: white;
   text-decoration: none;
+  transition: .6s ease;
 }
