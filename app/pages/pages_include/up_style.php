@@ -8,8 +8,8 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>COLEVENTS - Сайт з виховноі роботи та органцізації заходів</title>
-	<meta name="description" content="Site for educational work and organization of events" />
+	<title>COLEVENTS - Сайт для організації виховної роботи навчального закладу</title>
+	<meta name="description" content="Сайт для організації виховної роботи навчального закладу" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" href="../img/favicon.ico" />

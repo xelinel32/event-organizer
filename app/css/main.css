@@ -31,6 +31,7 @@ img {
 .header_topline a:hover {
   color: #1dd2af;
   text-decoration: none;
+  transition: .4s ease;
 }
 .header_topline a {
   font-family: "RobotoRegular", sans-serif;
@@ -422,6 +423,7 @@ img {
 .SingEventCategory a:hover {
   color: #1dd2af;
   text-decoration: none;
+  transition: .4s ease;
 }
 .SingEventCategory span {
   position: absolute;
@@ -433,6 +435,7 @@ img {
 }
 .SingEventCategory span:hover {
   color: #1dd2af;
+  transition: .4s ease;
 }
 #left {
   margin-left: 10px;
@@ -579,8 +582,9 @@ footer {
   cursor: default;
 }
 .LatestNews a:hover{
-  text-decoration: none;
   cursor: pointer;
+  transition: .4s ease;
+  color: #1dd2af;
 }
 .LatestNews span {
   font-family: "RobotoLight";
@@ -606,7 +610,9 @@ footer {
 }
 .Tags a:hover {
   text-decoration: none;
-  color: #1dd2af;
+  color: #ffffff;
+  background: #1dd2af;
+  transition: .5s ease;
 }
 .AddressFoo p {
   font-family: "RobotoRegular";
@@ -630,6 +636,7 @@ footer {
 }
 .FooterSocial a:hover {
   color: #1dd2af;
+  transition: .4s ease;
 }
 #hrev {
   background-color: #394c5f;
@@ -656,6 +663,7 @@ footer {
 .navfoo a:hover {
   text-decoration: none;
   color: #1dd2af;
+  transition: .4s ease; 
 }
 .navfoo .active {
   color: #1dd2af;
@@ -824,12 +832,13 @@ h2.post_title{
   width: 30px;
   border-radius: 4px;
   color: #999999;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 .paginations a:hover{
   text-decoration: none;
   background: #1dd2af;
   color: white;
+  transition: 0.4s ease;
 }
 .paginations .active{
   background: #1dd2af;
@@ -872,7 +881,8 @@ h2.post_title{
 .CommentsToEventPage h4{
   padding-top: 15px;
   text-align: center;
-  font-family: "RobotoRegular" ,serif;
+  font-family: "RobotoLight" ,serif;
+  font-weight: 500;
   color: rgb(54, 50, 50);
 }
 .CommentsToEventPage label{
@@ -1033,7 +1043,7 @@ h2.post_title{
   color: rgb(231, 140, 92);
 }
 #calendar2 tbody td.today {
-  background: rgb(220, 0, 0);
+  background: #1dd2af;
   color: #fff;
 }
 /* up button */
@@ -1083,4 +1093,30 @@ h2.post_title{
   color: white;
   text-decoration: none;
   transition: .6s ease;
+}
+/*rating post*/
+.rating_post_count_comment,.rating h5,.count_comment h5{
+  font-size: 17px;
+  padding: 0;
+  display: inline-block;
+  font-family: "RobotoSlab";
+  font-weight: 100;
+}
+.rating{
+  background: #3a4e61;
+  border-radius: 5px;
+  color: white;
+  padding: 0 10px 0 10px;
+  cursor: default;
+  margin-bottom: 10px;
+}
+.count_comment {
+  background: #3a4e61;
+  border-radius: 5px;
+  color: white;
+  padding: 0 10px 0 10px;
+  cursor: default;
+}
+.count_comment h5, .rating h5{
+  margin-top: 10px;
 }

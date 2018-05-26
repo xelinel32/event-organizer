@@ -15,7 +15,7 @@
 				</div>
 				<div class="category">
 					<div class="category_prev">
-						<h3>- Категорії -</h3>
+						<h3>- Категорії заходів -</h3>
 					</div>
 					<div class="category_item">
 						<a href="#">Всі</a>
@@ -28,7 +28,7 @@
 					</div>
 				</div>
 				<div class="sorting">
-					<span>Сортування:</span>
+					<span>Сортувати заходи:</span>
 					<a href="#">Дата</a> |
 					<a href="#">Назва</a>
 				</div>
