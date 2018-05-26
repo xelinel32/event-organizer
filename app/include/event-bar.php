@@ -43,7 +43,7 @@
                      </div>
                      <div class="SingEventCategory">
                         <a href="../pages/events"><i class="fa fa-car" aria-hidden="true"></i>
-                        <span id="left">Музика</span>
+                        <span id="left">Змагання</span>
                     </a>
                      </div>
                      <div class="SingEventCategory">
@@ -63,7 +63,7 @@
                      </div>
                      <div class="SingEventCategory">
                         <a href="../pages/events"><i class="fa fa-safari" aria-hidden="true"></i>
-                        <span id="left">Весілля</span>
+                        <span id="left">Музика</span>
                     </a>
                      </div>
                 </div>

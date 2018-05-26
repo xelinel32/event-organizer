@@ -20,11 +20,11 @@
 					<div class="category_item">
 						<a href="#">Всі</a>
 						<a href="#">Спорт</a>
-						<a href="#">Музика</a>
+						<a href="#">Змагання</a>
 						<a href="#">Подорожі</a>
 						<a href="#">Оліпміади</a>
 						<a href="#">Концерти</a>
-						<a href="#">Весілля</a>
+						<a href="#">Музика</a>
 					</div>
 				</div>
 				<div class="sorting">

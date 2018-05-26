@@ -56,7 +56,7 @@
       <div class="modal-body">
 	  	<div class="RegisterModal">
 				<h3>Пошук по сайту</h3><br>
-		<form action="../app/pages/search" class="FormRegisterModal" method="post">
+		<form action="" class="FormRegisterModal" method="post">
 				<input type="search" name="search" required placeholder="Що бажаэте знайти?">
 				<button type="submit">Шукати</button>
 		</form>

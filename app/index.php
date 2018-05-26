@@ -1,4 +1,4 @@
-<?php require_once("script/configdb.php") ?>
+<?php require_once("function/configdb.php") ?>
 <?php include("include/up_style.php") ?>
 <body>
 <header class="top_header">
