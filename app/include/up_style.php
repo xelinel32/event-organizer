@@ -11,15 +11,15 @@
 	<meta name="description" content="Сайт для організації виховної роботи навчального закладу" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" href="img/favicon.ico" />
-	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
-	<link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.css" />
-	<link rel="stylesheet" href="css/fonts.css" />
-	<link rel="stylesheet" href="css/main.css" />
-	<link rel="stylesheet" href="css/media.css" />
-	<link rel="stylesheet" href="libs/mobilemenu/jquery.mmenu.all.css" />
-	<link rel="stylesheet" href="libs/superfish/superfish.css" />
-	<link rel="stylesheet" href="libs/superfish/megafish.css" />
-	<link rel="stylesheet" href="css/hard_style.css">
-	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+	<link rel="stylesheet" href="../libs/bootstrap/bootstrap-grid.min.css" />
+	<link rel="stylesheet" href="../libs/font-awesome-4.7.0/css/font-awesome.css" />
+	<link rel="stylesheet" href="../css/fonts.css" />
+	<link rel="stylesheet" href="../css/main.css" />
+	<link rel="stylesheet" href="../css/media.css" />
+	<link rel="stylesheet" href="../libs/mobilemenu/jquery.mmenu.all.css" />
+	<link rel="stylesheet" href="../libs/superfish/superfish.css" />
+	<link rel="stylesheet" href="../libs/superfish/megafish.css" />
+	<link rel="stylesheet" href="../css/hard_style.css">
+	<link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
 </head>

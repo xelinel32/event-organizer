@@ -47,6 +47,9 @@ img {
   float: left;
   margin-left: 2px;
 }
+#logout{
+  margin-left: 10px;
+}
 .login_contact p {
   float: left;
   margin: 0;
@@ -1066,10 +1069,11 @@ h2.post_title{
   box-shadow: 0px 3px 1px 0 rgba(0, 0, 0, 0.25);
 }
 .category_prev{
-  text-align: center;
-  background-color: #3a4e61 ;
+  background-color: #3a4e61;
   height: 40px;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 .category_prev h3{
   font-size: 30px;
@@ -1080,6 +1084,11 @@ h2.post_title{
 .category_item {
   text-align: center;
   margin-top: 20px;
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .category_item a{
   background-color: grey;

@@ -1735,10 +1735,6 @@ html.mm-opening .mm-menu.mm-next {
   border-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.6);
 }
-.mm-menu.mm-theme-white .mm-navbar > *,
-.mm-menu.mm-theme-white .mm-navbar a {
-  color: rgba(0, 0, 0, 0.3);
-}
 .mm-menu.mm-theme-white .mm-navbar .mm-btn:before,
 .mm-menu.mm-theme-white .mm-navbar .mm-btn:after {
   border-color: rgba(0, 0, 0, 0.3);

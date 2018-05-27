@@ -34,7 +34,7 @@
       <div class="modal-body">
 	  	<div class="RegisterModal">
 				<h3>Авторизація на сайті</h3><br>
-		<form class="FormRegisterModal" method="post" action="">
+		<form class="FormRegisterModal" method="post" action="../function/login.php">
 			<label>Логін</label><br>
 			<input type="text" name="username" required placeholder="username"><br>
 			<label>Пароль</label><br>

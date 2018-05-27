@@ -20,17 +20,32 @@ function activemenu($activemenu)
                 <a target="_blank" href="https://plus.google.com/u/0/103334064496844281082"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>  
               </div>
               <div class="login_contact">
+              <?php if(!isset($_SESSION["user"])){ ?>
               <p>
                <i class="fa fa-user-o" aria-hidden="true"></i>
                   <a id="logadm" data-toggle="modal" data-target="#CustomerModal" href="">Авторизація</a>
-                </p>
+              </p>
               <p>
                <i class="fa fa-file-o" aria-hidden="true"></i> Нема аккаунту?
                   <a data-toggle="modal" data-target="#RegisterModal" href="">Реєстрація</a>
                 </p>
-              <p>
+               <?php }else{ ?>
+                <?php $sql = "SELECT * FROM multi_login WHERE id LIMIT 1";  
+                  $rs_result = mysql_query ($sql); 
+                  while($result = mysql_fetch_array($rs_result)){
+                 ?>
+                <p>
+                  Ласкаво просимо <?php echo $_SESSION['user']['user_type'];?> - 
+                  <i class="fa fa-user-o" aria-hidden="true"></i> 
+                  <a id="logadm"  href="../user/user?id=<?php echo $result['id'];?>"><?php echo $_SESSION['user']['username'];?></a>
+                </p>
+                <p>
+                  <i class="fa fa-sign-out" aria-hidden="true"></i>
+                  <a href="../function/logout.php">Вийти</a>
+                </p>
+               <?php }} ?>  
                 <span>
-                    <i class="fa fa-phone" aria-hidden="true"></i> Передзвоніть мені: +380935039351</p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> Передзвоніть мені: +380935039351</p>
                 </span>
               </div>
            </div>
@@ -50,9 +65,7 @@ function activemenu($activemenu)
                 <ul class="sf-menu">
                   <li><a <?=activemenu("index.php")?> href="../index">Головна</a></li>
                   <li><a <?=activemenu("full_calendar.php")?> href="../pages/full_calendar">Календар</a></li>
-                  <li><a <?=activemenu("events.php")?> href="../pages/events">Заходи</a>
-                  <li><a id="log_mob" data-toggle="modal" data-target="#CustomerModal" href="#">Вхід</a></li>
-                  </li>
+                  <li><a <?=activemenu("events.php")?> href="../pages/events">Заходи</a></li>
                   <li><a <?=activemenu("location.php")?> href="../pages/location">Місця</a></li>
                   <li><a <?=activemenu("blog.php")?> href="../pages/blog">Блог</a></li>
                   <li><a <?=activemenu("moreinfo.php")?> href="../pages/moreinfo">Інше</a></li>

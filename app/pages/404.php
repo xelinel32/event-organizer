@@ -8,7 +8,7 @@
               <p><a href="../pages/location.php">Дивитися місця заходів</a></p>
           </div>          
       </div>
-	  <?php include("pages_include/bot_script.php") ?>
+  <?php include("../include/bot_script.php") ?>
 </body>
 	<?php include("../modal_window.php") ?>
 </html>

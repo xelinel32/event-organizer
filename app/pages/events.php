@@ -67,7 +67,7 @@
 <div class="up_button">
     <img src="../img/up.png">
   </div>		
-  <?php include("pages_include/bot_script.php") ?>
+  <?php include("../include/bot_script.php") ?>
 </body>
   <?php include("../modal_window.php") ?>
 </html>

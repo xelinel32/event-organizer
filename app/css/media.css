@@ -92,6 +92,10 @@
   .slider-info h3{
     font-size: 30px;
   }
+  .catagory_event_list_singl{
+    margin: auto;
+    margin-top: 20px;
+  }
 }
 
 /* Extra Small Devices, Phones */

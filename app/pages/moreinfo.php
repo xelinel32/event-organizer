@@ -37,7 +37,7 @@ if (isset ($_POST['message'])) {
 <footer>
 	<?php include("../include/footer.php") ?>
 </footer>	
-<?php include("pages_include/bot_script.php") ?>
+  <?php include("../include/bot_script.php") ?>
 </body>
 	<?php include("../modal_window.php") ?>
 </html>
