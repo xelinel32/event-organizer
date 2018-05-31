@@ -1,9 +1,9 @@
 <?php
 session_start();
 $dbhost = 'localhost';  
-$dbuser = 'root';  
-$dbpass = "";  
-$conn = mysql_connect($dbhost, $dbuser, $dbpass) or die ("Помилка зв'язку з базою даних");  
+$dbuser = 'Xelinel32';  
+$dbpass = "123qaz";  
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die ("Помилка зв'язку з базою даних");  
 $dbname = 'colevents.com.ua';  
-$connection = mysql_select_db($dbname); 
+$connection = mysqli_select_db($conn,$dbname); 
 ?>

@@ -32,7 +32,7 @@
                   <div class="CommentsToEventPage">
                   <h4>Залиште свій відгук про захід!</h4>
                     <form method="post">
-                      <label>Ваше ім'я:</label><br>
+                      <label>Ваше ім'я(логін):</label><br>
                       <input type="text" name="coment_input" id="com_inp" required placeholder="ім'я"><br>
                       <label>Ваш відгук про захід:</label><br>
                       <textarea name="coment_txtarea" id="coment_txtarea" cols="50" rows="5" required placeholder="Розкажіть щось?"></textarea><br>
@@ -54,9 +54,6 @@
                     <div class="pluso" data-background="none;" data-options="big,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,tumblr,myspace"></div></p>
                   </div>
                   <div class="rating_post_count_comment">
-                    <div class="rating">
-                      <h5>Рейтинг цього заходу - </h5><span> *****</span>
-                    </div>
                     <div class="count_comment">
                       <h5>Кількість коментарів для цього заходу - </h5><span> 5 </span>
                     </div>

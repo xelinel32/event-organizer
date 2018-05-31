@@ -11,8 +11,8 @@
           <!-- main -->
           <?php
 	if(isset($_GET['id'])){
-    $sql = mysql_query("SELECT * FROM `blog` WHERE `id` = ".$_GET['id']."") or die("Помилка");
-    while($result = mysql_fetch_array($sql)){
+    $sql = mysqli_query($conn,"SELECT * FROM `blog` WHERE `id` = ".$_GET['id']."") or die("Помилка");
+    while($result = mysqli_fetch_array($sql)){
 ?>
           <div class="news_content">
             <div class="box_news">
@@ -25,21 +25,26 @@
               </div>
               <img class="mini_log" src="<?php echo $result['image_post'];?>" alt="post_image">
               <?php echo $result['big_text_post'];?>
+            <?php }}else{
+            echo "<script>window.location = '404.php';</script>";
+            mysqli_close();} ?>
                <div class="CommentsToEventPage">
-                  <h4>Обсудити цю тему можна за формою нижче!</h4>
-                    <form method="post">
-                      <label>Ваше ім'я:</label><br>
-                      <input type="text" name="coment_input" id="com_inp" required placeholder="ім'я"><br>
+                  <h4>Обсудити цю тему можна за формою нижче!</h4><br>
+                  <?php include('../function/comments_blog_view.php') ?>
+          <?php if(!isset($_SESSION["user"])){ ?>
+            <p style="text-align: center; color: red;">Для того щоб залишати коментарi треба авторизуватись!</p>
+          <?php }else{ ?>
+                    <form method="post"action="../function/comments_blog.php">
+                      <label>Ваше ім'я(логін):</label><br>
+                      <input type="text" name="name" id="com_inp" required value="<?php echo $_SESSION['user']['username'];?>" placeholder="Ім'я"><br>
                       <label>Ваш коментар:</label><br>
-                      <textarea name="coment_txtarea" id="coment_txtarea" cols="50" rows="5" required placeholder="Розкажіть щось?"></textarea><br>
-                      <button type="submit">Додати</button>
+                      <textarea name="text_comment" id="coment_txtarea" cols="50" rows="5" required placeholder="Розкажіть щось?"></textarea><br>
+                      <button name="id_blog" value="<?=$_GET['id']?>" type="submit">Додати</button>
                     </form>
+                  <?php } ?>
                   </div> 
             </div>
           </div>
-          <?php }}else{
-            echo "<script>window.location = '404.php';</script>";
-            mysql_close();} ?>
             </div>
           <!-- Sidebar -->
             <?php include("../include/sidebar.php"); ?>

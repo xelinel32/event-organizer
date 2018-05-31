@@ -30,14 +30,14 @@ function activemenu($activemenu)
                   <a data-toggle="modal" data-target="#RegisterModal" href="">Реєстрація</a>
                 </p>
                <?php }else{ ?>
-                <?php $sql = "SELECT * FROM multi_login WHERE id LIMIT 1";  
-                  $rs_result = mysql_query ($sql); 
-                  while($result = mysql_fetch_array($rs_result)){
+                <?php $sql = "SELECT id FROM multi_login LIMIT 1";  
+                  $rs_result = mysqli_query($conn,$sql); 
+                  while($result = mysqli_fetch_array($rs_result)){
                  ?>
                 <p>
                   Ласкаво просимо <?php echo $_SESSION['user']['user_type'];?> - 
                   <i class="fa fa-user-o" aria-hidden="true"></i> 
-                  <a id="logadm"  href="../user/user?id=<?php echo $result['id'];?>"><?php echo $_SESSION['user']['username'];?></a>
+                  <a id="logadm"  href="../user/user?id=<?php echo $_SESSION['user']['id'];?>"><?php echo $_SESSION['user']['username'];?></a>
                 </p>
                 <p>
                   <i class="fa fa-sign-out" aria-hidden="true"></i>

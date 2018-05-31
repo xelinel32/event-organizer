@@ -36,36 +36,16 @@
                     </p>
                 </div>
                     <div class="MoreEventCategory">
+                <?php $sql_category_events = "SELECT * FROM `category_events` WHERE `id`";  
+                  $result_category_events = mysqli_query($conn,$sql_category_events); 
+                  while($result = mysqli_fetch_array($result_category_events)){
+                 ?>
                     <div class="SingEventCategory">
-                        <a href="../pages/events"><i class="fa fa-ship" aria-hidden="true"></i>
-                        <span id="left">Спорт</span>
+                        <a href="../pages/events?category_events_id=<?php echo $result['id']; ?>"><i  <?php echo $result['category_events_logo'];?>></i>
+                        <span id="left"><?php echo $result['category'];?></span>
                     </a>
                      </div>
-                     <div class="SingEventCategory">
-                        <a href="../pages/events"><i class="fa fa-car" aria-hidden="true"></i>
-                        <span id="left">Змагання</span>
-                    </a>
-                     </div>
-                     <div class="SingEventCategory">
-                         <a href="../pages/events"><i class="fa fa-heart" aria-hidden="true"></i>
-                         <span id="left">Подорожі</span>
-                        </a>
-                     </div>
-                     <div class="SingEventCategory">
-                            <a href="../pages/events"><i class="fa fa-eercast" aria-hidden="true"></i>
-                        <span id="lefti">Олімппіади</span>
-                        </a>
-                     </div>
-                     <div class="SingEventCategory">
-                        <a href="../pages/events"><i class="fa fa-bed" aria-hidden="true"></i>
-                        <span id="left">Концерти</span>
-                    </a>
-                     </div>
-                     <div class="SingEventCategory">
-                        <a href="../pages/events"><i class="fa fa-safari" aria-hidden="true"></i>
-                        <span id="left">Музика</span>
-                    </a>
-                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

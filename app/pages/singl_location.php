@@ -9,13 +9,17 @@
     <div class="row">
       <div class="col-md-8">
           <!-- main -->
+                      <?php
+  if(isset($_GET['id'])){
+    $sql = mysqli_query($conn,"SELECT * FROM `location` WHERE `id` = ".$_GET['id']."") or die("Помилка");
+    while($result = mysqli_fetch_array($sql)){
+?>
 <div class="news_content">
             <div class="box_news">
-              <h2 class="post_title">Місце</h2>
-              <img class="mini_log" src="../img/news_prev.jpg" alt="post_image">
-              <p>Equally, the strengthening and development of the structure allows carrying out important tasks in the development of systems of mass participation. Diverse and rich experience a new model of organizational activity makes it possible to assess the importance of forms of development. On the other hand, the constant information and propaganda support of our activities allows us to carry out important tasks for the development of appropriate conditions for activation. Everyday practice shows that the further development of various forms of activity allows performing important tasks in the development of directions for progressive development. We should not, however, forget that the framework and place of training of personnel contributes to the preparation and implementation of forms of development.</p>
-              <img class="mini_log" src="../img/news_prev.jpg" alt="post_image">
-              <p>The task of the organization, especially the framework and place of training of personnel, is an interesting experiment to verify the systems of mass participation. Equally, the strengthening and development of the structure requires the definition and refinement of the directions of progressive development.</p>
+              <h2 class="post_title"><?php echo $result['title']; ?></h2><br>
+              <img class="mini_log" src="<?php echo $result['image'];?>" alt="post_image">
+              <p><?php echo $result['big_text'];?></p><br>  
+              <p><b>Місце проводження заходу/виховної роботи, знаходиться за адресою - </b>Шевченка 53В</p>
 							<h2 class="post_title">Заходи на це місце:</h2>
 							<ul class="location_event_bit_page">
 								<li><a href="../pages/big_events.php">Олімпіада</a> <span>Date 28.10.2018</span></li>
@@ -26,6 +30,9 @@
 							</ul>
 						</div>
           </div>
+          <?php }} else{
+            echo "<script>window.location = '404.php';</script>";
+            mysqli_close();} ?>
             </div>
           <!-- Sidebar -->
             <?php include("../include/sidebar.php"); ?>

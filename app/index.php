@@ -1,4 +1,4 @@
-<?php require_once("function/configdb.php") ?>
+<?php require_once('function/configdb.php') ?>
 <?php include("include/up_style.php") ?>
 <body>
 <header class="top_header">
@@ -7,7 +7,7 @@
 <div class="main_content">	
 	<?php include("include/main.php") ?>
 	<?php include("include/event-bar.php") ?>
-	<?php include("include/news.php") ?>
+	<?php include("include/comments-block.php") ?>
 </div>
 <footer>
 	<?php include("include/footer.php") ?>

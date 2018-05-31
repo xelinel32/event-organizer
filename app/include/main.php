@@ -58,7 +58,7 @@
 
 <div class="row align-items-center justify-content-center SearchMenuMain">
 
-  <div class="col-lg-1">
+  <div class="col-md-1">
     <div class="SearchMenu-Holidays">
     <p>
       <span>Знайди</span><br>
@@ -66,14 +66,14 @@
     </p>
   </div>
   </div>
-  <div class="col-lg-6">
+  <div class="col-md-6">
     <div class="SearchMenu-Search">
       <form action="" method="post">
-    <p>Назва</p><input type="text" name="dest" required placeholder="  назва заходу">
-    <p>Дата</p><input type="date" name="date" required placeholder="  дата">
+    <input type="text" name="dest" required placeholder="  Назва заходу">
+    <input type="date" name="date" required placeholder="  Дата заходу">
   </div>
   </div>
-  <div class="col-lg-1">
+  <div class="col-md-1">
     <div>
     <button type="submit" value="Submit" class="SearchMenu-Button">Знайти</button>
     </form>

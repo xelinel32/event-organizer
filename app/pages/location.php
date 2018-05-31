@@ -15,28 +15,41 @@
 					<a href="#">Назва</a>
 				</div>
           <div class="catagory_event_list_sort">
-          <?php 
-            for ($i=0; $i < 9; $i++) { 
-              echo '<div class="catagory_event_list_singl">
-              <img src="../img/location.jpg" alt="logo_event">
+                        <?php
+    $limit = 6;  
+    if (isset($_GET["page_loc"])) { $page  = $_GET["page_loc"]; } else { $page=1; };  
+    $start_from = ($page-1) * $limit;  
+    $sql = "SELECT * FROM location WHERE id ORDER BY id ASC LIMIT $start_from, $limit";  
+    $rs_result_location = mysqli_query ($conn,$sql); 
+    while($result = mysqli_fetch_array($rs_result_location)){
+    ?>
+             <div class="catagory_event_list_singl">
+              <img src="<?php echo $result['image'];?>" alt="logo_event">
               <div class="catagory_event_list_desc">
-              <a href="../pages/singl_location.php">Назва місця</a><br>
-                  <span>Опис Опис Опис Опис </span>
+              <a href="../pages/singl_location?id=<?php echo $result['id'];?>"><?php echo $result['title'];?></a><br>
+                  <span><?php echo $result['prev_text'];?></span>
                 </div>
-              </div>';
-            }
-					?>
+              </div>
+          <?php } ?>
 					<div class="col-md-12">
         				<div class="row">
-        					<div class="paginations">
-								<div class="paginations_event_location"> 
-								<a class="active" href="#">1</a>
-								<a href="#">2</a>
-								<a href="#">3</a>
-								<a href="#">4</a>
-								<a href="#">5</a>
-								</div>
-          					</div>
+<?php  
+$sql = "SELECT COUNT(id) FROM location";  
+$rs_result_loc = mysqli_query($conn,$sql);  
+$row = mysqli_fetch_row($rs_result_loc);  
+$total_records = $row[0];  
+$total_pages = ceil($total_records / $limit);  
+$pagLink = "<div class='paginations'>";  
+for ($i=1; $i<=$total_pages; $i++) {
+        if($page == $i) {
+      $pagLink .= "<a href='location?page_loc=".$i."'class = 'active'>".$i."</a>"; 
+      }else{
+      $pagLink .= "<a href='location?page_loc=".$i."'class = 'noactive'>".$i."</a>"; 
+      }  
+};  
+echo $pagLink . "</div>";
+mysqli_close($conn);  
+?>
         				</div>
       				</div> 
           </div>

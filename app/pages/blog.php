@@ -13,9 +13,9 @@
     $limit = 2;  
     if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
     $start_from = ($page-1) * $limit;  
-    $sql = "SELECT * FROM blog WHERE id ORDER BY id ASC LIMIT $start_from, $limit";  
-    $rs_result = mysql_query ($sql); 
-    while($result = mysql_fetch_array($rs_result)){
+    $sql = "SELECT * FROM blog WHERE id ORDER BY date_post ASC LIMIT $start_from, $limit";  
+    $rs_result = mysqli_query ($conn,$sql); 
+    while($result = mysqli_fetch_array($rs_result)){
 ?>
 <div class="news_content">
             <div class="box_news">
@@ -41,20 +41,20 @@
         <div class="row">
 <?php  
 $sql = "SELECT COUNT(id) FROM blog";  
-$rs_result = mysql_query($sql);  
-$row = mysql_fetch_row($rs_result);  
+$rs_result = mysqli_query($conn,$sql);  
+$row = mysqli_fetch_row($rs_result);  
 $total_records = $row[0];  
 $total_pages = ceil($total_records / $limit);  
 $pagLink = "<div class='paginations'>";  
 for ($i=1; $i<=$total_pages; $i++) {
         if($page == $i) {
-      $pagLink .= "<a href='blog.php?page=".$i."'class = 'active'>".$i."</a>"; 
+      $pagLink .= "<a href='blog?page=".$i."'class = 'active'>".$i."</a>"; 
       }else{
-      $pagLink .= "<a href='blog.php?page=".$i."'class = 'noactive'>".$i."</a>"; 
+      $pagLink .= "<a href='blog?page=".$i."'class = 'noactive'>".$i."</a>"; 
       }  
 };  
 echo $pagLink . "</div>";
-mysql_close();  
+mysqli_close($conn);  
 ?>
         </div>
       </div> 

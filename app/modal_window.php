@@ -6,18 +6,24 @@
       <div class="modal-body">
 	  	<div class="RegisterModal">
 	  		<h3>Реєстрація на сайті</h3><br>
-		<form class="FormRegisterModal" method="post" action="">
+		<form class="FormRegisterModal" method="post" action="../function/register.php">
 			<label>Повне ім'я</label><br>
 			<input type="text" name="name_pib" required placeholder="ім'я"><br>
 			<label>Логін</label><br>
 			<input type="text" name="username" required placeholder="username"><br>
 			<label>Пошта</label><br>
 			<input type="email" name="email" required placeholder="example@gmail.com"><br>
+			<label>Вік</label><br>
+			<input type="number" name="age" required placeholder="age"><br>
+			<label>Адреса</label><br>
+			<input type="text" name="adress" required placeholder="adress"><br>
+			<label>Телефон</label><br>
+			<input type="tel" name="tel_number" required placeholder="telephone number"><br>
 			<label>Пароль</label><br>
 			<input type="password" name="password_1" required placeholder="password"><br>
 			<label>Повторіть пароль</label><br>
 			<input type="password" name="password_2" required placeholder="password"><br>
-			<input type="submit" name="register_btn" value="Реєстрація">
+			<input type="submit" id="reg_submit_reg" name="register_btn" value="Реєстрація">
 		</form>
 		<span>Зареєстровані? Перейдіть на <a href="../index.php">Головну</a> та авторизуйтесь.</span>
 		</div>
