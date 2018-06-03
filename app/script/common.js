@@ -26,13 +26,6 @@ $(document).ready(function() {
       ],
       navbar: {
         title: "Меню сайта"
-      },
-      navbars: {
-        content: ["searchfield"]
-      },
-      searchfield: {
-        noResults: "Вибачте, в меню нічого немає",
-        placeholder: "Пошук..."
       }
     });
 

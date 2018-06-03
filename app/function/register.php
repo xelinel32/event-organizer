@@ -9,8 +9,6 @@ if(isset($_POST["register_btn"])){
 	$password_2 = $_POST['password_2'];
 	$name_pib = $_POST['name_pib'];
 	$tel_number = $_POST['tel_number'];
-	$adress = $_POST['adress'];
-	$age = $_POST['age'];
 	$user_type_reg = "Юзер";
 	$image_user = "../img/user.png";
 
@@ -22,7 +20,7 @@ if(isset($_POST["register_btn"])){
 	if($numrows == 0)
 	{	
 	$password = md5($password_1);
-	$sql = "INSERT INTO `multi_login` (`username`, `email`, `password`, `pib`, `phone_number`, `adress`, `age`, `user_type`, `image`) VALUES ('$username','$email', '$password', '$name_pib', '$tel_number', '$adress', '$age', '$user_type_reg', '$image_user')";
+	$sql = "INSERT INTO `multi_login` (`username`, `email`, `password`, `pib`, `phone_number`, `user_type`, `image`) VALUES ('$username','$email', '$password', '$name_pib', '$tel_number', '$user_type_reg', '$image_user')";
 	 // выводим результат если ошибки то ошибку если все ок то даем вход
 	$result = mysqli_query($conn,$sql);
 

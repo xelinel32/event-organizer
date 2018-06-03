@@ -19,14 +19,14 @@
 					</div>
 					<div class="category_item">
 						<a href="#">Всі</a>
-						<a href="#">Спорт</a>
+						<a href="#">Засідання</a>
 						<a href="#">Змагання</a>
 						<a href="#">Подорожі</a>
 						<a href="#">Оліпміади</a>
 						<a href="#">Концерти</a>
-						<a href="#">Музика</a>
+						<a href="#">Екскурсії</a>
 					</div>
-				</div>
+				</div><br>
 				<div class="sorting">
 					<span>Сортувати заходи:</span>
 					<a href="#">Дата</a> |

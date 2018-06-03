@@ -23,20 +23,14 @@
         </div>
     </div>
     <div class="col-sm">
-        <h3>Теги</h3>
-        <div class="Tags">
-        <p>
-            <a data-toggle="modal" data-target="#AdminModal" href="#">Адміністрація</a>
-            <a data-toggle="modal" data-target="#CustomerModal" href="#">Простий Юзер</a>
-            <a data-toggle="modal" data-target="#RegisterModal" href="#">Не зареєстровані?</a>
-            <a href="../pages/moreinfo">Контакти</a>
-            <a href="../index">Теги</a>
-            <a href="../pages/news">Новини</a>
-            <a href="../pages/events">Заходи</a>
-            <a href="#">Чудово</a>
-            <a href="../pages/location">Місце</a>
-            <a href="../pages/my_booking">Мій захід</a>
-</p> 
+        <h3>Нові статті</h3>
+        <div class="LatestNews">
+        <img src="../img/ava.jpg" alt="ava">
+        <b><a href="../pages/big_events.php">Назва статті</a></b>
+            <br><span>December 12:39, 22.05.2018</span>
+            <br><img src="../img/ava.jpg" alt="ava">
+        <b><a href="../pages/big_events.php">Назва статті</a></b>
+            <br><span>December 12:39, 22.05.2018</span>
         </div>
     </div>
     <div class="col-sm">

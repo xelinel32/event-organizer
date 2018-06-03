@@ -5,8 +5,8 @@
             <div class="col-md-12">
                 <div class="SpecialOffers">
                     <p>
-                        <span>Кращі заходи</span><br>
-                        <span>Кращі заходи за 2018 рік!</span>
+                        <span>Найближчі заходи</span><br>
+                        <span>Найближчі заходи у цьому місяці</span>
                     </p>
                 </div>
                 <div class="EventPageBig">
@@ -32,7 +32,7 @@
                     <div class="HolidaysType">
                     <p>
                         <span>Типи заходів</span><br>
-                        <span>Вибери категорію заходу та відпочивай</span>
+                        <span>Вибери категорію заходу та відвідай його</span>
                     </p>
                 </div>
                     <div class="MoreEventCategory">

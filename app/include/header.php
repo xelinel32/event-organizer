@@ -26,7 +26,7 @@ function activemenu($activemenu)
                   <a id="logadm" data-toggle="modal" data-target="#CustomerModal" href="">Авторизація</a>
               </p>
               <p>
-               <i class="fa fa-file-o" aria-hidden="true"></i> Нема аккаунту?
+               <i class="fa fa-file-o" aria-hidden="true"></i> Немає облікового запису?
                   <a data-toggle="modal" data-target="#RegisterModal" href="">Реєстрація</a>
                 </p>
                <?php }else{ ?>

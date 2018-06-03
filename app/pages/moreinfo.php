@@ -5,9 +5,9 @@
 </header>
 <div class="myinfobars">
     <div class="container">
-        <div class="col-md-12">
             <div class="row">
-			 <h3>Інформація про сайт</h3>
+            	<div class="col-md-8">
+            		<div class="box_news">
 			 <div class="inf">
 			 <h1>Юридична інформація:</h1>
 	<p>Наша адреса: 14030, м. Чернігів, вул. Одинцова, 25 | тел. (04622) 3-41-09 - приймальня | телефони для довідок: (0462) 670-207, (0462) 95-55-58, (0462) 67-38-06 | e-mail: ktkt.cnukr.net , chrmtukr.net </p>
@@ -15,14 +15,15 @@
 	<p>Україна, м. Чернігів, Чернігівська область, вул. Одинцова, зал 1, 2-й поверх, д. 20</p>		
 	<h1>Правила для користувачів:</h1>
 	<p>Для того щоб залишати коментарі та відгуки, а також організовувати заходу треба авторизуватись!</p>
-	<h1>Звернутися за допомогою на пошту :</h1>
-<form method="POST" id="forminfo">
+	<h1>Звернутися за допомогою на пошту:</h1>
+<form method="post" id="forminfo">
 	<input type="text" class="infinp" name="name_full" required placeholder="Як вас звуть?"/><br>
 	<input type="email"  class="infinp" name="contact" required placeholder="Вашу електронну адресу?"/><br>
 	<textarea name="message" required rows="5" placeholder="Ваша пропозиція?" /></textarea><br>
 	<input type="submit" value="Надіслати">
 </form>
 	</div>
+</div>
 <?php
 $sitename = "colevents.com.ua";
 if (isset ($_POST['message'])) {
@@ -33,6 +34,9 @@ if (isset ($_POST['message'])) {
 }
 ?><br>
         </div>
+                  <!-- Sidebar -->
+            <?php include("../include/sidebar.php"); ?>
+          <!-- Sidebar -->
         </div>
 	</div>
 </div>	

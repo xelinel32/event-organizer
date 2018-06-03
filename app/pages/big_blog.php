@@ -38,7 +38,7 @@
                       <label>Ваше ім'я(логін):</label><br>
                       <input type="text" name="name" id="com_inp" required value="<?php echo $_SESSION['user']['username'];?>" placeholder="Ім'я"><br>
                       <label>Ваш коментар:</label><br>
-                      <textarea name="text_comment" id="coment_txtarea" cols="50" rows="5" required placeholder="Розкажіть щось?"></textarea><br>
+                      <textarea  width= "100%" max-width="450" name="text_comment" id="coment_txtarea" cols="50" rows="5" required placeholder="Розкажіть щось?"></textarea><br>
                       <button name="id_blog" value="<?=$_GET['id']?>" type="submit">Додати</button>
                     </form>
                   <?php } ?>

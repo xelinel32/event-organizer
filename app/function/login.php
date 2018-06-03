@@ -1,7 +1,5 @@
 <?php
 include 'configdb.php';
-session_start();
-//Getting Input value
 if(isset($_POST['login_btn'])){
   $username=mysqli_real_escape_string($conn,$_POST['username']);
   $password=mysqli_real_escape_string($conn,md5($_POST['password']));

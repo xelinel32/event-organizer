@@ -5,6 +5,9 @@
   .EeventPageSmall {
     margin-top: 10px;
   }
+  .Triq {
+    display: none;
+  }
 }
 /* ipad */
 @media only screen and (max-width: 1024px) {
@@ -30,6 +33,15 @@
   .main_menu {
     margin-left: 40px;
   }
+  .FooterAdress{
+    margin-left: 0;
+  }
+  hr,#hrev{
+    display: none;
+  }
+  footer{
+    height: 473px;
+  }
 }
 
 /* Small Devices, Tablets */
@@ -51,7 +63,7 @@
     margin-top: 0;
   }
   .EventCategory {
-    height: 1700px;
+    height: 700px;
   }
   .SingEventCategory {
     margin-top: 80px;
@@ -62,14 +74,7 @@
   .but_next {
     display: none;
   }
-  .Triq {
-    display: none;
-  }
-  .Tags a {
-    padding: 0;
-    border: none;
-    line-height: 0;
-  }
+
   .CommentEventBlock {
     flex-wrap: wrap;
   }
@@ -95,6 +100,9 @@
   .catagory_event_list_singl{
     margin: auto;
     margin-top: 20px;
+  }
+  .paginations {
+  	margin-top: 40px;
   }
 }
 

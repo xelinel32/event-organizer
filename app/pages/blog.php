@@ -24,6 +24,7 @@
                 <ul>
                   <li><?php echo $result['user_post'];?></li>
                   <li>Дата додавання статті - <?php echo $result['date_post'];?></li>
+                  <li><i style="float:right;" class="fa fa-heart" aria-hidden="true"> 10</i></li>
                 </ul>
               </div>
               <img class="mini_log" src="<?php echo $result['image_post'];?>" alt="post_image">

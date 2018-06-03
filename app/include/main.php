@@ -5,10 +5,10 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../img/travel.jpg" alt="Los Angeles">
+      <img src="../img/travel.jpg">
       <div class="carousel-caption">
-    <div class="slider-info"><h3>Подорожувати - це жити</h3>
-    <p>Вам не потрібна магія зникнути. Все, що вам потрібно, це місце призначення</p>
+    <div class="slider-info"><h3>Відпочивай  з нами</h3>
+    <p>Вибери підходящий захід та відвідай його у своєму місті</p>
     <div class="slider-btn">
         <a href="../pages/location.php">Дивитися місця заходів</a>
         <a href="../pages/moreinfo.php">Контакти</a>
@@ -17,10 +17,10 @@
         </div>
     </div>
     <div class="carousel-item">
-      <img src="../img/travel_1.jpg" alt="Chicago">
+      <img src="../img/travel_1.jpg">
       <div class="carousel-caption">
-    <div class="slider-info"><h3>Подорожувати - це жити</h3>
-    <p>Вам не потрібна магія зникнути. Все, що вам потрібно, це місце призначення</p>
+    <div class="slider-info"><h3>Відпочивай  з нами</h3>
+    <p>Вибери підходящий захід та відвідай його у своєму місті</p>
     <div class="slider-btn">
         <a href="../pages/location.php">Дивитися місця заходів</a>
         <a href="../pages/moreinfo.php">Контакти</a>
@@ -29,10 +29,10 @@
         </div>
     </div>
     <div class="carousel-item">
-      <img src="../img/travel_2.jpg" alt="New York">
+      <img src="../img/travel_2.jpg">
       <div class="carousel-caption">
-    <div class="slider-info"><h3>Подорожувати - це жити</h3>
-    <p>Вам не потрібна магія зникнути. Все, що вам потрібно, це місце призначення</p>
+    <div class="slider-info"><h3>Відпочивай  з нами</h3>
+    <p>Вибери підходящий захід та відвідай його у своєму місті</p>
     <div class="slider-btn">
         <a href="../pages/location.php">Дивитися місця заходів</a>
         <a href="../pages/moreinfo.php">Контакти</a>

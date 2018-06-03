@@ -9,13 +9,8 @@
         <div class="catagory_event_list">
 				<h3>Місця проходження заходів</h3>
 				<p>подивись більше про місця заходів</p>
-				<div class="sorting">
-					<span>Сортувати місця проходження заходів:</span>
-					<a href="#">Дата</a> |
-					<a href="#">Назва</a>
-				</div>
           <div class="catagory_event_list_sort">
-                        <?php
+    <?php
     $limit = 6;  
     if (isset($_GET["page_loc"])) { $page  = $_GET["page_loc"]; } else { $page=1; };  
     $start_from = ($page-1) * $limit;  
@@ -26,8 +21,8 @@
              <div class="catagory_event_list_singl">
               <img src="<?php echo $result['image'];?>" alt="logo_event">
               <div class="catagory_event_list_desc">
-              <a href="../pages/singl_location?id=<?php echo $result['id'];?>"><?php echo $result['title'];?></a><br>
-                  <span><?php echo $result['prev_text'];?></span>
+              <a href="../pages/singl_location?location=<?php echo $result['id'];?>"><?php echo $result['title'];?></a><br>
+                  <span><?php echo $result['pre_text'];?></span>
                 </div>
               </div>
           <?php } ?>
