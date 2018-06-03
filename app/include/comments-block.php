@@ -9,14 +9,18 @@
                     </p>
                 </div>
                 <div class="CommentEventBlock">
-                <?php for ($i=0; $i < 3; $i++) { 
-                    echo '<div class="CommentEventOne">
-                    <p>Нам дуже сподобався цей сервісНам дуже сподобався цей сервісНам дуже сподобався цей сервіс
-                    <br><b>User</b>
-                    <br><span>Дата - 22.08.2018р</span>
+                    <?php 
+                    $sql = "SELECT * FROM comments_event WHERE `id` ORDER BY `date` LIMIT 3";  
+                    $row = mysqli_query($conn,$sql); 
+                    while($result = mysqli_fetch_array($row)){
+                    ?>  
+                    <div class="CommentEventOne">
+                    <p><?php echo $result['text'] ?>
+                    <br><b><?php echo $result['author'] ?></b>
+                    <br><span>Дата - <?php echo $result['date'] ?></span>
                     </p>
-                </div>';
-                } ?>
+                </div>
+            <?php } ?>
                 </div>
             </div>
         </div>

@@ -75,7 +75,7 @@
                       $a = mysqli_query($conn,"SELECT COUNT(1) FROM comments_event WHERE `id` = '$event_comment'");
                       $b = mysqli_fetch_array( $a ); ?>
                       <h5>Кількість коментарів для цього заходу - </h5><span> <?php  echo $b[0]; 
-                      } mysqli_close($conn);?> </span>
+                      } ?> </span>
                     </div>
                   </div>
                   </div>

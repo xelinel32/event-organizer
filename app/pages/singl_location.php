@@ -33,7 +33,7 @@
                 while($result = mysqli_fetch_array($sql)){
                 ?>
 								<li><a href="../pages/big_events?event=<?php echo $result['id']; ?>"><?php echo $result['title']; ?></a> <span><?php echo $result['add_event']; ?></span></li>
-              <?php }} mysqli_close($conn);?>
+              <?php }} ?>
 							</ul>
 						</div>
           </div>

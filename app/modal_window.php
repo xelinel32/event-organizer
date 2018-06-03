@@ -21,7 +21,7 @@
 			<input type="password" name="password_2" required placeholder="password two"><br>
 			<input type="submit" id="reg_submit_reg" name="register_btn" value="Реєстрація">
 		</form>
-		<span>Зареєстровані? Перейдіть на <a href="../index.php">Головну</a> та авторизуйтесь.</span>
+		<span>Зареєстровані? Перейдіть на <a href="../index">Головну</a> та авторизуйтесь.</span>
 		</div>
 		</div>
       </div>
@@ -43,7 +43,7 @@
 			<input type="password" name="password" required placeholder="password"><br>
 			<input type="submit" name="login_btn" value="Увійти">
 		</form>
-		<span>Не зареєстровані? Перейдіть на <a href="../index.php">Головну</a> та зареєструйтесь.</span>
+		<span>Не зареєстровані? Перейдіть на <a href="../index">Головну</a> та зареєструйтесь.</span>
 		</div>
 		</div>
       </div>

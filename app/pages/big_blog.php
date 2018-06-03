@@ -27,7 +27,7 @@
               <?php echo $result['big_text_post'];?>
             <?php }}else{
             echo "<script>window.location = '404.php';</script>";
-            mysqli_close();} ?>
+            } ?>
                <div class="CommentsToEventPage">
                   <h4>Обсудити цю тему можна за формою нижче!</h4><br>
                   <?php include('../function/comments_blog_view.php') ?>

@@ -2,28 +2,36 @@
     <div class="sidebar_my">
         <h3>Випадкові заходи</h3>
         <div class="sidebarevent">
-        <?php for ($i=0; $i < 4; $i++) { 
-            echo '<div class="sidebareventsmall">
-            <img src="../img/sidebar_event_prev.jpg" alt="">
+            <div class="sidebareventsmall">
+            <?php 
+            $sql = "SELECT * FROM events WHERE id ORDER BY RAND() LIMIT 4";  
+            $row = mysqli_query($conn,$sql); 
+            while($result = mysqli_fetch_array($row)){
+            ?>
+            <img src="<?php echo $result['image']; ?>" alt="logo_event">
             <ul>
-                <li><a href="../pages/big_events">Назва заходу</a></li>
-                <li>24.05.2018</li>
-                <li>Місце</li>
+                <li><a href="../pages/big_events?event=<?php echo $result['id']; ?>"><?php echo $result['title']; ?></a></li>
+                <li><?php echo $result['add_event']; ?></li>
+                <li><?php echo $result['text_location']; ?></li>
             </ul>
-        </div>';
-        } ?>
+        <?php } ?>
+        </div>
         </div>
         <h3>Випадкові місця</h3>
-        <?php for ($i=0; $i < 4; $i++) { 
-            echo '<div class="sidebareventsmall">
-            <img src="../img/sidebar_event_prev.jpg" alt="">
+           <div class="sidebareventsmall">
+            <?php 
+            $sql = "SELECT * FROM location WHERE id ORDER BY RAND() LIMIT 4";  
+            $row = mysqli_query($conn,$sql); 
+            while($result = mysqli_fetch_array($row)){
+            ?>
+            <img src="<?php echo $result['image']; ?>" alt="location_event">
             <ul>
-                <li><a href="../pages/singl_location">Назва місця</a></li>
-                <li>Адреса</li>
-                <li>Категорія</li>
+                <li><a href="../pages/singl_location?location=<?php echo $result['id']; ?>"><?php echo $result['title']; ?></a></li>
+                <li><?php echo $result['adress']; ?></li>
+                <li><?php echo $result['cat_loc']; ?></li>
             </ul>
-        </div>';
-        } ?>
+        <?php } ?>
+        </div>
         <h3>Календар</h3>
         <div class="sidebareventsmall">
         <table id="calendar2">

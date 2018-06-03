@@ -14,23 +14,29 @@
     <div class="col-sm">
         <h3>Останні заходи</h3>
         <div class="LatestNews">
-        <img src="../img/ava.jpg" alt="ava">
-        <b><a href="../pages/big_events.php">Назва заходу</a></b>
-            <br><span>December 12:39, 22.05.2018</span>
-            <br><img src="../img/ava.jpg" alt="ava">
-        <b><a href="../pages/big_events.php">Назва заходу</a></b>
-            <br><span>December 12:39, 22.05.2018</span>
+        <?php 
+        $sql = "SELECT * FROM events WHERE id ORDER BY add_event LIMIT 2";  
+        $row = mysqli_query($conn,$sql); 
+        while($result = mysqli_fetch_array($row)){
+        ?>
+        <img src="<?php echo $result['image']; ?>" alt="ava">
+        <b><a href="../pages/big_events?event=<?php echo $result['id']; ?>"><?php echo $result['title']; ?></a></b>
+            <br><span><?php echo $result['add_event'] ?></span><br>
+        <?php } ?>  
         </div>
     </div>
     <div class="col-sm">
         <h3>Нові статті</h3>
         <div class="LatestNews">
-        <img src="../img/ava.jpg" alt="ava">
-        <b><a href="../pages/big_events.php">Назва статті</a></b>
-            <br><span>December 12:39, 22.05.2018</span>
-            <br><img src="../img/ava.jpg" alt="ava">
-        <b><a href="../pages/big_events.php">Назва статті</a></b>
-            <br><span>December 12:39, 22.05.2018</span>
+        <?php 
+        $sql = "SELECT * FROM blog WHERE id ORDER BY date_post LIMIT 2";  
+        $row = mysqli_query($conn,$sql); 
+        while($result = mysqli_fetch_array($row)){
+        ?>   
+        <img src="<?php echo $result['image_post']; ?>" alt="ava">
+        <b><a href="../pages/big_blog?id=<?php echo $result['id']; ?>"><?php echo $result['title_post']; ?></a></b>
+            <br><span><?php echo $result['date_post']; ?></span><br>
+        <?php } ?>
         </div>
     </div>
     <div class="col-sm">

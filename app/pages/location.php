@@ -42,8 +42,7 @@ for ($i=1; $i<=$total_pages; $i++) {
       $pagLink .= "<a href='location?page_loc=".$i."'class = 'noactive'>".$i."</a>"; 
       }  
 };  
-echo $pagLink . "</div>";
-mysqli_close($conn);  
+echo $pagLink . "</div>";  
 ?>
         				</div>
       				</div> 

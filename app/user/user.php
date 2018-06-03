@@ -38,13 +38,16 @@ if($_SESSION['user']['user_type']=='Адміністрація'){
     <li>Тип облікового запису - <span><?php echo $result['user_type']; ?></li>
     </ul>
   </div>
+  <div class="panel_user">
+      <h3>Панель керування</h3>
+  </div>
     <?php }} else {
       echo "<script>location='../pages/404'</script>";
-    }mysqli_close($conn); ?>
+    }?>
           </div>
           </div>
             </div>
-                        </div>
+              </div>
           <!-- Sidebar -->
             <?php include("../include/sidebar.php"); ?>
           <!-- Sidebar -->

@@ -9,3 +9,4 @@
   	<script src="../libs/mobilemenu/jquery.mmenu.min.all.js"></script>
 	<script src="../script/common.js"></script>
   	<script src="../libs/bootstrap/bootstrap.min.js"></script>
+  	<?php mysqli_close($conn); ?>

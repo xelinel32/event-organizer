@@ -10,15 +10,19 @@
                     </p>
                 </div>
                 <div class="EventPageBig">
-                <?php for ($i=0; $i < 4; $i++) { 
-                    echo '<div class="EeventPageSmall">
-                    <img src="../img/event_page.jpg" alt="logo_event">
-                    <p>Назва заходу<br> 
-                    <span>Місце заходу</span>
-                    <a href="../pages/big_events"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <?php 
+                    $sql = "SELECT * FROM events WHERE `id` ORDER BY `add_event` LIMIT 4";  
+                    $row = mysqli_query($conn,$sql); 
+                    while($result = mysqli_fetch_array($row)){
+                    ?>  
+                    <div class="EeventPageSmall"> 
+                    <img src="<?php echo $result['image']; ?>" alt="logo_event">
+                    <p><?php echo $result['title']; ?><br> 
+                    <span><?php echo $result['text_location']; ?></span>
+                    <a href="../pages/big_events?event=<?php echo $result['id']; ?>"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
                     </p>
-                </div>';
-                } ?>
+                </div>
+                <?php } ?>
                 </div>
             </div>
         </div>
