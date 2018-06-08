@@ -104,6 +104,12 @@
   .paginations {
   	margin-top: 40px;
   }
+  .EventCategory {
+    display: none;
+  }
+  .AddressFoo p {
+    line-height: 1.5;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -113,9 +119,6 @@
   }
   .Newslatter p {
     display: none;
-  }
-  .sorting {
-    text-align: center;
   }
   .slider-btn > a {
     padding: 15px 10px;
@@ -165,6 +168,9 @@
     transform: translate(0px, 0px);
   }
   #log_mob{
+    display: none;
+  }
+  #cat_event_menu {
     display: none;
   }
 }

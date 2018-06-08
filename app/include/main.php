@@ -68,7 +68,7 @@
   </div>
   <div class="col-md-6">
     <div class="SearchMenu-Search">
-      <form action="" method="post">
+      <form action="../pages/search.php" method="get">
     <input type="text" name="dest" required placeholder="  Назва заходу">
     <input type="date" name="date" required placeholder="  Дата заходу">
   </div>

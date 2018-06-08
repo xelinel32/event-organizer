@@ -15,5 +15,6 @@ if($_SESSION['user']['user_type']=='Юзер'){
 <link rel="stylesheet" href="style.css" type="text/css"/>
 <div id="profile">
 <h2>Ваше ім'я: <?php echo $_SESSION['user']['username'];?> та роль :<?php echo $_SESSION['user']['user_type'];?></h2>
+<a href="../index">Головна</a>
 <div id="logout"><a href="../function/logout">Вийти</a></div>
 </div>

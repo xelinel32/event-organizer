@@ -25,7 +25,7 @@ if(isset($_POST['login_btn'])){
   header('location:../index');
   break;
   case 'Адміністрація':
-  header('location:../admin/admin');
+  header('location:../index');
   break;
  }
  }else{

@@ -4,17 +4,17 @@ include 'configdb.php';
 if(isset($_POST["register_btn"])){ 
 
 	$email = $_POST['email'];
-    $username = $_POST['username'];
-	$password_1 = $_POST['password_1'];
-	$password_2 = $_POST['password_2'];
-	$name_pib = $_POST['name_pib'];
+    $username = mysqli_real_escape_string($conn,$_POST['username']);
+	$password_1 = mysqli_real_escape_string($conn,$_POST['password_1']);
+	$password_2 = mysqli_real_escape_string($conn,$_POST['password_2']);
+	$name_pib = mysqli_real_escape_string($conn,$_POST['name_pib']);
 	$tel_number = $_POST['tel_number'];
 	$user_type_reg = "Юзер";
 	$image_user = "../img/user.png";
 
 	if ($password_1 == $password_2) {
 
-	$query = mysqli_query($conn,"SELECT * FROM `multi_login` WHERE `username`='".$username."'") or die(mysql_error($conn)); // заносим значения в базу
+	$query = mysqli_query($conn,"SELECT * FROM `multi_login` WHERE `username`='".$username."'") or die(mysqli_error($conn)); // заносим значения в базу
 	$numrows=mysqli_num_rows($query);
 
 	if($numrows == 0)

@@ -20,8 +20,8 @@
               <h2 class="post_title"><?php echo $result['title']; ?></h2>
               <div class="post_meta">
                 <ul>
-                  <li><?php echo $result['text_category']; ?></li>
-                  <li><?php echo $result['post_event']; ?></li>
+                  <li><a href="../pages/events?category_events_id=<?php echo $result['id_cat_event'] ?>"><?php echo $result['text_category']; ?></a></li>
+                  <li><a href="../user/user.php?id=<?php echo $result['id_user'] ?>"><?php echo $result['post_event']; ?></a></li>
                   <li>Початок заходу - <?php echo $result['start_event']; ?></li>
                   <li>Кінець заходу - <?php echo $result['end_event']; ?></li>
                   <li>Додано захід - <?php echo $result['add_event']; ?></li>
@@ -72,9 +72,9 @@
                       <?php 
                       if(isset($_GET['event'])){
                       $event_comment = $_GET['event'];
-                      $a = mysqli_query($conn,"SELECT COUNT(1) FROM comments_event WHERE `id` = '$event_comment'");
+                      $a = mysqli_query($conn,"SELECT COUNT(1) FROM comments_event WHERE `id_events` = '$event_comment'");
                       $b = mysqli_fetch_array( $a ); ?>
-                      <h5>Кількість коментарів для цього заходу - </h5><span> <?php  echo $b[0]; 
+                      <h5>Кількість відгуків для цього заходу - </h5><span> <?php  echo $b[0]; 
                       } ?> </span>
                     </div>
                   </div>

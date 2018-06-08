@@ -66,6 +66,16 @@ function activemenu($activemenu)
                   <li><a <?=activemenu("index.php")?> href="../index">Головна</a></li>
                   <li><a <?=activemenu("full_calendar.php")?> href="../pages/full_calendar">Календар</a></li>
                   <li><a <?=activemenu("events.php")?> href="../pages/events">Заходи</a></li>
+                  <li><a id="cat_event_menu" <?=activemenu("events.php")?> href="../pages/events">Категорії</a>
+                  <ul class="submenu">
+                <?php $sql_category_events = "SELECT * FROM `category_events` WHERE `id`";  
+                  $result_category_events = mysqli_query($conn,$sql_category_events); 
+                  while($result = mysqli_fetch_array($result_category_events)){
+                 ?>
+                     <li><a <?=activemenu("events.php")?> href="../pages/events?category_events_id=<?php echo $result['id']; ?>"><?php echo $result['category'];?></a></li>
+                <?php } ?>
+                  </ul>
+                  </li>
                   <li><a <?=activemenu("location.php")?> href="../pages/location">Місця</a></li>
                   <li><a <?=activemenu("blog.php")?> href="../pages/blog">Блог</a></li>
                   <li><a <?=activemenu("moreinfo.php")?> href="../pages/moreinfo">Інше</a></li>

@@ -5,7 +5,7 @@
                 <div class="HappyClients">
                     <p>
                         <span>Задоволені клієнти</span><br>
-                        <span>Розкажіть як ви любите наш сервіс!</span>
+                        <span>Останні відгуки за цей місяць</span>
                     </p>
                 </div>
                 <div class="CommentEventBlock">

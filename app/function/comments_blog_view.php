@@ -6,7 +6,7 @@ include 'configdb.php';
 	$sql = mysqli_query($conn,$sqlquery) or die(mysqli_error());
 	while($row = mysqli_fetch_array($sql)){
 ?>
-		<i class="fa fa-user-o" aria-hidden="true"></i> Автор - <b><?php echo $row['author']; ?> 
+		<i class="fa fa-user-o" aria-hidden="true"></i> Автор - <a style="color:black;text-decoration:none;" href="../user/user?id=<?php echo $row['id_user']; ?>"><b><?php echo $row['author']; ?> </a>	
 	<?php if($row['comments_user_type'] =='Юзер'){ ?>
 		(<i style = "color: blue;"><?php echo $row['comments_user_type']; ?></i>)</b> 
 	<?php } else { ?>

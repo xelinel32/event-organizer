@@ -10,7 +10,7 @@
                 <div class="SpecialOffers">
                     <p>
                         <span>Всі заходи</span><br>
-						<span>вибери свій захід та відвідай його в своєму місті</span>
+						<span>Вибери свій захід та відвідай його в своєму місті</span>
 					</p>
 				</div>
 				<div class="category">
@@ -18,39 +18,61 @@
 						<h3>- Категорії заходів -</h3>
 					</div>
 					<div class="category_item">
-						<a href="#">Всі</a>
-						<a href="#">Засідання</a>
-						<a href="#">Змагання</a>
-						<a href="#">Подорожі</a>
-						<a href="#">Оліпміади</a>
-						<a href="#">Концерти</a>
-						<a href="#">Екскурсії</a>
+				<?php $sql_category_events = "SELECT * FROM `category_events` WHERE `id`";  
+                  $result_category_events = mysqli_query($conn,$sql_category_events); 
+                  while($result = mysqli_fetch_array($result_category_events)){
+                 ?>
+					<a href="events?category_events_id=<?php echo $result['id']; ?>"><?php echo $result['category']; ?></a>
+				<?php } ?>
+					<a href="events">Всі заходи</a>		
 					</div>
 				</div><br>
-				<div class="sorting">
-					<span>Сортувати заходи:</span>
-					<a href="#">Дата</a> |
-					<a href="#">Назва</a>
-				</div>
                 <div class="EventPageBig">
-                <?php for ($i=0; $i < 8; $i++) { 
-					echo '<div class="EeventPageSmall">
-                    <img src="../img/event_page.jpg" alt="logo_event">
-                    <p>Назва заходу<br> 
-					<span>Опис заходу</span>
-                    <a href="../pages/big_events"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+				<?php
+				$limit = 8;  
+				if (isset($_GET["page"])) { 
+				$page  = $_GET["page"]; 
+				} else { $page=1; $ideventcat = $_GET['category_events_id'];};  
+				$start_from = ($page-1) * $limit; 
+				if(!empty($ideventcat)){ 
+				$sql = "SELECT * FROM `events` WHERE `id_cat_event` = '$ideventcat' ORDER BY `add_event` ASC LIMIT $start_from, $limit";
+				}else {
+				$sql = "SELECT * FROM `events` WHERE `id` ORDER BY `add_event` ASC LIMIT $start_from, $limit";
+				}  
+				$rs_result = mysqli_query ($conn,$sql); 
+				while($g_result = mysqli_fetch_array($rs_result)){
+				?>
+				<div class="EeventPageSmall">
+                    <img src="<?php echo $g_result['image'] ?>" alt="logo_event">
+                    <p><?php echo $g_result['title'] ?><br> 
+					<span><?php echo $g_result['pre_event'] ?></span>
+                    <a href="../pages/big_events?event=<?php echo $g_result['id'] ?>"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
                     </p>
-                </div>';
-				} ?>
+                </div>
+            <?php } ?>
 				 <div class="col-md-12">
         				<div class="row">
         					<div class="paginations">
-								<div class="paginations_event_location"> 
-								<a class="active" href="#">1</a>
-								<a href="#">2</a>
-								<a href="#">3</a>
-								<a href="#">4</a>
-								<a href="#">5</a>
+			<?php
+			if(!empty($ideventcat)){   
+				$sql = "SELECT COUNT(id) FROM `events` WHERE `id_cat_event` = '$ideventcat'";
+			}else{
+				$sql = "SELECT COUNT(id) FROM `events` WHERE id";
+				}	  
+				$rs_result = mysqli_query($conn,$sql);  
+				$row = mysqli_fetch_row($rs_result);  
+				$total_records = $row[0];  
+				$total_pages = ceil($total_records / $limit);  
+				$pagLink = "<div class='paginations_event_location'>";  
+				for ($i=1; $i<=$total_pages; $i++) {
+				        if($page == $i) {
+				      $pagLink .= "<a href='events?page=".$i."'class = 'active'>".$i."</a>"; 
+				      }else{
+				      $pagLink .= "<a href='events?page=".$i."'class = 'noactive'>".$i."</a>"; 
+				      }  
+				};  
+				echo $pagLink . "</div>";  
+			?>
 								</div>
           					</div>
         				</div>
@@ -59,7 +81,6 @@
             </div>
         </div>
     </div>
-</div>
 <!-- nav --> 
 <footer>
 	<?php include("../include/footer.php") ?>

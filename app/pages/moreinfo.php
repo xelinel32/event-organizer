@@ -14,7 +14,7 @@
 		<h1>Наш Офіс:</h1>
 	<p>Україна, м. Чернігів, Чернігівська область, вул. Одинцова, зал 1, 2-й поверх, д. 20</p>		
 	<h1>Правила для користувачів:</h1>
-	<p>Для того щоб залишати коментарі та відгуки, а також організовувати заходу треба авторизуватись!</p>
+	<p>Для того щоб залишати коментарі та відгуки, а також організовувати заходи треба авторизуватись!</p>
 	<h1>Звернутися за допомогою на пошту:</h1>
 <form method="post" id="forminfo">
 	<input type="text" class="infinp" name="name_full" required placeholder="Як вас звуть?"/><br>
@@ -30,7 +30,7 @@ if (isset ($_POST['message'])) {
   mail ("bombopedroua@gmail.com",
         "Вам прийшло нове повідомлення з вашого сайту : ".$sitename,
         "\nПовне iм'я: ".$_POST['name_full']."\nEmail: ".$_POST['contact']."\nПовідомлення: ".$_POST['message']);
-  echo "<div style='color:green'>Повідомлення успішно відправлено!<br><a style='color:red; text-decoration:none' href='moreinfo.php?f=news&mod=add'>Оновити</a><br></div>";
+  echo "<script>alert('Повідомлення успішно відправлено!')</script>";
 }
 ?><br>
         </div>

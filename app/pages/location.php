@@ -8,7 +8,7 @@
       <div class="col-md-12">
         <div class="catagory_event_list">
 				<h3>Місця проходження заходів</h3>
-				<p>подивись більше про місця заходів</p>
+				<p>Детальніше про місця проходження заходів</p>
           <div class="catagory_event_list_sort">
     <?php
     $limit = 6;  

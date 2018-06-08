@@ -32,6 +32,20 @@
             </ul>
         <?php } ?>
         </div>
+        <h3>Випадкові статті</h3>
+           <div class="sidebareventsmall">
+            <?php 
+            $sql = "SELECT * FROM blog WHERE id ORDER BY RAND() LIMIT 4";  
+            $row = mysqli_query($conn,$sql); 
+            while($result = mysqli_fetch_array($row)){
+            ?>
+            <img src="<?php echo $result['image_post']; ?>" alt="location_event">
+            <ul>
+                <li><a href="../pages/big_blog?id=<?php echo $result['id']; ?>"><?php echo $result['title_post']; ?></a></li><br>
+                <li><?php echo $result['date_post']; ?></li>
+            </ul>
+        <?php } ?>
+        </div>
         <h3>Календар</h3>
         <div class="sidebareventsmall">
         <table id="calendar2">

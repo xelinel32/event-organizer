@@ -22,7 +22,7 @@
               <h2 class="post_title"><a href="big_blog?id=<?php echo $result['id'];?>"><?php echo $result['title_post'];?></a></h2>
               <div class="post_meta">
                 <ul>
-                  <li><?php echo $result['user_post'];?></li>
+                  <li><a href="../user/user.php?id=<?php echo $result['id_user'] ?>"><?php echo $result['user_post'];?></a></li>
                   <li>Дата додавання статті - <?php echo $result['date_post'];?></li>
                 </ul>
               </div>

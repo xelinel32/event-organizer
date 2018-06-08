@@ -20,7 +20,7 @@
               <h2 class="post_title"><?php echo $result['title']; ?></h2><br>
               <img class="mini_log" src="<?php echo $result['image'];?>" alt="post_image">
               <p><?php echo $result['big_text'];?></p><br>  
-              <p><b>Місце проводження заходу/виховної роботи, знаходиться за адресою - </b>Шевченка 53В</p>
+              <p><b>Дивитись адресу на Google карті - </b><a style="color: red;" target="_blank" href="<?php echo $result['loc_url']; ?>"><?php echo $result['adress']; ?></a></p>
             <?php }} else {
             echo "<script>window.location = '404.php';</script>";
             } ?> 

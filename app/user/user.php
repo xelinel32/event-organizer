@@ -1,13 +1,9 @@
 <?php
 include '../function/configdb.php';
-//Checking User Logged or Not
-if(empty($_SESSION['user'])){
- header('location:../pages/404');
-}
 //Restrict admin to Access user.php page
-if($_SESSION['user']['user_type']=='Адміністрація'){
- header('location:../admin/admin');
-}
+// if($_SESSION['user']['user_type']=='Адміністрація'){
+//  header('location:../admin/admin');
+// }
 ?>
 <?php include("../include/up_style.php") ?>
 <body>
@@ -38,12 +34,47 @@ if($_SESSION['user']['user_type']=='Адміністрація'){
     <li>Тип облікового запису - <span><?php echo $result['user_type']; ?></li>
     </ul>
   </div>
-  <div class="panel_user">
-      <h3>Панель керування</h3>
-  </div>
     <?php }} else {
       echo "<script>location='../pages/404'</script>";
     }?>
+    <?php if($_SESSION['user']['id'] !== $_GET['id']){ ?>
+    <?php } else { ?>
+    <div class="panel_user">
+      <h3>Панель керування</h3>
+      <?php if($_SESSION['user']['user_type']=='Адміністрація'){ ?>
+      <a href="../admin/admin">перейти до панелі адміністратора</a> 
+      <?php } else { ?>
+   <div class="my_events_user"> 
+     <b>Мої заходи</b>   
+      <?php $results = mysqli_query($conn, "SELECT * FROM `events` WHERE `id_user` = ".$_SESSION['user']['id'].""); ?>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Назва</th>
+      <th>Скор. опис</th>
+      <th>Адреса</th>
+      <th>Категорія</th>
+    </tr>
+  </thead>
+  <?php while ($row = mysqli_fetch_array($results)) { ?>
+    <tr>
+      <td><a href="../pages/big_events?event=<?php echo $row['id']; ?>"><?php echo $row['title']; ?></a></td>
+      <td><?php echo $row['pre_event']; ?></td>
+      <td><a href="../pages/singl_location?location=<?php echo $row['id_loc_event']; ?>"><?php echo $row['text_location']; ?></a></td>
+      <td><a href="../pages/events?category_events_id=<?php echo $row['id_cat_event']; ?>"><?php echo $row['text_category']; ?></a></td>
+    </tr>
+  <?php } ?>
+</table>
+</div>
+    <div class="operation_profile">
+      <b>Операції з профілем</b> 
+    <form action="" method="GET">
+        <button type="submit">Видалити профіль</button>
+    </form>
+    </div>
+     <?php } ?> 
+    </div>
+    <?php } ?>
           </div>
           </div>
             </div>

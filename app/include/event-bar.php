@@ -6,7 +6,7 @@
                 <div class="SpecialOffers">
                     <p>
                         <span>Найближчі заходи</span><br>
-                        <span>Найближчі заходи у цьому місяці</span>
+                        <span>Останні заходи за цей місяць</span>
                     </p>
                 </div>
                 <div class="EventPageBig">
@@ -18,7 +18,7 @@
                     <div class="EeventPageSmall"> 
                     <img src="<?php echo $result['image']; ?>" alt="logo_event">
                     <p><?php echo $result['title']; ?><br> 
-                    <span><?php echo $result['text_location']; ?></span>
+                    <span><?php echo $result['pre_event']; ?></span>
                     <a href="../pages/big_events?event=<?php echo $result['id']; ?>"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
                     </p>
                 </div>
@@ -36,7 +36,7 @@
                     <div class="HolidaysType">
                     <p>
                         <span>Типи заходів</span><br>
-                        <span>Вибери категорію заходу та відвідай його</span>
+                        <span>Всі категорії заходів</span>
                     </p>
                 </div>
                     <div class="MoreEventCategory">
