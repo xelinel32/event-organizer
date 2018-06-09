@@ -22,10 +22,10 @@ if(isset($_POST['login_btn'])){
    //Redirecting User Based on Role
     switch($role){
   case 'Юзер':
-  header('location:../index');
+  header("location: ".$_SERVER["HTTP_REFERER"]);
   break;
   case 'Адміністрація':
-  header('location:../index');
+  header("location: ".$_SERVER["HTTP_REFERER"]);
   break;
  }
  }else{

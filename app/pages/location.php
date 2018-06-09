@@ -14,22 +14,22 @@
     $limit = 6;  
     if (isset($_GET["page_loc"])) { $page  = $_GET["page_loc"]; } else { $page=1; };  
     $start_from = ($page-1) * $limit;  
-    $sql = "SELECT * FROM location WHERE id ORDER BY id ASC LIMIT $start_from, $limit";  
+    $sql = "SELECT * FROM `location` WHERE `id` ORDER BY `id` ASC LIMIT $start_from, $limit";  
     $rs_result_location = mysqli_query ($conn,$sql); 
     while($result = mysqli_fetch_array($rs_result_location)){
     ?>
              <div class="catagory_event_list_singl">
               <img src="<?php echo $result['image'];?>" alt="logo_event">
               <div class="catagory_event_list_desc">
-              <a href="../pages/singl_location?location=<?php echo $result['id'];?>"><?php echo $result['title'];?></a><br>
-                  <span><?php echo $result['pre_text'];?></span>
+              <a href="../pages/singl_location?location=<?php echo $result['id'];?>"><?php echo $result['title'];?></a>
+                  <br><span><?php echo $result['pre_text'];?></span>
                 </div>
               </div>
           <?php } ?>
 					<div class="col-md-12">
         				<div class="row">
 <?php  
-$sql = "SELECT COUNT(id) FROM location";  
+$sql = "SELECT COUNT(id) FROM `location`";  
 $rs_result_loc = mysqli_query($conn,$sql);  
 $row = mysqli_fetch_row($rs_result_loc);  
 $total_records = $row[0];  

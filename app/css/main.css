@@ -729,10 +729,14 @@ footer {
   color: black;
 }
 h2.post_title{
-  font-size: 26px;
+  font-size: 20px;
   margin-top: 30px;
   margin-bottom: 10px;
   cursor: default;
+  color: #5d6e80;
+  font-family: "RobotoMedium";
+  text-transform: uppercase;
+  font-weight: 500;
 }
 .post_title a:hover{
   text-decoration: none;
@@ -773,7 +777,17 @@ h2.post_title{
   padding-bottom: 40px;
 }
 .inf h1{
-  font-size: 25px;
+  cursor: default;
+  font-size: 20px;
+  background: #fff;
+  color: #5d6e80;
+  font-family: "RobotoMedium";
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.inf p{
+  font-weight: 500;
+  font-size: 14px;
 }
 .infinp{
   width: 240px;
@@ -909,7 +923,12 @@ h2.post_title{
   padding-top: 20px;
   padding-bottom: 20px;
   cursor: default;
-  font-size: 25px;
+  font-size: 20px;
+  background: #fff;
+  color: #5d6e80;
+  font-family: "RobotoMedium";
+  text-transform: uppercase;
+  font-weight: 500;
 }
 .sidebareventsmall{
   padding-bottom: 20px;
@@ -919,7 +938,6 @@ h2.post_title{
   margin-left: 40px;
   color: black;
   font-family: "RobotoLight";
-  font-size: 17px;
 }
 .sidebareventsmall a{
   color: #1dd2af;
@@ -937,6 +955,10 @@ h2.post_title{
 .result_seart_be {
   padding:0;
   display: block;
+}
+.result_seart_be a:hover{
+  color: #1dd2af;
+  text-decoration: none;
 }
 .result_strat_be a{
   color: #1dd2af;
@@ -956,6 +978,11 @@ h2.post_title{
   padding-bottom: 10px;
   text-align: center;
   padding-top: 20px;
+  color: #5d6e80;
+  font-size: 18px;
+  font-family: "RobotoMedium";
+  text-transform: uppercase;
+  font-weight: 500;
 }
 .FormSearchResult{
   padding-bottom: 20px;
@@ -992,8 +1019,12 @@ h2.post_title{
 .catagory_event_list_desc{
   padding: 10px 0 10px 0;
 }
+.catagory_event_list_desc span{
+  font-size: 13.5px;
+  line-height: 1.26;
+  color: #8899a8;
+}    
 .catagory_event_list p {
-  text-align: center;
   font-size: 16px;
   line-height: 1.56;
   text-align: center;
@@ -1002,10 +1033,13 @@ h2.post_title{
   text-transform: none;
 }
 .catagory_event_list h3{
-  text-align: center;
+  font-family: "RobotoMedium";
   font-size: 25px;
-  font-family: "RobotoLight";
-  font-weight: bold;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  color: #2c3e50;
+  text-transform: uppercase;
 }
 .catagory_event_list_sort{
   display: flex;
@@ -1154,6 +1188,28 @@ h2.post_title{
   float: left;
   max-width: 100px;
 }
+.panel_user h3{
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: default;
+  font-size: 20px;
+  background: #fff;
+  color: #5d6e80;
+  font-family: "RobotoMedium";
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.operation_profile,.my_events_user a{
+  font-family: "RobotoMedium";
+  color: #2c3e50;
+}
+.operation_profile a:hover,.my_events_user a:hover{
+  text-decoration: none;
+}
+.operation_profile b{
+  text-decoration: underline;
+}
 /*calendar*/
 .full_calendar{
   margin-top: 50px;
@@ -1181,20 +1237,7 @@ h2.post_title{
   max-width: 100%;
   margin: auto;
 }
-.content_cal .fc-today{
+.content_cal .content_cal .fc-today{
   background: #1dd2af;
   color: #fff;
-}
-.panel_user h3{
-  text-align: center;
-}
-.operation_profile,.my_events_user a{
-  font-family: "RobotoMedium";
-  color: #2c3e50;
-}
-.operation_profile a:hover,.my_events_user a:hover{
-  text-decoration: none;
-}
-.operation_profile b{
-  text-decoration: underline;
 }

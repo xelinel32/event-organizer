@@ -41,8 +41,9 @@
             ?>
             <img src="<?php echo $result['image_post']; ?>" alt="location_event">
             <ul>
-                <li><a href="../pages/big_blog?id=<?php echo $result['id']; ?>"><?php echo $result['title_post']; ?></a></li><br>
+                <li><a href="../pages/big_blog?id=<?php echo $result['id']; ?>"><?php echo $result['title_post']; ?></a></li>
                 <li><?php echo $result['date_post']; ?></li>
+                <li><?php echo $result['user_post']; ?></li>
             </ul>
         <?php } ?>
         </div>
