@@ -1188,3 +1188,13 @@ h2.post_title{
 .panel_user h3{
   text-align: center;
 }
+.operation_profile,.my_events_user a{
+  font-family: "RobotoMedium";
+  color: #2c3e50;
+}
+.operation_profile a:hover,.my_events_user a:hover{
+  text-decoration: none;
+}
+.operation_profile b{
+  text-decoration: underline;
+}

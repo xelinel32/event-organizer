@@ -50,6 +50,7 @@ include '../function/configdb.php';
 <table class="table table-bordered">
   <thead>
     <tr>
+      <th>№</th>
       <th>Назва</th>
       <th>Скор. опис</th>
       <th>Адреса</th>
@@ -58,19 +59,22 @@ include '../function/configdb.php';
   </thead>
   <?php while ($row = mysqli_fetch_array($results)) { ?>
     <tr>
+      <td><?php echo $row['id']; ?></td>
       <td><a href="../pages/big_events?event=<?php echo $row['id']; ?>"><?php echo $row['title']; ?></a></td>
       <td><?php echo $row['pre_event']; ?></td>
-      <td><a href="../pages/singl_location?location=<?php echo $row['id_loc_event']; ?>"><?php echo $row['text_location']; ?></a></td>
-      <td><a href="../pages/events?category_events_id=<?php echo $row['id_cat_event']; ?>"><?php echo $row['text_category']; ?></a></td>
+      <td><?php echo $row['text_location']; ?></td>
+      <td><?php echo $row['text_category']; ?></td>
     </tr>
   <?php } ?>
 </table>
 </div>
     <div class="operation_profile">
-      <b>Операції з профілем</b> 
-    <form action="" method="GET">
-        <button type="submit">Видалити профіль</button>
-    </form>
+      <b>Операції з профілем</b> -
+      <a data-toggle="modal" data-target="#EditeProfilePass" href="">Змінити пароль</a> |
+      <a data-toggle="modal" data-target="#EditeProfile" href="">Змінити ім'я та номер</a> |
+      <a data-toggle="modal" data-target="#EditeProfilePhoto" href="">Змінити зображення</a>
+      <b>Організація заходів</b> -
+      <a href="">Організувати захід</a>
     </div>
      <?php } ?> 
     </div>
