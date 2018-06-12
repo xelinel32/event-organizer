@@ -74,6 +74,12 @@ img {
 #logadm:hover {
   color: #1dd2af;
 }
+.SharedEvent h4{
+  font-size: 18px;
+  font-family: "RobotoBold", sans-serif;
+  font-weight: bold;
+  color: #2c3e50;
+}
 /* logosite */
 .logo_site {
   font-family: "RobotoBold", sans-serif;
@@ -755,6 +761,7 @@ h2.post_title{
 }
 .mini_log{
   padding-bottom: 10px;
+  max-height: 459px;
 }
 .post_meta a{
   color: #bbb;
@@ -1055,6 +1062,9 @@ h2.post_title{
   background-color: #eeeeee;
   border: solid 5px #eeeeee;
 }
+.catagory_event_list_singl img{
+  height: 200px;
+}
 .catagory_event_list_singl a{
   font-family: "RobotoRegular";
   color: #1dd2af;
@@ -1105,7 +1115,6 @@ h2.post_title{
 }
 /* category_event_all */
 .category{
-  height: 100px;
   background-color: #ffffff;
   box-shadow: 0px 3px 1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -1188,7 +1197,7 @@ h2.post_title{
   float: left;
   max-width: 100px;
 }
-.panel_user h3{
+.panel_user h3, .newevent h3{
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -1240,4 +1249,16 @@ h2.post_title{
 .content_cal .content_cal .fc-today{
   background: #1dd2af;
   color: #fff;
+}
+/*form new event*/
+.formnewevent {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.formnewevent textarea{
+  resize: none;
+}
+.newevent h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

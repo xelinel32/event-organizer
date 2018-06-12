@@ -1,33 +1,33 @@
 $(document).ready(function() {
   //Мега-меню и мобайл меню
   $(".sf-menu")
-    .superfish({
-      delay: 200,
-      speed: "fast",
-      cssArrows: false
-    })
-    .after("<div id='mobile-menu'>")
-    .clone()
-    .appendTo("#mobile-menu");
+  .superfish({
+    delay: 200,
+    speed: "fast",
+    cssArrows: false
+  })
+  .after("<div id='mobile-menu'>")
+  .clone()
+  .appendTo("#mobile-menu");
   $("#mobile-menu")
-    .find("*")
-    .attr("style", "");
+  .find("*")
+  .attr("style", "");
   $("#mobile-menu")
-    .children("ul")
-    .removeClass("sf-menu")
+  .children("ul")
+  .removeClass("sf-menu")
 
-    .parent()
-    .mmenu({
-      extensions: [
-        "widescreen",
-        "theme-white",
-        "effect-menu-slide",
-        "pagedim-black"
-      ],
-      navbar: {
-        title: "Меню сайта"
-      }
-    });
+  .parent()
+  .mmenu({
+    extensions: [
+    "widescreen",
+    "theme-white",
+    "effect-menu-slide",
+    "pagedim-black"
+    ],
+    navbar: {
+      title: "Меню сайта"
+    }
+  });
 
   //Кнопка Button к мобайл меню
   $(".toggle-mnu").click(function() {
@@ -55,12 +55,13 @@ $(document).ready(function() {
     $("html, body").animate({ scrollTop: 0 }, 300);
     return false;
   });
+  // calendar
   $('.content_cal').fullCalendar({
-buttonText: {
-    today: "Сьогодні",
-    month: "Місяць",
-    week: "Неділя",
-    day: "День"
+    buttonText: {
+      today: "Сьогодні",
+      month: "Місяць",
+      week: "Неділя",
+      day: "День"
     },
     eventSources : [{
       events : events,

@@ -1,5 +1,5 @@
 <?php 
-	include 'configdb.php';
+include 'configdb.php';
 function get_events(){
 	global $conn;
 	$query = "SELECT `id`, `title`, `start_event`, `end_event` FROM events";
