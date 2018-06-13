@@ -31,6 +31,7 @@ if(isset($_POST["edit_btn_prof"])){
 	$name_pib = mysqli_real_escape_string($conn,trim($_POST['name_pib']));
 	$tel_number_edit = mysqli_real_escape_string($conn,trim($_POST['tel_number_edit']));
 	$id_user = $_SESSION['user']['id'];
+
 	$sql_check = mysqli_query($conn,"SELECT * FROM `multi_login` WHERE `phone_number` = '$tel_number_edit'") or die(mysqli_error($conn));
 	$numrows=mysqli_num_rows($sql_check);
 	if($numrows == 0) {

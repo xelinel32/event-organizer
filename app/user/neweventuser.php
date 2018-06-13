@@ -18,9 +18,9 @@
 							<div class="formnewevent">
 								<form action="eventsprocess.php" method="post" enctype="multipart/form-data">
 								<div class="form-group">
-								<label>Назва</label><br>
-								<input class="form-control" type="text" name="name_event" required><br>
-						<label for="exampleFormControlSelect1">Категорія</label><br>
+								<label>Назва заходу</label><br>
+								<input class="form-control" type="text" placeholder="Назва виховної роботи" name="name_event" required><br>
+						<label for="exampleFormControlSelect1">Категорія заходу</label><br>
 						<select class="form-control" id="exampleFormControlSelect1" name="cat_event">
 						<?php $query = "SELECT `id`,`category` FROM `category_events`"; 
 						$categories =  mysqli_query($conn,$query);
@@ -30,7 +30,7 @@
                         <option value="<?php echo $row['id'] ?>"><?php echo $row['category']?></option>
                     	<?php } ?>
                       	</select></br>
-						<label for="exampleFormControlSelect1">Місце проходження</label><br>
+						<label for="exampleFormControlSelect1">Місце проходження заходу</label><br>
 						<select class="form-control" id="exampleFormControlSelect1" name="location_event">
 						<?php $query = "SELECT `id`,`title_location` FROM `location`"; 
 						$locations =  mysqli_query($conn,$query);
@@ -43,20 +43,32 @@
 								<label for="exampleFormControlFile1">Зображення</label><br>
 								<input class="form-control-file" id="exampleFormControlFile1" required type="file" type="file" name="img_event" multiple accept="image/*,image/jpeg"><br>
 								<label>Початок заходу</label>
-								<input class="form-control" value="<?php date("Y-m-d"); ?>" id="example-date-input" required type="date" name="start_event"><br>
+								<input class="form-control" value="2018-08-19T13:45:00" step="1" id="example-date-input" required type="datetime-local" name="start_event"><br>
 								<label>Кінець заходу</label>
-								<br><input value="<?php date("Y-m-d"); ?>" id="example-date-input" class="form-control" required type="date" name="end_event"><br>
-								<br><label for="exampleFormControlTextarea1">Короткий опис</label><br>
-								<textarea required name="preview_event" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea><br>
+								<br><input value="2018-08-19T13:45:00" step="1" id="example-date-input" class="form-control" required type="datetime-local" name="end_event"><br>
+								<label>Довгота для Google Maps</label>
+								<input class="form-control" type="text" name="lat_name" required placeholder="00.000000"><br>
+								<label>Широта для Google Maps</label>
+								<input class="form-control" placeholder="00.000000" type="text" name="lng_name" required><br>
+								<label for="exampleFormControlTextarea1">Короткий опис</label><br>
+								<textarea required name="preview_event" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Що буде за захід?"></textarea><br>
 								<label>Повний опис</label><br>
-								<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_event" cols="80" rows="10"></textarea><br>
+								<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_event" cols="80" rows="10" placeholder="Повний опис заходу"></textarea><br>
 								<input class="btn btn-light" type="submit" value="Додати захід" name="btn_new_event">
 								</div>
 								</form>
 								<div style="clear: both;border-top: 1px solid black"><br></div>
 								<div class="infoevents">
 									<h5>Правила оформлення заходу</h5>
-								
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">Всі заходи перевіряються та редагуються адміністратором.</li>
+									<li class="list-group-item">Текстові поля повинні мати не менше 10 символі.</li>
+									<li class="list-group-item">Назва заходу не повинна містити цифр.</li>
+									<li class="list-group-item">Свої заходи можна редагувати та видаляти у профілі.</li>
+									<li class="list-group-item">Якщо не знайшли підходящого місця заходу, можна його додати.</li>
+									<li class="list-group-item">Довготу та широту задавати через крапку(52.323324, 30.245455)</li>
+									<li class="list-group-item">У полі можна використовувати теги для форматування тексту(&lt;p&gt;&lt/p&gt;,&lth1&gt;&lt/h1&gt,&ltbr&gt)</li>
+								</ul>
 								</div>
 							</div>
 						</div>

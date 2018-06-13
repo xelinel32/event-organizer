@@ -2,7 +2,7 @@
 include 'configdb.php';
 $name = $_POST["name"];
 $comments_user_type = $_SESSION['user']['user_type'];
-$date = date("Y-m-d H:i:s");;
+$date = date("Y-m-d H:i:s");
 $id_event = $_POST["id_event"];
 $text_comment = $_POST["text_comment"];
 $id_user = $_SESSION['user']['id'];

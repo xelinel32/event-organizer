@@ -57,6 +57,8 @@ $(document).ready(function() {
   });
   // calendar
   $('.content_cal').fullCalendar({
+    timeFormat: 'H(:mm):s',
+    displayEventEnd: true,
     buttonText: {
       today: "Сьогодні",
       month: "Місяць",

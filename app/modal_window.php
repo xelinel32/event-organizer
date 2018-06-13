@@ -57,7 +57,7 @@
 			<div class="modalbg">
 				<div class="modal-body">
 					<div class="RegisterModal">
-						<h3>Пошук по сайту</h3><br>
+						<h3>Пошук заходів</h3><br>
 						<form action="../pages/search" class="FormRegisterModal" method="GET">
 							<input type="search" name="search" required placeholder="Що бажаєте знайти?">
 							<button type="submit">Шукати</button>

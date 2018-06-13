@@ -74,6 +74,7 @@ include '../function/configdb.php';
                     <a data-toggle="modal" data-target="#EditeProfilePhoto" href="">Змінити зображення</a><br>
                     <br><a class="btn btn-outline-primary btn-sm" href="neweventuser"> Організувати захід</a>
                     <a class="btn btn-outline-primary btn-sm" href="newlocationuser"> Додати місце проходження заходів</a>
+                    <a class="btn btn-outline-primary btn-sm" href="../pages/moreinfo"> Залишити повідомлення</a>
                   </div>
                 <?php } ?> 
               </div>

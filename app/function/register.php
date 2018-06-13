@@ -11,7 +11,8 @@ if(isset($_POST["register_btn"])){
 	$tel_number = trim($_POST['tel_number']);
 	$user_type_reg = "Юзер";
 	$image_user = "../img/user.png";
-
+	
+	if(!empty($name_pib) && !empty($tel_number) && !empty($username)){
 	if ($password_1 == $password_2) {
 
 	$query = mysqli_query($conn,"SELECT * FROM `multi_login` WHERE `username`='$username' OR `email` = '$email' OR `phone_number` = '$tel_number'") or die(mysqli_error($conn));
@@ -37,7 +38,9 @@ if(isset($_POST["register_btn"])){
 } else {
 	$message = "Паролі не співпадають";	
 }
-
+} else {
+	$message = "Заповніть обов'язкові поля!";	
+}
 } else {
 	$message = "Всі поля обов'язкові для заповнення!";
 }

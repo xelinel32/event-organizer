@@ -9,7 +9,9 @@ if($_SESSION['user']['user_type']=='Юзер'){
 	header('location:../pages/404');
 }
 ?>
+
 <h3>Ласкаво просимо <?php echo $_SESSION['user']['username'];?> роль - <span><?php echo $_SESSION['user']['user_type'];?></span></h3>
+
 <a href="../index">Головна</a>
 <a href="#">Заходи</a>
 <a href="#">Статті</a>
