@@ -38,13 +38,20 @@ include '../function/configdb.php';
                 <div class="panel_user">
                   <h3>Панель керування</h3>
                   <?php if($_SESSION['user']['user_type']=='Адміністрація'){ ?>
-                    <a class="btn btn-outline-primary btn-xsm" href="../admin/admin">Перейти до панелі адміністратора</a> 
+                    <div class="operation_profile">
+                    <b>Операції з профілем</b> -
+                    <a data-toggle="modal" data-target="#EditeProfilePass" href="">Змінити пароль</a> |
+                    <a data-toggle="modal" data-target="#EditeProfile" href="">Змінити дані</a> |
+                    <a data-toggle="modal" data-target="#EditeProfilePhoto" href="">Змінити зображення</a><br>
+                    </div><br>
+                    <a class="btn btn-outline-primary btn-sm" href="../admin/admin">Перейти до панелі адміністратора</a> 
+
                   <?php } else { ?>
                    <div class="my_events_user"> 
                      <b>Мої заходи</b><br>   
                      <?php $results = mysqli_query($conn, "SELECT * FROM `category_events`,`location`, `events` WHERE `events`.id_cat_event = `category_events`.id AND `events`.id_loc_event = `location`.id AND `events`.id_user = ".$_SESSION['user']['id'].""); ?>
                      <div class="table-responsive">
-                     <br><table class="table table-sm table-bordered">
+                     <br><table style="text-align: center;" class="table table-sm table-bordered">
                       <thead>
                         <tr>
                           <th>Назва</th>
@@ -74,7 +81,7 @@ include '../function/configdb.php';
                     <a data-toggle="modal" data-target="#EditeProfilePhoto" href="">Змінити зображення</a><br>
                     <br><a class="btn btn-outline-primary btn-sm" href="neweventuser"> Організувати захід</a>
                     <a class="btn btn-outline-primary btn-sm" href="newlocationuser"> Додати місце проходження заходів</a>
-                    <a class="btn btn-outline-primary btn-sm" href="../pages/moreinfo"> Залишити повідомлення</a>
+                    <a class="btn btn-outline-primary btn-sm" href="../user/user?id=1"> Зв'язатись з адміністрацією</a>
                   </div>
                 <?php } ?> 
               </div>

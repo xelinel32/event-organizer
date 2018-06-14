@@ -32,26 +32,25 @@ if($_SESSION['user']['user_type']=='Юзер'){
 			<div class="row">
 				<div class="col-md-12">
 					<div class="admin_content">
-						<h5>Керування всіма заходами</h5><br>
+						<h5>Керування всіма відгуками та коментарами</h5><br>
+						<span><b>Відгуки з заходів</b></span><br><br>
 						<?php 
 						$limit = 2;  
 						if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
 						$start_from = ($page-1) * $limit;  
 
-						$sql = "SELECT * FROM `events` ORDER BY `add_event` ASC LIMIT $start_from, $limit";  
+						$sql = "SELECT * FROM `comments_event` ORDER BY `id` ASC LIMIT $start_from, $limit";  
 						$rs_result = mysqli_query($conn,$sql);  
 						?>  
 						<table class="table table-bordered table-striped">  
 							<thead>  
 								<tr>  
 									<th>№</th>  
-									<th>Назва</th> 
-									<th>Початок</th>
-									<th>Кінець</th>
-									<th>Додано</th>
-									<th>Ім'я юзера</th> 
-									<th colspan="2">Координати</th>
-									<th colspan="3">Операції</th>       
+									<th>Автор</th> 
+									<th>Дата</th>
+									<th>Тип юзера</th>
+									<th>Коментар</th>
+									<th>Операції</th>       
 								</tr>  
 							</thead>  
 							<tbody>  
@@ -60,25 +59,54 @@ if($_SESSION['user']['user_type']=='Юзер'){
 									?>  
 									<tr>  
 										<td><? echo $row["id"]; ?></td> 
-										<td><a href="../pages/big_events?event=<?php echo $row['id'] ?>"><? echo $row["title"]; ?></a></td>    
-										<td><? echo $row["start_event"]; ?></td>  
-										<td><? echo $row["end_event"]; ?></td>  
-										<td><? echo $row["add_event"]; ?></td>  
-										<td><a href="../user/user?id=<?php echo $row['id_user'] ?>"><? echo $row["post_event"]; ?></a></td>  
-										<td><? echo $row["lat"]; ?></td>  
-										<td><? echo $row["lng"]; ?></td>
-										<td><a href="../user/neweventuser" class="btn btn-success btn-sm">Дод.</a></td>
-										<td><a href="../user/editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Змі.</a></td>
-										<td><a href="../user/editprofile?del=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Вид.</a></td>  
+										<td><a href="../user/user?id=<? echo $row["id_user"]; ?>"><? echo $row["author"]; ?></a></td> 
+										<td><? echo $row["date"]; ?></td>  
+										<td><? echo $row["comments_user_type"]; ?></td>
+										<td><a href="../pages/big_events?event=<?php echo $row["id_events"]; ?>"><? echo $row["text"]; ?></a></td>       
+										<td><a href="" class="btn btn-danger btn-sm">Видалити</a></td>
 									</tr>  
-									<?php  
-								};  
-								?>  
+									<?php  }  ?>  
+							</tbody>  
+						</table>
+						
+						<span><b>Коментарі з блогу</b></span><br><br>
+						<?php 
+						$limit = 2;  
+						if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
+						$start_from = ($page-1) * $limit;  
+
+						$sql = "SELECT * FROM `comments_blog` ORDER BY `id` ASC LIMIT $start_from, $limit";  
+						$rs_result = mysqli_query($conn,$sql);  
+						?>  
+						<table class="table table-bordered table-striped">  
+							<thead>  
+								<tr>  
+									<th>№</th>  
+									<th>Автор</th> 
+									<th>Дата</th>
+									<th>Тип юзера</th>
+									<th>Коментар</th>
+									<th>Операції</th>       
+								</tr>  
+							</thead>  
+							<tbody>  
+								<?php  
+								while ($row = mysqli_fetch_assoc($rs_result)) {  
+									?>  
+									<tr>  
+										<td><? echo $row["id"]; ?></td> 
+										<td><a href="../user/user?id=<? echo $row["id_user"]; ?>"><? echo $row["author"]; ?></a></td> 
+										<td><? echo $row["date"]; ?></td>  
+										<td><? echo $row["comments_user_type"]; ?></td>
+										<td><a href="../pages/big_blog?event=<?php echo $row["id_blog"]; ?>"><? echo $row["text"]; ?></a></td>       
+										<td><a href="" class="btn btn-danger btn-sm">Видалити</a></td>
+									</tr>  
+									<?php  }  ?>  
 							</tbody>  
 						</table>
 						<nav> 
 							<?php  
-							$sql = "SELECT COUNT(id) FROM `events`";  
+							$sql = "SELECT COUNT(id) FROM `comments_event`";  
 							$rs_result = mysqli_query($conn,$sql);  
 							$row = mysqli_fetch_row($rs_result);  
 							$total_records = $row[0];  
@@ -86,9 +114,9 @@ if($_SESSION['user']['user_type']=='Юзер'){
 							$pagLink = "<ul class='pagination justify-content-center pagination-sm'>";  
 							for ($i=1; $i<=$total_pages; $i++) {
 								if($page == $i) {  
-									$pagLink .= "<a class='page-link' href='admin?page=".$i."'>".$i."</a>";  
+									$pagLink .= "<a class='page-link' href='commentsdashboard?page=".$i."'>".$i."</a>";  
 								} else {
-									$pagLink .= "<a class='page-link' href='admin?page=".$i."'>".$i."</a>"; 
+									$pagLink .= "<a class='page-link' href='commentsdashboard?page=".$i."'>".$i."</a>"; 
 								}
 							};  
 							echo $pagLink . "</ul>";  

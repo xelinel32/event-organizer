@@ -11,7 +11,7 @@ if(isset($_POST["register_btn"])){
 	$tel_number = trim($_POST['tel_number']);
 	$user_type_reg = "Юзер";
 	$image_user = "../img/user.png";
-	
+	if (preg_match('/^\D+$/i', $name_pib)) {
 	if(!empty($name_pib) && !empty($tel_number) && !empty($username)){
 	if ($password_1 == $password_2) {
 
@@ -40,6 +40,9 @@ if(isset($_POST["register_btn"])){
 }
 } else {
 	$message = "Заповніть обов'язкові поля!";	
+}
+}else{
+	$message = "Назва заходу не повинна мати числа!";
 }
 } else {
 	$message = "Всі поля обов'язкові для заповнення!";

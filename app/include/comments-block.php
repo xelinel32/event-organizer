@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="HappyClients">
                     <p>
-                        <span>Задоволені клієнти</span><br>
+                        <span>Задоволені користувачі</span><br>
                         <span>Останні відгуки за цей місяць</span>
                     </p>
                 </div>

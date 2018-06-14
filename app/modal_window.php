@@ -76,7 +76,9 @@
 				<div class="modal-body">
 					<div class="RegisterModal">
 						<form class="FormEditModalPass" method="post" action="../user/editprofile.php">
-							<label>Пароль</label><br>
+							<label>Ваш перший пароль</label><br>
+							<input type="password" name="password_re" required><br>
+							<label>Новий пароль</label><br>
 							<input type="password" name="password_1" required><br>
 							<label>Повторіть пароль</label><br>
 							<input type="password" name="password_2" required><br>

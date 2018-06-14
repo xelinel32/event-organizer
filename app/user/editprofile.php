@@ -4,8 +4,13 @@ include '../function/configdb.php';
 if(isset($_POST["edit_btn"])){ 
 	$password_1 = mysqli_real_escape_string($conn,trim($_POST['password_1']));
 	$password_2 = mysqli_real_escape_string($conn,trim($_POST['password_2']));
+	$password_re = mysqli_real_escape_string($conn,trim(md5($_POST['password_re'])));
 	$id_user = $_SESSION['user']['id'];
+
+	$re_sql_pass = mysqli_query($conn,"SELECT * FROM `multi_login` WHERE `password`='$password_re'") or die(mysqli_error($conn));
+	$numrows_pass=mysqli_num_rows($re_sql_pass);
 	if ($password_1 == $password_2) {
+		if($numrows_pass !== 0) {
 		$password = md5($password_1);
 		$sql = "UPDATE `multi_login` SET `password` = '$password' WHERE `id` = '$id_user'";
 	 // выводим результат если ошибки то ошибку если все ок то даем вход
@@ -16,7 +21,9 @@ if(isset($_POST["edit_btn"])){
 		}else {
 			$message = "Не вдалося вставити дані!";
 		} 
-		
+	} else {
+		$message = "Ваш пароль невірний!";
+	}
 	} else {
 		$message = "Паролі не співпадають";	
 	}

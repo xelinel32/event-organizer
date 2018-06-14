@@ -18,7 +18,8 @@
             <div class="news_content">
               <div class="box_news">
                 <h2 class="post_title"><?php echo $result['title_location']; ?></h2><br>
-                <img class="mini_log" src="<?php echo $result['image'];?>" alt="post_image">
+                <img class="mini_log" src="<?php echo $result['image'];?>" alt="post_image"><br>
+                <br><p><b><?php echo $result['pre_text'];?></b></p>
                 <p><?php echo $result['big_text'];?></p><br>  
                 <p><b>Дивитись адресу на Google карті - </b><a style="color: red;" target="_blank" href="<?php echo $result['loc_url']; ?>"><?php echo $result['adress']; ?></a></p>
               <?php }} else {

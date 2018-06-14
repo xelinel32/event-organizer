@@ -1,15 +1,15 @@
 <?php include("pages_include/up_style.php") ?>
 <body>
     <header class="top_header">
-       <?php include("../include/header.php") ?>
-   </header>
-   <div class="SearchResult">
+     <?php include("../include/header.php") ?>
+ </header>
+ <div class="SearchResult">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <div class="news_content">
                     <div class="box_news">
-                     <div class="FormSearchResult"> 
+                       <div class="FormSearchResult"> 
                         <h4>Результати пошуку</h4>              
                         <?php
                         $query = trim($_GET['search']);
@@ -18,7 +18,13 @@
                         $query = mysqli_real_escape_string($conn,$query);
                         $min_length = 3;
                         if(strlen($query) >= $min_length){ 
-                        $search_query = "SELECT `id`,`title`,`add_event` FROM `events` WHERE `title` LIKE '%".$query."%' AND `add_event` LIKE '%".$query_date."%' UNION SELECT `id`,`title_post`,`date_post` FROM `blog` WHERE `title_post` LIKE '%.$query.%' AND `date_post` LIKE '%.$query_date.%'";
+                            $search_query = "SELECT `id`,`title`,`add_event`, 'article' as subj   
+                            FROM `events`   
+                            WHERE `title` LIKE '%$query%' AND `add_event` LIKE '%$query_date%'   
+                            UNION   
+                            SELECT `id`,`title_post` as title,`date_post` as add_event, 'blog' as subj  
+                            FROM `blog`   
+                            WHERE `title_post` LIKE '%$query%' AND `date_post` LIKE '%$query_date%'";
                             $raw_results = mysqli_query($conn,$search_query) or die(mysqli_error($conn));
                             if(mysqli_num_rows($raw_results) > 0){ 
                                 while($results = mysqli_fetch_array($raw_results)){?>

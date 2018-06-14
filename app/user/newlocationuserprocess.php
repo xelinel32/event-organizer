@@ -13,10 +13,12 @@ if(isset($_POST['btn_new_loc'])){
 	$preview_loc = mysqli_real_escape_string($conn,trim($_POST['preview_loc']));
 	$full_loc = mysqli_real_escape_string($conn,trim($_POST['full_loc']));
 	$adress_loc = mysqli_real_escape_string($conn,trim($_POST['adres_loc']));
-	$url_loc = $_POST['url_loc'];
+	$url_loc = trim($_POST['url_loc']);
 	$id_user = $_SESSION['user']['id'];
 	$photo_size_events  = $_FILES['img_loc']['size'];
 	$type_image_events = $_FILES['img_loc']['type'];
+	// parse url
+	if (! preg_match("/\b(?:(?:https?|ftp) :\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$url_loc)) {
 
 	$str_adress = strlen($adress_loc);
 	$str_title = strlen($title);
@@ -45,13 +47,16 @@ if(isset($_POST['btn_new_loc'])){
 					echo "<script>alert('Зображення іншого формату!');location='user?id=".$id_user."'</script>";
 				}
 			}else{
-				echo "<script>alert('Заповніть всі поля!');location='neweventuser'</script>";
+				echo "<script>alert('Заповніть всі поля!');location='newlocationuser'</script>";
 			}
 		}else{
-			echo "<script>alert('Мало символів мін(10)!');location='neweventuser'</script>";
+			echo "<script>alert('Мало символів мін(10)!');location='newlocationuser'</script>";
 		}
 	}else{
-		echo "<script>alert('Назва заходу не повинна мати числа!');location='neweventuser'</script>";
+		echo "<script>alert('Назва заходу не повинна мати числа!');location='newlocationuser'</script>";
+	}
+	}else{
+		echo "<script>alert('Невірне посилання на карти!');location='newlocationuser'</script>";
 	}
 }	
 ?>

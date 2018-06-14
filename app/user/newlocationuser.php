@@ -19,11 +19,12 @@
 								<form action="newlocationuserprocess.php" method="post" enctype="multipart/form-data">
 								<div class="form-group">
 								<label>Назва місця</label><br>
-								<input class="form-control" type="text" name="name_loc" required><br>
+								<input class="form-control" type="text" name="name_loc" required placeholder="Назва місця проходження заходів"><br>
 								<label>Адреса</label><br>
-								<input class="form-control" type="text" name="adres_loc" required><br>
+								<input class="form-control" type="text" name="adres_loc" required placeholder="Точна адреса"><br>
 								<label>Посилання для Google Maps</label><br>
-								<input class="form-control" type="text" name="url_loc" required><br>
+								<input class="form-control" type="url" name="url_loc" required
+								placeholder="https://goo.gl/maps/uQzHS2W4cAv"><br>
 						<label for="exampleFormControlSelect1">Категорія</label><br>
 						<select class="form-control" id="exampleFormControlSelect1" name="cat_loc">
 						<?php $query = "SELECT `id`,`category` FROM `category_events`"; 
@@ -37,9 +38,9 @@
 								<label for="exampleFormControlFile1">Зображення</label><br>
 								<input class="form-control-file" id="exampleFormControlFile1" required type="file" type="file" name="img_loc" multiple accept="image/*,image/jpeg"><br>
 								<label for="exampleFormControlTextarea1">Короткий опис</label><br>
-								<textarea required name="preview_loc" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea><br>
+								<textarea required name="preview_loc" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Короткий опис основної інформації"></textarea><br>
 								<label>Повний опис</label><br>
-								<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_loc" cols="80" rows="10"></textarea><br>
+								<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_loc" cols="80" rows="10" placeholder="Повний опис основної інформації та місцезнаходження"></textarea><br>
 								<input class="btn btn-light" type="submit" value="Додати" name="btn_new_loc">
 								</div>
 								</form>

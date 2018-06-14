@@ -21,14 +21,17 @@
                 <div class="post_meta">
                   <ul>
                     <li><a href="../pages/events?category_events_id=<?php echo $result['id_cat_event'] ?>"><?php echo $result['category']; ?></a></li>
-                    <li><a href="../user/user.php?id=<?php echo $result['id_user'] ?>"><?php echo $result['post_event']; ?></a></li>
-                    <li>Початок - <?php echo $result['start_event']; ?></li>
-                    <li>Кінець - <?php echo $result['end_event']; ?></li>
-                    <li>Додано - <?php echo $result['add_event']; ?></li>
+                    <li><i class="fa fa-user" aria-hidden="true"></i> <a href="../user/user.php?id=<?php echo $result['id_user'] ?>"><?php echo $result['post_event']; ?></a></li>
+                    <li><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> <?php echo $result['start_event']; ?></li>
+                    <li><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> <?php echo $result['end_event']; ?></li>
+                    <li>Додано - <i class="fa fa-calendar-check-o" aria-hidden="true"></i> <?php echo $result['add_event']; ?></li>
                   </ul>
                 </div>
                 <img class="mini_log" src="<?php echo $result['image']; ?>" alt="post_image">
-                <p><?php echo $result['big_event']; ?></p>
+                <div class="default_text">
+                  <p><h5><b><?php echo $result['pre_event']; ?></b></h5></p>
+                  <p><?php echo $result['big_event']; ?></p>
+                </div>
                 <div class="LocationEventPage">
                 <?php }} else {
                   echo "<script>window.location = '404.php';</script>";
@@ -63,6 +66,25 @@
                          };
                          var map = new google.maps.Map(document.getElementById("map_canvas"), 
                           settings);
+                         var contentString = '<div class="infowindow">' +
+                         '<h3><?php echo $row['title'] ?></h3>' +
+                         '<p><?php echo $row['pre_event'] ?></p>' +
+                         '</div>';
+                         var infoWindow = new google.maps.InfoWindow({
+                          content: contentString
+                        });
+                         var companyPos = new google.maps.LatLng(<?php echo $row['lat'] ?>, <?php echo $row['lng'] ?>);
+                         var companyMarker = new google.maps.Marker({
+                          position: companyPos,
+                          map: map,
+                          title:"<?php echo $row['title'] ?>"
+                        });
+                         google.maps.event.addListener(companyPos, 'click', function() {
+                          infoWindow.open(map, companyPos);
+                        });
+                         google.maps.event.addListener(map, 'click', function() {
+                          infoWindow.close();
+                        });
                        }
                      </script>
                      <div id="map_canvas" style="width:auto; height:500px"></div>

@@ -19,12 +19,15 @@
                 <h2 class="post_title"><?php echo $result['title_post']; ?></h2>
                 <div class="post_meta">
                   <ul>
-                    <li><a href="../user/user.php?id=<?php echo $result['id_user'] ?>"><?php echo $result['user_post'];?></a></li>
-                    <li>Дата додавання статті - <?php echo $result['date_post'];?></li>
+                    <li><i class="fa fa-user" aria-hidden="true"></i> <a href="../user/user.php?id=<?php echo $result['id_user'] ?>"><?php echo $result['user_post'];?></a></li>
+                    <li><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Дата додавання статті - <?php echo $result['date_post'];?></li>
                   </ul>
                 </div>
                 <img class="mini_log" src="<?php echo $result['image_post'];?>" alt="post_image">
-                <?php echo $result['big_text_post'];?>
+                <div class="default_text">
+                <p><b><?php echo $result['small_text_post'];?></b></p>
+                <p><?php echo $result['big_text_post'];?></p>
+                </div>
               <?php }}else{
                 echo "<script>window.location = '404.php';</script>";
               } ?>

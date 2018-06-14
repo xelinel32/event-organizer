@@ -32,26 +32,25 @@ if($_SESSION['user']['user_type']=='Юзер'){
 			<div class="row">
 				<div class="col-md-12">
 					<div class="admin_content">
-						<h5>Керування всіма заходами</h5><br>
+						<h5>Керування всіма юзерами</h5><br>
 						<?php 
 						$limit = 2;  
 						if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
 						$start_from = ($page-1) * $limit;  
 
-						$sql = "SELECT * FROM `events` ORDER BY `add_event` ASC LIMIT $start_from, $limit";  
+						$sql = "SELECT * FROM `multi_login` ORDER BY `id` ASC LIMIT $start_from, $limit";  
 						$rs_result = mysqli_query($conn,$sql);  
 						?>  
 						<table class="table table-bordered table-striped">  
 							<thead>  
 								<tr>  
 									<th>№</th>  
-									<th>Назва</th> 
-									<th>Початок</th>
-									<th>Кінець</th>
-									<th>Додано</th>
-									<th>Ім'я юзера</th> 
-									<th colspan="2">Координати</th>
-									<th colspan="3">Операції</th>       
+									<th>Логін</th> 
+									<th>Email</th>
+									<th>Тип юзера</th>
+									<th>Ім'я</th> 
+									<th>Телефон</th>
+									<th colspan="2">Операції</th>       
 								</tr>  
 							</thead>  
 							<tbody>  
@@ -60,25 +59,23 @@ if($_SESSION['user']['user_type']=='Юзер'){
 									?>  
 									<tr>  
 										<td><? echo $row["id"]; ?></td> 
-										<td><a href="../pages/big_events?event=<?php echo $row['id'] ?>"><? echo $row["title"]; ?></a></td>    
-										<td><? echo $row["start_event"]; ?></td>  
-										<td><? echo $row["end_event"]; ?></td>  
-										<td><? echo $row["add_event"]; ?></td>  
-										<td><a href="../user/user?id=<?php echo $row['id_user'] ?>"><? echo $row["post_event"]; ?></a></td>  
-										<td><? echo $row["lat"]; ?></td>  
-										<td><? echo $row["lng"]; ?></td>
-										<td><a href="../user/neweventuser" class="btn btn-success btn-sm">Дод.</a></td>
-										<td><a href="../user/editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Змі.</a></td>
-										<td><a href="../user/editprofile?del=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Вид.</a></td>  
+										<td><a href="../user/user?id=<?php echo $row['id'] ?>"><? echo $row["username"]; ?></a></td>    
+										<td><? echo $row["email"]; ?></td>  
+										<td><? echo $row["user_type"]; ?></td>   
+										<td><? echo $row["pib"]; ?></td>  
+										<td><? echo $row["phone_number"]; ?></td> 
+										<td><a href="" class="btn btn-success btn-sm">Дод.</a></td>
+										<?php if($_SESSION['user']['username'] == $row['username']){ ?>
+										<?php } else { ?>
+										<td><a href="" class="btn btn-danger btn-sm">Вид.</a></td>
+										<?php } ?> 
 									</tr>  
-									<?php  
-								};  
-								?>  
+									<?php  }  ?>  
 							</tbody>  
 						</table>
 						<nav> 
 							<?php  
-							$sql = "SELECT COUNT(id) FROM `events`";  
+							$sql = "SELECT COUNT(id) FROM `multi_login`";  
 							$rs_result = mysqli_query($conn,$sql);  
 							$row = mysqli_fetch_row($rs_result);  
 							$total_records = $row[0];  
@@ -86,9 +83,9 @@ if($_SESSION['user']['user_type']=='Юзер'){
 							$pagLink = "<ul class='pagination justify-content-center pagination-sm'>";  
 							for ($i=1; $i<=$total_pages; $i++) {
 								if($page == $i) {  
-									$pagLink .= "<a class='page-link' href='admin?page=".$i."'>".$i."</a>";  
+									$pagLink .= "<a class='page-link' href='userdashboard?page=".$i."'>".$i."</a>";  
 								} else {
-									$pagLink .= "<a class='page-link' href='admin?page=".$i."'>".$i."</a>"; 
+									$pagLink .= "<a class='page-link' href='userdashboard?page=".$i."'>".$i."</a>"; 
 								}
 							};  
 							echo $pagLink . "</ul>";  
