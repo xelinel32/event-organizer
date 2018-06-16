@@ -30,6 +30,10 @@ if(isset($_POST['btn_edit_event'])){
 	$str_full_event = strlen($full_event);
 	$str_lat_name = strlen($lat_name);
 	$str_lng_name = strlen($lng_name);
+	// oper
+	$query_title_event_prev = mysqli_query($conn,"SELECT * FROM `events` WHERE `title`='$title'") or die(mysqli_error($conn));
+	$numrows_pre_event=mysqli_num_rows($query_title_event_prev);
+	if($numrows_pre_event == 0) {	
 	if (preg_match('/^\D+$/i', $title)) {
 		if($str_title > 10 || $str_prev_event > 10 || $str_full_event > 10 || $str_title < 200 || $str_prev_event < 100 || $str_lat_name > 6 || $str_lng_name > 6) {
 			if($id_cat !== " " || $id_loc !== " " || $lat_name !== " " || $lng_name !== " ") {
@@ -54,16 +58,19 @@ if(isset($_POST['btn_edit_event'])){
 						echo "<script>alert('Зображення іншого формату!');location='user?id=".$id_user."'</script>";
 					}
 				}else{
-					echo "<script>alert('Некоректна дата!');location='neweventuser'</script>";
+					echo "<script>alert('Некоректна дата!');location='editeventprocess'</script>";
 				}
 			}else{
-				echo "<script>alert('Заповніть всі поля!');location='neweventuser'</script>";
+				echo "<script>alert('Заповніть всі поля!');location='editeventprocess'</script>";
 			}
 		}else{
-			echo "<script>alert('Мало символів мін(10)!');location='neweventuser'</script>";
+			echo "<script>alert('Мало символів мін(10)!');location='editeventprocess'</script>";
 		}
 	}else{
-		echo "<script>alert('Назва заходу не повинна мати числа!');location='neweventuser'</script>";
+		echo "<script>alert('Назва заходу не повинна мати числа!');location='editeventprocess'</script>";
+	}
+	}else{
+		echo "<script>alert('Така назва заходу вже існує!');location='editeventprocess'</script>";
 	}
 }
 ?>

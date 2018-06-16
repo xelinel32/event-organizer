@@ -11,22 +11,7 @@ if($_SESSION['user']['user_type']=='Юзер'){
 ?>
 <?php include("../include/up_style.php") ?>
 <body>	
-	<div class="admin_welcome">
-		<h4>Ласкаво просимо, <?php echo $_SESSION['user']['username'];?>! <br><span><?php echo $_SESSION['user']['user_type'];?></span></h4>
-	</div>
-	<div class="admin_menu">
-		<ul>
-			<li>
-				<a class="btn btn-sm btn-outline-secondary" href="../index">На головну</a>
-				<a class="btn btn-sm btn-outline-secondary" href="admin">Пенель заходів</a>
-				<a class="btn btn-sm btn-outline-secondary" href="blogdashboard">Панель статей</a>
-				<a class="btn btn-sm btn-outline-secondary" href="locdashboard">Панель місць</a>
-				<a class="btn btn-sm btn-outline-secondary" href="userdashboard">Панель юзерів</a>
-				<a class="btn btn-sm btn-outline-secondary" href="commentsdashboard">Панель коментарів та відгуків</a>
-				<a class="btn btn-sm btn-outline-secondary" href="../user/user?id=<?php echo $_SESSION['user']['id']; ?>">Мій профіль</a>
-			</li>
-		</ul>
-	</div>
+	<?php require_once('admin_include/admin_header.php'); ?>
 	<div class="main_content_news">
 		<div class="container">
 			<div class="row">
@@ -41,6 +26,7 @@ if($_SESSION['user']['user_type']=='Юзер'){
 						$sql = "SELECT * FROM `events` ORDER BY `add_event` ASC LIMIT $start_from, $limit";  
 						$rs_result = mysqli_query($conn,$sql);  
 						?>  
+						<div class="table-responsive">
 						<table class="table table-bordered table-striped">  
 							<thead>  
 								<tr>  
@@ -76,6 +62,7 @@ if($_SESSION['user']['user_type']=='Юзер'){
 								?>  
 							</tbody>  
 						</table>
+					</div>
 						<nav> 
 							<?php  
 							$sql = "SELECT COUNT(id) FROM `events`";  

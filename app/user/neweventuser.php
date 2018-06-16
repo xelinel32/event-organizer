@@ -72,6 +72,7 @@ echo "<script>location='../pages/404'</script>";
 						<label>Повний опис</label><br>
 						<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_event" cols="80" rows="10" placeholder="Повний опис заходу"></textarea><br>
 						<input class="btn btn-light" type="submit" value="Додати захід" name="btn_new_event">
+						<a href="user?id=<?php echo $_SESSION['user']['id'];?>" class="btn btn-light float-right">Назад</a>
 					</div>
 				</form>
 				<div style="clear: both;border-top: 1px solid black"><br></div>

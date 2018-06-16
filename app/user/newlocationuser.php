@@ -42,6 +42,7 @@
 								<label>Повний опис</label><br>
 								<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_loc" cols="80" rows="10" placeholder="Повний опис основної інформації та місцезнаходження"></textarea><br>
 								<input class="btn btn-light" type="submit" value="Додати" name="btn_new_loc">
+								<a href="user?id=<?php echo $_SESSION['user']['id'];?>" class="btn btn-light float-right">Назад</a>
 								</div>
 								</form>
 							</div>

@@ -1,5 +1,5 @@
 <?php include("pages_include/up_style.php") ?>
-<body onload="initialize()">
+<body onload="initMap()">
   <header class="top_header">
    <?php include("../include/header.php") ?>
  </header>
@@ -43,8 +43,9 @@
                   $sql = mysqli_query($conn,"SELECT * FROM events, `location` WHERE `events`.id_loc_event = `location`.id AND `events`.id = '$event_loc_id_first'") or die(mysqli_error($conn)); 
                   while($result = mysqli_fetch_array($sql)){
                     ?>
-                    <a href="../pages/singl_location?location=<?php echo $result['id_loc_event']; ?>"><?php echo $result['title_location']; ?></a>
-                  <?php }}?>
+                    <a href="../pages/singl_location?location=<?php echo $result['id_loc_event']; ?>"><?php echo $result['title_location']; ?></a><br><br>
+                  <?php }} ?>
+                  <p><b>Рекомендації до відвідування заходу -</b> <span style="color:red">Обов'язкове</span></p>
                   <hr>
                   <?php if(isset($_GET['event'])){ 
                     $event_long_lang = $_GET['event'];
@@ -53,22 +54,23 @@
                       ?>
                       <!-- Google Maps -->
                       <script type="text/javascript">
-                       function initialize() {
+                       function initMap() {
                          var latlng = {lat: <?php echo $row['lat'] ?>, lng: <?php echo $row['lng'] ?>};
                          var settings = {
                            zoom: 15,
                            center: latlng,
-                           mapTypeControl: true,
+                           mapTypeControl: false,
                            mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
-                           navigationControl: true,
+                           navigationControl: false,
                            navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
                            mapTypeId: google.maps.MapTypeId.ROADMAP
-                         };
+                         }
                          var map = new google.maps.Map(document.getElementById("map_canvas"), 
                           settings);
                          var contentString = '<div class="infowindow">' +
                          '<h3><?php echo $row['title'] ?></h3>' +
                          '<p><?php echo $row['pre_event'] ?></p>' +
+                         '<p><?php echo $row['post_event'] ?></p>' +
                          '</div>';
                          var infoWindow = new google.maps.InfoWindow({
                           content: contentString
@@ -79,11 +81,8 @@
                           map: map,
                           title:"<?php echo $row['title'] ?>"
                         });
-                         google.maps.event.addListener(companyPos, 'click', function() {
-                          infoWindow.open(map, companyPos);
-                        });
-                         google.maps.event.addListener(map, 'click', function() {
-                          infoWindow.close();
+                        google.maps.event.addListener(companyMarker, 'click', function() {
+                        infoWindow.open(map, companyMarker);
                         });
                        }
                      </script>
@@ -91,7 +90,7 @@
                    <? } }?>
                    <!-- Google Maps -->
                    <div class="CommentsToEventPage">
-                    <h4>Залиште свій відгук про захід!</h4><br>
+                    <h4>Залишіть свій відгук про захід!</h4><br>
                     <?php include('../function/comments_event_view.php') ?>
                     <?php if(!isset($_SESSION["user"])){ ?>
                       <p style="text-align: center; color: red;">Для того щоб залишати коментарi треба авторизуватись!</p>

@@ -35,7 +35,7 @@ function activemenu($activemenu)
           while($result = mysqli_fetch_array($rs_result)){
            ?>
            <p>
-            Ласкаво просимо <?php echo $_SESSION['user']['user_type'];?> - 
+            Ласкаво просимо (<?php echo $_SESSION['user']['user_type'];?>) - 
             <i class="fa fa-user-o" aria-hidden="true"></i> 
             <a id="logadm"  href="../user/user?id=<?php echo $_SESSION['user']['id'];?>"><?php echo $_SESSION['user']['username'];?></a>
           </p>

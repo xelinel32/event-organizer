@@ -19,7 +19,6 @@ $events = get_json($events);
 					<div class="content_cal">
 						<script>var events = <?php echo $events ?>;</script>
 					</div>
-				</div>
 			</div>
 		</div>
 	</div>

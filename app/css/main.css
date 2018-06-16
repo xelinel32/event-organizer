@@ -1148,6 +1148,7 @@ h2.post_title{
   font-size: 20px;
   padding: 8px;
   margin: 10px;
+  border-radius: 10px;
 }
 .category_item a:hover{
   background-color: #1dd2af;
@@ -1215,15 +1216,21 @@ h2.post_title{
   font-family: "RobotoMedium";
   color: #2c3e50;
 }
-.operation_profile a:hover,.my_events_user a:hover{
-  text-decoration: none;
+.my_events_user .table-bordered td{
+  vertical-align: baseline;
 }
-.operation_profile b{
-  text-decoration: underline;
+.operation_profile a:hover{
+  text-decoration: none;
+  color: white;
+}
+.my_events_user a:hover{
+  text-decoration: none;
+  color: #1dd2af;
 }
 /*calendar*/
 .full_calendar{
   margin-top: 50px;
+  width: 100%;
 }
 .info_cal {
   text-align: center;
@@ -1248,9 +1255,59 @@ h2.post_title{
   max-width: 100%;
   margin: auto;
 }
+.content_cal .fc-title{
+  text-align: center;
+  font-size: 15px;
+}
+.content_cal .fc-time{
+  text-align: center;
+  font-size: 15px;
+}
+.content_cal .fc-content{
+  color: white;
+  background: #3a4e61;
+  transition: all .5s;
+}
+.content_cal .fc-content:hover{
+  background: #1dd2af;
+  color: #fff;
+  text-shadow: #1dd2af;
+}
+.content_cal .fc-day-number{
+  font-size: 17px;
+}
+.content_cal .fc-left h2{
+  font-family: "RobotoBold";
+  font-size: 28px;
+}
+.content_cal .fc-right button, .fc-left button{
+  border:none;
+  margin-left: 10px;
+  color:  #3a4e61;
+}
+.content_cal .fc-head{
+  border-color: #3a4e61;
+  background: #3a4e61;
+  color: white;
+  font-size: 17px;
+}
 .content_cal .content_cal .fc-today{
   background: #1dd2af;
   color: #fff;
+}
+.content_cal .fc-button-group button{
+  margin-left: 10px;
+  background-color: #1dd2af;
+  padding: 8px 15px;
+  color: black;
+  cursor: pointer;
+}
+.content_cal td{
+  vertical-align: inherit;
+  height: 40px;
+}
+.content_cal td.fc-today{
+  background: #858585;
 }
 /*form new event*/
 .formnewevent {
@@ -1289,7 +1346,7 @@ h2.post_title{
   justify-content: center;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
-  background: cornsilk;
+  background-color: #3a4e61;
 }
 .admin_menu ul{
   display: inline;

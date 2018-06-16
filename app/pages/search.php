@@ -17,7 +17,7 @@
                         $query = htmlspecialchars($query);
                         $query = mysqli_real_escape_string($conn,$query);
                         $min_length = 3;
-                        if(strlen($query) >= $min_length){ 
+                        if(strlen($query) >= $min_length || strlen($query_date) >= $min_length){ 
                             $search_query = "SELECT `id`,`title`,`add_event`, 'article' as subj   
                             FROM `events`   
                             WHERE `title` LIKE '%$query%' AND `add_event` LIKE '%$query_date%'   
@@ -29,7 +29,7 @@
                             if(mysqli_num_rows($raw_results) > 0){ 
                                 while($results = mysqli_fetch_array($raw_results)){?>
                                     <div class="result_seart_be">
-                                        Захід - <a href="../pages/big_events?event=<?php echo $results['id']; ?>"><?php echo $results['title']; ?></a><span>Дата публікації заходу - <?php echo $results['add_event']; ?></span>
+                                        Захід - <a href="<?php if($results['id']){ ?>../pages/big_events?event<?php }else{ ?>../pages/big_blog?id<?php  }?>=<?php echo $results['id']; ?>"><?php echo $results['title']; ?></a><span>Дата публікації заходу - <?php echo $results['add_event']; ?></span>
                                     </div>
                                 <?php } 
                             }

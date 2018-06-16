@@ -19,7 +19,7 @@ include '../function/configdb.php';
               $sql = mysqli_query($conn,"SELECT * FROM `multi_login` WHERE `id` = ".$_GET['id']."") or die("Помилка в запиті");
               while($result = mysqli_fetch_array($sql)){
                 ?>
-                <h2>Профіль користувача  - <span><?php echo $result['username']; ?></span> </h2>
+                <h2>Профіль користувача  - <span><?php echo $result['username']; ?></span></h2><br>
                 <img src="<?php echo $result['image']; ?>" alt="userlogo">
                 <div class="profile_user">
                  <ul> </li>
@@ -38,13 +38,13 @@ include '../function/configdb.php';
                 <div class="panel_user">
                   <h3>Панель керування</h3>
                   <?php if($_SESSION['user']['user_type']=='Адміністрація'){ ?>
-                    <div class="operation_profile">
-                    <b>Операції з профілем</b> -
-                    <a data-toggle="modal" data-target="#EditeProfilePass" href="">Змінити пароль</a> |
-                    <a data-toggle="modal" data-target="#EditeProfile" href="">Змінити дані</a> |
-                    <a data-toggle="modal" data-target="#EditeProfilePhoto" href="">Змінити зображення</a><br>
-                    </div><br>
-                    <a class="btn btn-outline-primary btn-sm" href="../admin/admin">Перейти до панелі адміністратора</a> 
+                  <div class="operation_profile">
+                    <b>Операції з профілем</b><br><br>
+                    <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfilePass" href="">Змінити пароль</a> 
+                    <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfile" href="">Змінити дані</a> 
+                    <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfilePhoto" href="">Змінити зображення</a><br>
+                  </div><br>
+                    <a class="btn btn-outline-danger btn-sm" href="../admin/admin">Перейти до панелі адміністратора</a> 
 
                   <?php } else { ?>
                    <div class="my_events_user"> 
@@ -55,7 +55,6 @@ include '../function/configdb.php';
                       <thead>
                         <tr>
                           <th>Назва</th>
-                          <th>Скор. опис</th>
                           <th>Адреса</th>
                           <th>Категорія</th>
                           <th colspan="2">Дія</th>
@@ -64,24 +63,23 @@ include '../function/configdb.php';
                       <?php while ($row = mysqli_fetch_assoc($results)) { ?>
                         <tr>
                           <td><a href="../pages/big_events?event=<?php echo $row['id'] ?>"><?php echo $row['title']; ?></a></td>
-                          <td><?php echo $row['pre_event']; ?></td>
                           <td><?php echo $row['title_location']; ?></td>
                           <td><?php echo $row['category']; ?></td>
-                          <td><a href="editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-success btn-sm">Змі.</a></td>
-                          <td><a href="editprofile?del=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Вид.</a></td>
+                          <td><a href="editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-default btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                          <td><a href="editprofile?del=<?php echo $row['id']; ?>" class="btn btn-default btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                         </tr>
                       <?php } ?>
                     </table>
                   </div>
                   </div>
                   <div class="operation_profile">
-                    <b>Операції з профілем</b> -
-                    <a data-toggle="modal" data-target="#EditeProfilePass" href="">Змінити пароль</a> |
-                    <a data-toggle="modal" data-target="#EditeProfile" href="">Змінити дані</a> |
-                    <a data-toggle="modal" data-target="#EditeProfilePhoto" href="">Змінити зображення</a><br>
+                    <b>Операції з профілем</b><br><br>
+                    <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfilePass" href="">Змінити пароль</a> 
+                    <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfile" href="">Змінити дані</a> 
+                    <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfilePhoto" href="">Змінити зображення</a><br>
                     <br><a class="btn btn-outline-primary btn-sm" href="neweventuser"> Організувати захід</a>
                     <a class="btn btn-outline-primary btn-sm" href="newlocationuser"> Додати місце проходження заходів</a>
-                    <a class="btn btn-outline-primary btn-sm" href="../user/user?id=1"> Зв'язатись з адміністрацією</a>
+                    <a class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#SendAdmin" href=""> Зв'язатись з адміністрацією</a>
                   </div>
                 <?php } ?> 
               </div>

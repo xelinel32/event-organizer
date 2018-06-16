@@ -1,7 +1,7 @@
 <?php
 include 'configdb.php';
 if(isset($_GET['id'])){
-	$sqlquery = "SELECT * FROM `comments_blog` WHERE `id_blog` = ".$_GET['id'].""; 
+	$sqlquery = "SELECT * FROM `comments_blog` WHERE `id_blog` = ".$_GET['id']." ORDER BY `date` DESC LIMIT 10"; 
 }
 $sql = mysqli_query($conn,$sqlquery) or die(mysqli_error());
 while($row = mysqli_fetch_array($sql)){

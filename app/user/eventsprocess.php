@@ -23,6 +23,9 @@ if(isset($_POST['btn_new_event'])){
 	$type_image_events = $_FILES['img_event']['type'];
 	define('MB', 1048576);
 	// oper
+	$query_title_event_prev = mysqli_query($conn,"SELECT * FROM `events` WHERE `title`='$title'") or die(mysqli_error($conn));
+	$numrows_pre_event=mysqli_num_rows($query_title_event_prev);
+	if($numrows_pre_event == 0) {	
 	if (preg_match('/^\D+$/i', $title)) {
 		$str_title = strlen($title);
 		$str_lat_name = strlen($lat_name);
@@ -61,6 +64,9 @@ if(isset($_POST['btn_new_event'])){
 		}
 	}else{
 		echo "<script>alert('Назва заходу не повинна мати числа!');location='neweventuser'</script>";
+	}
+	}else{
+		echo "<script>alert('Така назва заходу вже існує!');location='neweventuser'</script>";
 	}
 }		
 ?>

@@ -57,7 +57,30 @@ $(document).ready(function() {
   });
   // calendar
   $('.content_cal').fullCalendar({
+    eventSources : [{
+      events : events,
+    }],
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay',
+      columnHeaderFormat: 'dddd',
+    },
+    eventRender: function(event, element) {
+      element.attr('data-toggle', "modal");
+      element.attr('data-target', "#calendarModal");
+      element.attr('href', "/details");
+    },
+    eventClick:  function(event, jsEvent, view) {
+      $('#modalTitle').html(event.title);
+      $("#startTime").html(moment(event.start).format('YYYY/MM/DD H(:mm):s'));
+      $("#endTime").html(moment(event.end).format('YYYY/MM/DD H(:mm):s'));
+      $('#modalBody').html(event.description);
+      $('#eventUrl').attr('href',event.url);
+      $('#calendarModal').modal();
+    },
     timeFormat: 'H(:mm):s',
+    axisFormat: 'H(:mm):s',
     displayEventEnd: true,
     buttonText: {
       today: "Сьогодні",
@@ -65,12 +88,9 @@ $(document).ready(function() {
       week: "Неділя",
       day: "День"
     },
-    eventSources : [{
-      events : events,
-    }],
     monthNames: ['Січень','Лютий','Березень','Квітень','Травень','Червень','Липень','Серпень','Вересень','Жовтень','Листопад',' Грудень',],
-    monthNamesShort: ['Січ','Лют','Бер','Кві','Тра','Чер','Лип','Сер','Вер','Жов','Лис','Гру',],
+    monthNamesShort: ['Січень','Лютий','Березень','Квітень','Травень','Червень','Липень','Серпень','Вересень','Жовтень','Листопад','Грудень',],
     dayNames: ['Неділя','Понеділок','Вівторок','Середа','Четвер','П`ятниця','Субота'],
-    dayNamesShort: ['НД','ПН','ВТ','СР','ЧТ','ПТ','СБ',],
+    dayNamesShort: ['Неділя','Понеділок','Вівторок','Середа','Четвер','П`ятниця','Субота',],
   });
 });

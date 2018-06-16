@@ -46,21 +46,30 @@ echo "<script>location='../pages/404'</script>";
 					<input class="form-control" value="2018-08-19T13:45:00" step="1" id="example-date-input" required type="datetime-local" name="start_event"><br>
 					<label>Кінець заходу</label>
 					<br><input value="2018-08-19T13:45:00" step="1" id="example-date-input" class="form-control" required type="datetime-local" name="end_event"><br>
+
+					<?php $event_id_edit_user = $_GET['user_event_id'];
+              $sql = mysqli_query($conn,"SELECT * FROM `events` WHERE `id` = '$event_id_edit_user'") or die(mysqli_error($conn)); 
+              while($result = mysqli_fetch_array($sql)){ ?>
+
 					<label>Довгота для Google Maps</label>
-					<input class="form-control" type="text" id="lat" name="lat_name" required placeholder="00.000000"><br>
+					<input class="form-control" type="text" id="lat" name="lat_name" required placeholder="<?php echo $result['lat'] ?>"><br>
 					<label>Широта для Google Maps</label>
-					<input class="form-control" id="long" type="text" name="lng_name" required placeholder="00.000000">
-					<label>
+					<input class="form-control" id="long" type="text" name="lng_name" required placeholder="<?php echo $result['lng'] ?>">
+					<label><br>
 					Виберіть координати клікнувши на карту</label>
 					<div id="map" style="width:100%; height:350px; border:2px solid #00ff00;"></div><br>
 					<script type="text/javascript">
 						function initMap() {
-							var bogor = {lat: 51.495866, lng: 31.2204985};
+							var bogor = {lat: <?php echo $result['lat'] ?>, lng: <?php echo $result['lng'] ?>};
 							var map = new google.maps.Map(document.getElementById('map'), {
 								center: bogor,
 								scrollwheel: false,
 								zoom: 12
 							});
+                        	var companyMarker = new google.maps.Marker({
+                          	position: bogor,
+                          	map: map
+                        	});
 							google.maps.event.addListener(map, 'click', function(event){
 								document.getElementById('lat').value = event.latLng.lat();
 								document.getElementById('long').value = event.latLng.lng();
@@ -68,12 +77,14 @@ echo "<script>location='../pages/404'</script>";
 						}
 					</script>
 					<br><label for="exampleFormControlTextarea1">Короткий опис</label>
-					<textarea required name="preview_event" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Що буде за захід?"></textarea><br>
+					<textarea required name="preview_event" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Що буде за захід?"><?php echo $result['pre_event'] ?></textarea><br>
 					<label>Повний опис</label><br>
-					<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_event" cols="80" rows="10" placeholder="Повний опис заходу"></textarea><br>
+					<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_event" cols="80" rows="10" placeholder="Повний опис заходу"><?php echo $result['big_event'] ?></textarea><br>
 					<input class="btn btn-light" type="submit" value="Редагувати" name="btn_edit_event">
+					<a href="user?id=<?php echo $_SESSION['user']['id'];?>" class="btn btn-light float-right">Назад</a>
 					<input type="text" name="user_event_id_post" hidden value="<?php echo $_GET['user_event_id'] ?>">
 				</div>
+			<?php } ?>
 			</form>
 			<div style="clear: both;border-top: 1px solid black"><br></div>
 			<div class="infoevents">
