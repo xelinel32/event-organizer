@@ -168,7 +168,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Закрити</button>
-			<a class="btn btn-info btn-sm" id="eventUrl" href="" target="_blank">Дивитись більше</a>
+			<a class="btn btn-info btn-sm" id="eventUrl" href="">Перейти</a>
 			</div>
 		</div>
 	</div>

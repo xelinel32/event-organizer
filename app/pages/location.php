@@ -35,7 +35,10 @@
               $row = mysqli_fetch_row($rs_result_loc);  
               $total_records = $row[0];  
               $total_pages = ceil($total_records / $limit);  
-              $pagLink = "<div class='paginations'>";  
+              $pagLink = "<div class='paginations'>"; 
+              if($page != 1){
+                $pagLink .= "<a id='prevnext' href='location?page_loc=1'>Перша</a>";  
+              }   
               for ($i=1; $i<=$total_pages; $i++) {
                 if($page == $i) {
                   $pagLink .= "<a href='location?page_loc=".$i."'class = 'active'>".$i."</a>"; 
@@ -43,6 +46,9 @@
                   $pagLink .= "<a href='location?page_loc=".$i."'class = 'noactive'>".$i."</a>"; 
                 }  
               };  
+              if($page != $total_pages){
+                $pagLink .= "<a id='prevnext' href='location?page_loc=".$total_pages."'>Остання</a>";  
+              } 
               echo $pagLink . "</div>";  
               ?>
             </div>

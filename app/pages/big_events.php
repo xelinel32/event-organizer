@@ -44,8 +44,12 @@
                   while($result = mysqli_fetch_array($sql)){
                     ?>
                     <a href="../pages/singl_location?location=<?php echo $result['id_loc_event']; ?>"><?php echo $result['title_location']; ?></a><br><br>
-                  <?php }} ?>
-                  <p><b>Рекомендації до відвідування заходу -</b> <span style="color:red">Обов'язкове</span></p>
+                  <!-- tags -->
+                  <?php if($result['tag'] == "Обов'язкове"){ ?>
+                  <p><b>Рекомендації до відвідування заходу -</b> <span style="color:red"><?php echo $result['tag']; ?></span></p>
+                <?php } else { ?>
+                   <p><b>Рекомендації до відвідування заходу -</b> <span style="color:green"><?php echo $result['tag']; ?></span></p>
+                  <?php }}} ?>
                   <hr>
                   <?php if(isset($_GET['event'])){ 
                     $event_long_lang = $_GET['event'];

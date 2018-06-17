@@ -45,14 +45,20 @@
         $row = mysqli_fetch_row($rs_result);  
         $total_records = $row[0];  
         $total_pages = ceil($total_records / $limit);  
-        $pagLink = "<div class='paginations'>";  
+        $pagLink = "<div class='paginations'>";
+        if($page != 1){
+          $pagLink .= "<a id='prevnext' href='blog?page=1'>Перша</a>";  
+        }  
         for ($i=1; $i<=$total_pages; $i++) {
           if($page == $i) {
             $pagLink .= "<a href='blog?page=".$i."'class = 'active'>".$i."</a>"; 
           }else{
             $pagLink .= "<a href='blog?page=".$i."'class = 'noactive'>".$i."</a>"; 
           }  
-        };  
+        }; 
+        if($page != $total_pages){
+          $pagLink .= "<a id='prevnext' href='blog?page=".$total_pages."'>Остання</a>";  
+       } 
         echo $pagLink . "</div>";  
         ?>
       </div>

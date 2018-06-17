@@ -27,7 +27,7 @@ echo "<script>location='../pages/404'</script>";
 							?>	
 							<option></option>
 							<?php while($row = mysqli_fetch_assoc($categories)){ ?>
-								<option value="<?php echo $row['id'] ?>"><?php echo $row['category']?></option>
+							<option value="<?php echo $row['id'] ?>"><?php echo $row['category']?></option>
 							<?php } ?>
 						</select></br>
 						<label for="exampleFormControlSelect1">Місце проходження заходу</label><br>
@@ -37,7 +37,7 @@ echo "<script>location='../pages/404'</script>";
 							?>	
 							<option></option> 
 							<?php while($row = mysqli_fetch_assoc($locations)){ ?>
-								<option value="<?php echo $row['id'] ?>"><?php echo $row['title_location']?></option>
+							<option value="<?php echo $row['id'] ?>"><?php echo $row['title_location']?></option>
 							<?php } ?>
 						</select></br>
 						<label for="exampleFormControlFile1">Зображення</label><br>
@@ -71,6 +71,12 @@ echo "<script>location='../pages/404'</script>";
 						<textarea required name="preview_event" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Що буде за захід?"></textarea><br>
 						<label>Повний опис</label><br>
 						<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_event" cols="80" rows="10" placeholder="Повний опис заходу"></textarea><br>
+						<label>Мітка відвідування</label><br>
+						<select name="tag" class="form-control" id="exampleFormControlSelect1">
+						<option></option>
+						<option>Обов'язкове</option> 
+						<option>Необов'язкове</option>  	
+						</select><br>
 						<input class="btn btn-light" type="submit" value="Додати захід" name="btn_new_event">
 						<a href="user?id=<?php echo $_SESSION['user']['id'];?>" class="btn btn-light float-right">Назад</a>
 					</div>

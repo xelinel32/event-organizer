@@ -11,6 +11,7 @@ if(isset($_POST['btn_new_event'])){
 	$start_date_event = $_POST['start_event'];
 	$end_date_event = $_POST['end_event'];
 	$add_date_event = date("Y-m-d H:i:s");
+	$tag = mysqli_real_escape_string($conn,$_POST['tag']);
 	$preview_event = mysqli_real_escape_string($conn,trim($_POST['preview_event']));
 	$full_event = mysqli_real_escape_string($conn,trim($_POST['full_event']));
 	$lat_name = trim($_POST['lat_name']);
@@ -33,13 +34,13 @@ if(isset($_POST['btn_new_event'])){
 		$str_prev_event = strlen($preview_event);
 		$str_full_event = strlen($full_event);
 		if($str_title > 10 || $str_prev_event > 10 || $str_full_event > 10 || $str_title < 200 || $str_prev_event < 100 || $str_lat_name > 6 || $str_lng_name > 6) {
-			if($id_cat !== " " || $id_loc !== " " || $lat_name !== " " || $lng_name !== " ") {
+			if($id_cat !== " " || $id_loc !== " " || $lat_name !== " " || $lng_name !== " " || tag !== " ") {
 				if($end_date_event > $start_date_event && $add_date_event <= $start_date_event){
 					if($type_image_events == "image/jpeg" || $type_image_events == "image/png"){
 						if($photo_size_events < 5*MB) {
 
 							if (move_uploaded_file($_FILES['img_event']['tmp_name'], $fots_dir)) {
-								$result_query_ev = "INSERT INTO `events` (`title`, `pre_event`, `image`, `id_cat_event`, `post_event`, `start_event`, `end_event`, `add_event`, `big_event`, `id_loc_event`,`id_user`, `lat`,`lng`) VALUES ('$title','$preview_event', '$fots_dir','$id_cat', '$post_event', '$start_date_event', '$end_date_event', '$add_date_event', '$full_event', '$id_loc', '$id_user','$lat_name','$lng_name')";
+								$result_query_ev = "INSERT INTO `events` (`title`, `pre_event`, `image`, `id_cat_event`, `post_event`, `start_event`, `end_event`, `add_event`, `big_event`, `id_loc_event`,`id_user`, `lat`,`lng`,`tag`) VALUES ('$title','$preview_event', '$fots_dir','$id_cat', '$post_event', '$start_date_event', '$end_date_event', '$add_date_event', '$full_event', '$id_loc', '$id_user','$lat_name','$lng_name','$tag')";
 								$result_add = mysqli_query($conn,$result_query_ev) or die(mysqli_error($conn));
 								if($result_add) {
 									echo "<script>alert('Захід опубліковано!');location='user?id=".$id_user."'</script>"; 

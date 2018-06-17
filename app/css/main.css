@@ -1364,3 +1364,6 @@ h2.post_title{
 .admin_content table {
   text-align: center;
 }
+#prevnext{
+  width: 100px;
+}

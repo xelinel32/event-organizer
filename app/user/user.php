@@ -62,12 +62,16 @@ include '../function/configdb.php';
                       </thead>
                       <?php while ($row = mysqli_fetch_assoc($results)) { ?>
                         <tr>
+                        <?php if($row == 0){ ?>
+                          <td colspan="5">hello</td>
+                        <?php } else { ?> 
                           <td><a href="../pages/big_events?event=<?php echo $row['id'] ?>"><?php echo $row['title']; ?></a></td>
                           <td><?php echo $row['title_location']; ?></td>
                           <td><?php echo $row['category']; ?></td>
                           <td><a href="editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-default btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
                           <td><a href="editprofile?del=<?php echo $row['id']; ?>" class="btn btn-default btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                        </tr>
+                        <?php } ?>
+                      </tr>
                       <?php } ?>
                     </table>
                   </div>

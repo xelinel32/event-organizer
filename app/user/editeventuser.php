@@ -80,6 +80,11 @@ echo "<script>location='../pages/404'</script>";
 					<textarea required name="preview_event" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Що буде за захід?"><?php echo $result['pre_event'] ?></textarea><br>
 					<label>Повний опис</label><br>
 					<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_event" cols="80" rows="10" placeholder="Повний опис заходу"><?php echo $result['big_event'] ?></textarea><br>
+					<label>Мітка відвідування</label><br>
+					<select name="tag" class="form-control" id="exampleFormControlSelect1">
+						<option>Обов'язкове</option> 
+						<option>Необов'язкове</option>  	
+					</select><br>
 					<input class="btn btn-light" type="submit" value="Редагувати" name="btn_edit_event">
 					<a href="user?id=<?php echo $_SESSION['user']['id'];?>" class="btn btn-light float-right">Назад</a>
 					<input type="text" name="user_event_id_post" hidden value="<?php echo $_GET['user_event_id'] ?>">

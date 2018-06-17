@@ -19,6 +19,7 @@ if(isset($_POST['btn_edit_event'])){
 	$photo_size_events  = $_FILES['img_event']['size'];
 	$type_image_events = $_FILES['img_event']['type'];
 
+	$tag = mysqli_real_escape_string($conn,$_POST['tag']);
 	$start_date_event = $_POST['start_event'];
 	$end_date_event = $_POST['end_event'];
 	$add_date_event = date("Y-m-d H:i:s");
@@ -36,14 +37,14 @@ if(isset($_POST['btn_edit_event'])){
 	if($numrows_pre_event == 0) {	
 	if (preg_match('/^\D+$/i', $title)) {
 		if($str_title > 10 || $str_prev_event > 10 || $str_full_event > 10 || $str_title < 200 || $str_prev_event < 100 || $str_lat_name > 6 || $str_lng_name > 6) {
-			if($id_cat !== " " || $id_loc !== " " || $lat_name !== " " || $lng_name !== " ") {
+			if($id_cat !== " " || $id_loc !== " " || $lat_name !== " " || $lng_name !== " " || tag !== " ") {
 				if($end_date_event > $start_date_event && $add_date_event <= $start_date_event){
 					define('MB', 1048576);
 					if($type_image_events == "image/jpeg" || $type_image_events == "image/png"){
 						if($photo_size_events < 5*MB) {
 
 							if (move_uploaded_file($_FILES['img_event']['tmp_name'], $fot_dir)) {
-								$result_query_ev = "UPDATE `events` SET `title` = '$title' , `pre_event` = '$preview_event', `image` = '$fot_dir', `id_cat_event` = '$id_cat' , `post_event` = '$post_event' , `start_event` = '$start_date_event', `end_event` = '$end_date_event' , `add_event` = '$add_date_event', `big_event` = '$full_event' , `id_loc_event` = '$id_loc',`id_user` = '$id_user', `lat` = '$lat_name' , `lng` = '$lng_name' WHERE  `id` = '$id_post_evet_edit'";
+								$result_query_ev = "UPDATE `events` SET `title` = '$title' , `pre_event` = '$preview_event', `image` = '$fot_dir', `id_cat_event` = '$id_cat' , `post_event` = '$post_event' , `start_event` = '$start_date_event', `end_event` = '$end_date_event' , `add_event` = '$add_date_event', `big_event` = '$full_event' , `id_loc_event` = '$id_loc',`id_user` = '$id_user', `lat` = '$lat_name' , `lng` = '$lng_name', `tag` = '$tag' WHERE  `id` = '$id_post_evet_edit'";
 								$result_add = mysqli_query($conn,$result_query_ev) or die(mysqli_error($conn));
 								if($result_add) {
 									echo "<script>alert('Захід змінено!');location='user?id=".$id_user."'</script>"; 
