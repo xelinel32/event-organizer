@@ -113,6 +113,9 @@
 	.profile_user ul{
 		margin-left: 0;
 	}
+	.mini_log{
+		height: 230px;
+	}
 }
 
 /* Extra Small Devices, Phones */

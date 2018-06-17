@@ -49,13 +49,14 @@ include '../function/configdb.php';
                    <div class="my_events_user"> 
                      <b>Мої заходи</b><br>   
                      <?php $results = mysqli_query($conn, "SELECT * FROM `category_events`,`location`, `events` WHERE `events`.id_cat_event = `category_events`.id AND `events`.id_loc_event = `location`.id AND `events`.id_user = ".$_SESSION['user']['id'].""); ?>
-                     <div class="table-responsive">
+                     <div class="table-responsive-md">
                      <br><table style="text-align: center;" class="table table-sm table-bordered">
                       <thead class="thead-light">
                         <tr>
                           <th>Назва</th>
                           <th>Адреса</th>
                           <th>Категорія</th>
+                          <th>Статус</th>
                           <th colspan="2">Дія</th>
                         </tr>
                       </thead>
@@ -64,6 +65,7 @@ include '../function/configdb.php';
                           <td><a href="../pages/big_events?event=<?php echo $row['id'] ?>"><?php echo $row['title']; ?></a></td>
                           <td><?php echo $row['title_location']; ?></td>
                           <td><?php echo $row['category']; ?></td>
+                          <td><?php echo $row['status']; ?></td>
                           <td><a href="editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-default btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
                           <td><a href="editprofile?del=<?php echo $row['id']; ?>" class="btn btn-default btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                       </tr>

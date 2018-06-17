@@ -14,7 +14,7 @@
 	<link rel="shortcut icon" href="../img/favicon.ico" />
 	<link rel="stylesheet" href="../libs/bootstrap/bootstrap-grid.min.css" />
 	<link rel="stylesheet" href="../libs/font-awesome-4.7.0/css/font-awesome.css" />
-	<link rel="stylesheet" href="../libs/fullcalendar/fullcalendar.css">
+	<!-- <link rel="stylesheet" href="../libs/fullcalendar/fullcalendar.css"> -->
 	<link rel="stylesheet" href="../css/fonts.css" />
 	<link rel="stylesheet" href="../css/main.css" />
 	<link rel="stylesheet" href="../css/media.css" />

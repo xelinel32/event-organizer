@@ -30,7 +30,7 @@ echo "<script>location='../pages/404'</script>";
 							<option value="<?php echo $row['id'] ?>"><?php echo $row['category']?></option>
 							<?php } ?>
 						</select></br>
-						<label for="exampleFormControlSelect1">Місце проходження заходу</label><br>
+						<label for="exampleFormControlSelect1">Місце проходження заходу(<a style="text-decoration:none;" href="newlocationuser">Створити</a></a>)</label><br>
 						<select class="form-control" id="exampleFormControlSelect1" name="location_event">
 							<?php $query = "SELECT `id`,`title_location` FROM `location`"; 
 							$locations =  mysqli_query($conn,$query);

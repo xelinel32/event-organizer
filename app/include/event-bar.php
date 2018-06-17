@@ -11,7 +11,7 @@
                 </div>
                 <div class="EventPageBig">
                     <?php 
-                    $sql = "SELECT * FROM `events` ORDER BY `add_event` DESC LIMIT 4";  
+                    $sql = "SELECT * FROM `events` WHERE `status` = 'active' ORDER BY `add_event` DESC LIMIT 4";  
                     $row = mysqli_query($conn,$sql); 
                     while($result = mysqli_fetch_array($row)){
                         ?>  

@@ -35,9 +35,9 @@
 						} else { $page=1; $ideventcat = $_GET['category_events_id'];};  
 						$start_from = ($page-1) * $limit; 
 						if(!empty($ideventcat)){ 
-							$sql = "SELECT * FROM `events` WHERE `id_cat_event` = '$ideventcat' ORDER BY `add_event` ASC LIMIT $start_from, $limit";
+							$sql = "SELECT * FROM `events` WHERE `id_cat_event` = '$ideventcat' AND `status` = 'active' ORDER BY `add_event` ASC LIMIT $start_from, $limit";
 						}else {
-							$sql = "SELECT * FROM `events` WHERE `id` ORDER BY `add_event` ASC LIMIT $start_from, $limit";
+							$sql = "SELECT * FROM `events` WHERE `status` = 'active' ORDER BY `add_event` ASC LIMIT $start_from, $limit";
 						}  
 						$rs_result = mysqli_query ($conn,$sql); 
 						while($g_result = mysqli_fetch_array($rs_result)){
@@ -56,9 +56,9 @@
 								<div class="paginations">
 									<?php
 									if(!empty($ideventcat)){   
-										$sql = "SELECT COUNT(id) FROM `events` WHERE `id_cat_event` = '$ideventcat' LIMIT 10";
+										$sql = "SELECT COUNT(id) FROM `events` WHERE `id_cat_event` = '$ideventcat' AND `status` = 'active' LIMIT 10";
 									}else{
-										$sql = "SELECT COUNT(id) FROM `events` WHERE `id`LIMIT 10";
+										$sql = "SELECT COUNT(id) FROM `events` WHERE `id` AND `status` = 'active' LIMIT 10";
 									}	  
 									$rs_result = mysqli_query($conn,$sql);  
 									$row = mysqli_fetch_row($rs_result);  

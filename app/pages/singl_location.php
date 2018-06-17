@@ -30,7 +30,7 @@
                 <?php 
                 if(isset($_GET['location'])){
                   $loc_event = $_GET['location'];
-                  $sql = mysqli_query($conn,"SELECT * FROM `events` WHERE `id_loc_event` = '$loc_event'") or die(mysqli_error($conn)); 
+                  $sql = mysqli_query($conn,"SELECT * FROM `events` WHERE `id_loc_event` = '$loc_event' AND `status` = 'active'") or die(mysqli_error($conn)); 
                   while($result = mysqli_fetch_array($sql)){
                     ?>
                     <li><a href="../pages/big_events?event=<?php echo $result['id']; ?>"><?php echo $result['title']; ?></a> <span><?php echo $result['add_event']; ?></span></li>

@@ -20,7 +20,7 @@
                         if(strlen($query) >= $min_length || strlen($query_date) >= $min_length){ 
                             $search_query = "SELECT `id`,`title`,`add_event`, 'article' as subj   
                             FROM `events`   
-                            WHERE `title` LIKE '%$query%' AND `add_event` LIKE '%$query_date%'   
+                            WHERE `title` LIKE '%$query%' AND `add_event` LIKE '%$query_date%' AND `status` = 'active'  
                             UNION   
                             SELECT `id`,`title_post` as title,`date_post` as add_event, 'blog' as subj  
                             FROM `blog`   

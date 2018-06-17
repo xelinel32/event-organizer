@@ -14,12 +14,13 @@ function activemenu($activemenu)
 	<div class="admin_menu">
 		<ul>
 			<li>
-				<a <?=activemenu("catdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="catdashboard">Панель категорій</a>
-				<a <?=activemenu("admin.php")?> class="btn btn-sm btn-warning" role="button" href="admin">Пенель заходів</a>
-				<a <?=activemenu("blogdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="blogdashboard">Панель статей</a>
-				<a <?=activemenu("locdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="locdashboard">Панель місць</a>
-				<a <?=activemenu("userdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="userdashboard">Панель юзерів</a>
-				<a <?=activemenu("commentsdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="commentsdashboard">Панель коментарів та відгуків</a>
+				<a <?=activemenu("catdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="catdashboard">Категорії</a>
+				<a <?=activemenu("admin.php")?> class="btn btn-sm btn-warning" role="button" href="admin">Заходи</a>
+				<a <?=activemenu("blogdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="blogdashboard">Статті</a>
+				<a <?=activemenu("locdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="locdashboard">Місця заходів</a>
+				<a <?=activemenu("userdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="userdashboard">Юзери</a>
+				<a <?=activemenu("commentsdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="commentsdashboard">Коментарі та відгуки</a>
+				<a <?=activemenu("commentsdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="commentsdashboard">Повідомлення</a>
 				<a <?=activemenu("index.php")?> class="btn btn-info" role="button" href="../user/user?id=<?php echo $_SESSION['user']['id']; ?>">Мій профіль</a>
 			</li>
 		</ul>

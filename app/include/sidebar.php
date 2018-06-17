@@ -4,7 +4,7 @@
         <div class="sidebarevent">
             <div class="sidebareventsmall">
                 <?php 
-                $sql = "SELECT * FROM `location` , `events` WHERE `events`.id_loc_event = `location`.id ORDER BY RAND() LIMIT 4";  
+                $sql = "SELECT * FROM `location` , `events` WHERE `events`.id_loc_event = `location`.id AND `status` = 'active' ORDER BY RAND() LIMIT 4";  
                 $row = mysqli_query($conn,$sql); 
                 while($result = mysqli_fetch_array($row)){
                     ?>

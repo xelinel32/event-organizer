@@ -10,8 +10,8 @@ if($_SESSION['user']['user_type']=='Юзер'){
 }
 ?>
 <?php include("../include/up_style.php") ?>
-<hr class="hrline">	
 <body>
+<hr class="hrline">	
 	<?php require_once('admin_include/admin_header.php'); ?>
 	<div class="main_content_news">
 		<div class="container">
@@ -37,7 +37,7 @@ if($_SESSION['user']['user_type']=='Юзер'){
 									<th>Кінець</th>
 									<th>Додано</th>
 									<th>Ім'я юзера</th> 
-									<th colspan="3">Операції</th>       
+									<th colspan="4">Операції</th>       
 								</tr>  
 							</thead>  
 							<tbody>  
@@ -52,6 +52,7 @@ if($_SESSION['user']['user_type']=='Юзер'){
 										<td><? echo $row["add_event"]; ?></td>  
 										<td><a href="../user/user?id=<?php echo $row['id_user'] ?>"><? echo $row["post_event"]; ?></a></td>  
 										<td><a href="../user/neweventuser" class="btn btn-success btn-sm">Дод.</a></td>
+										<td><a href="" class="btn btn-success btn-sm">Активувати</a></td>
 										<td><a href="../user/editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Змі.</a></td>
 										<td><a href="../user/editprofile?del=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Вид.</a></td>  
 									</tr>  
