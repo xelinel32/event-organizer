@@ -45,7 +45,8 @@
 							<div class="EeventPageSmall">
 								<img src="<?php echo $g_result['image'] ?>" alt="logo_event">
 								<p><?php echo $g_result['title'] ?><br> 
-									<span><?php echo $g_result['pre_event'] ?></span>
+                                <span>Дата - <?php echo $g_result['add_event']; ?></span><br>
+                                <span>Організував - <?php echo $g_result['post_event']; ?></span>
 									<a href="../pages/big_events?event=<?php echo $g_result['id'] ?>"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
 								</p>
 							</div>
@@ -55,9 +56,9 @@
 								<div class="paginations">
 									<?php
 									if(!empty($ideventcat)){   
-										$sql = "SELECT COUNT(id) FROM `events` WHERE `id_cat_event` = '$ideventcat'";
+										$sql = "SELECT COUNT(id) FROM `events` WHERE `id_cat_event` = '$ideventcat' LIMIT 10";
 									}else{
-										$sql = "SELECT COUNT(id) FROM `events` WHERE id";
+										$sql = "SELECT COUNT(id) FROM `events` WHERE `id`LIMIT 10";
 									}	  
 									$rs_result = mysqli_query($conn,$sql);  
 									$row = mysqli_fetch_row($rs_result);  

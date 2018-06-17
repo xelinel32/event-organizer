@@ -18,7 +18,8 @@
                         <div class="EeventPageSmall"> 
                             <img src="<?php echo $result['image']; ?>" alt="logo_event">
                             <p><?php echo $result['title']; ?><br> 
-                                <span>Дата - <?php echo $result['add_event']; ?></span>
+                                <span>Дата - <?php echo $result['add_event']; ?></span><br>
+                                <span>Організував - <?php echo $result['post_event']; ?></span>
                                 <a href="../pages/big_events?event=<?php echo $result['id']; ?>"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
                             </p>
                         </div>

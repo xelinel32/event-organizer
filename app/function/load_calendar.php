@@ -2,7 +2,7 @@
 include 'configdb.php';
 function get_events(){
 	global $conn;
-	$query = "SELECT `id`, `title`, `start_event`, `end_event`,`pre_event` FROM events";
+	$query = "SELECT `id`, `title`, `start_event`, `end_event`,`pre_event` FROM `events`";
 	$res = mysqli_query($conn,$query);
 	return mysqli_fetch_all($res, MYSQLI_ASSOC);
 }

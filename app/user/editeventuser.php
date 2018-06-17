@@ -46,11 +46,9 @@ echo "<script>location='../pages/404'</script>";
 					<input class="form-control" value="2018-08-19T13:45:00" step="1" id="example-date-input" required type="datetime-local" name="start_event"><br>
 					<label>Кінець заходу</label>
 					<br><input value="2018-08-19T13:45:00" step="1" id="example-date-input" class="form-control" required type="datetime-local" name="end_event"><br>
-
 					<?php $event_id_edit_user = $_GET['user_event_id'];
-              $sql = mysqli_query($conn,"SELECT * FROM `events` WHERE `id` = '$event_id_edit_user'") or die(mysqli_error($conn)); 
-              while($result = mysqli_fetch_array($sql)){ ?>
-
+             		 $sql = mysqli_query($conn,"SELECT * FROM `events` WHERE `id` = '$event_id_edit_user'") or die(mysqli_error($conn)); 
+              		while($result = mysqli_fetch_array($sql)){ ?>
 					<label>Довгота для Google Maps</label>
 					<input class="form-control" type="text" id="lat" name="lat_name" required placeholder="<?php echo $result['lat'] ?>"><br>
 					<label>Широта для Google Maps</label>

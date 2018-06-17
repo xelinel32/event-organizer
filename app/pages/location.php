@@ -30,7 +30,7 @@
           <div class="col-md-12">
             <div class="row">
               <?php  
-              $sql = "SELECT COUNT(id) FROM `location`";  
+              $sql = "SELECT COUNT(id) FROM `location` LIMIT 10";  
               $rs_result_loc = mysqli_query($conn,$sql);  
               $row = mysqli_fetch_row($rs_result_loc);  
               $total_records = $row[0];  

@@ -45,14 +45,13 @@ include '../function/configdb.php';
                     <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfilePhoto" href="">Змінити зображення</a><br>
                   </div><br>
                     <a class="btn btn-outline-danger btn-sm" href="../admin/admin">Перейти до панелі адміністратора</a> 
-
                   <?php } else { ?>
                    <div class="my_events_user"> 
                      <b>Мої заходи</b><br>   
                      <?php $results = mysqli_query($conn, "SELECT * FROM `category_events`,`location`, `events` WHERE `events`.id_cat_event = `category_events`.id AND `events`.id_loc_event = `location`.id AND `events`.id_user = ".$_SESSION['user']['id'].""); ?>
                      <div class="table-responsive">
                      <br><table style="text-align: center;" class="table table-sm table-bordered">
-                      <thead>
+                      <thead class="thead-light">
                         <tr>
                           <th>Назва</th>
                           <th>Адреса</th>
@@ -62,15 +61,11 @@ include '../function/configdb.php';
                       </thead>
                       <?php while ($row = mysqli_fetch_assoc($results)) { ?>
                         <tr>
-                        <?php if($row == 0){ ?>
-                          <td colspan="5">hello</td>
-                        <?php } else { ?> 
                           <td><a href="../pages/big_events?event=<?php echo $row['id'] ?>"><?php echo $row['title']; ?></a></td>
                           <td><?php echo $row['title_location']; ?></td>
                           <td><?php echo $row['category']; ?></td>
                           <td><a href="editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-default btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
                           <td><a href="editprofile?del=<?php echo $row['id']; ?>" class="btn btn-default btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                        <?php } ?>
                       </tr>
                       <?php } ?>
                     </table>

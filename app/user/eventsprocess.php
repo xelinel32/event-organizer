@@ -4,7 +4,7 @@ include '../function/configdb.php';
 
 if(isset($_POST['btn_new_event'])){
 	$id_user = $_SESSION['user']['id'];
-	$title = trim($_POST['name_event']);
+	$title = mysqli_real_escape_string($conn,trim($_POST['name_event']));
 	$id_cat = $_POST['cat_event'];
 	$id_loc = $_POST['location_event'];
 	$post_event	= trim($_SESSION['user']['username']);

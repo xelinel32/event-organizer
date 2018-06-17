@@ -40,7 +40,7 @@
     <div class="col-md-8">
       <div class="row">
         <?php  
-        $sql = "SELECT COUNT(id) FROM blog";  
+        $sql = "SELECT COUNT(id) FROM `blog` LIMIT 10";  
         $rs_result = mysqli_query($conn,$sql);  
         $row = mysqli_fetch_row($rs_result);  
         $total_records = $row[0];  

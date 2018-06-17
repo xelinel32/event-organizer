@@ -964,6 +964,7 @@ h2.post_title{
 .result_seart_be {
   padding:0;
   display: block;
+  margin-top: 10px;
 }
 .result_seart_be a:hover{
   color: #1dd2af;
@@ -998,6 +999,7 @@ h2.post_title{
 }
 #alerter {
   color: red;
+  padding: 0;
 }
 /* loca page vents  */
 .location_event_bit_page{
@@ -1066,6 +1068,7 @@ h2.post_title{
 }
 .catagory_event_list_singl img{
   height: 200px;
+  width: 100%;
 }
 .catagory_event_list_singl a{
   font-family: "RobotoRegular";
@@ -1265,12 +1268,11 @@ h2.post_title{
 }
 .content_cal .fc-content{
   color: white;
-  background: #3a4e61;
   transition: all .5s;
 }
 .content_cal .fc-content:hover{
   background: #1dd2af;
-  color: #fff;
+  color: black;
   text-shadow: #1dd2af;
 }
 .content_cal .fc-day-number{
@@ -1297,17 +1299,16 @@ h2.post_title{
 }
 .content_cal .fc-button-group button{
   margin-left: 10px;
-  background-color: #1dd2af;
   padding: 8px 15px;
   color: black;
   cursor: pointer;
 }
 .content_cal td{
   vertical-align: inherit;
-  height: 40px;
+  height: 25px;
 }
 .content_cal td.fc-today{
-  background: #858585;
+  background: #c0bbbb;
 }
 /*form new event*/
 .formnewevent {
@@ -1366,4 +1367,10 @@ h2.post_title{
 }
 #prevnext{
   width: 100px;
+}
+.hrline{
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  background-color: #3a4e61;
 }
