@@ -1,7 +1,7 @@
 <div class="FooterContent">
     <div class="container">
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm-3">
           <h3>Новостний канал</h3>
           <div class="Newslatter">
               <p>Підпишися на розсилку новостей та не пропусти кращих заходів</p>
@@ -11,8 +11,8 @@
               </form>
           </div>
       </div>
-      <div class="col-sm">
-        <h3>Останні заходи</h3>
+      <div class="col-sm-3">
+        <h3 id="le">Останні заходи</h3>
         <div class="LatestNews">
             <?php 
             $sql = "SELECT * FROM `events` ORDER BY `add_event` DESC LIMIT 2";  
@@ -25,9 +25,9 @@
             <?php } ?>  
         </div>
     </div>
-    <div class="col-sm">
-        <h3>Нові статті</h3>
-        <div class="LatestNews">
+    <div class="col-sm-3">
+        <h3 id="ln">Нові статті</h3>
+        <div class="LatestNews lnb">
             <?php 
             $sql = "SELECT * FROM `blog` ORDER BY `date_post` DESC LIMIT 2";  
             $row = mysqli_query($conn,$sql); 
@@ -39,7 +39,7 @@
             <?php } ?>
         </div>
     </div>
-    <div class="col-sm">
+    <div class="col-sm-3">
         <div class="FooterAdress">
             <h3>Адреса</h3>
             <div class="AddressFoo">

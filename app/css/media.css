@@ -116,6 +116,12 @@
 	.mini_log{
 		height: 230px;
 	}
+	.lnb,.LatestNews{
+		margin-left: 0;
+	}
+	#ln,#le{
+		margin-left: 0;
+	}
 }
 
 /* Extra Small Devices, Phones */

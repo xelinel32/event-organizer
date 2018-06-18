@@ -70,7 +70,7 @@
         <div class="SearchMenu-Search">
           <form action="../pages/search.php" method="get">
             <input type="text" name="search" placeholder="Назва заходу">
-            <input type="date" name="search_date" placeholder="Дата заходу">
+            <input type="date" name="search_date" required placeholder="Дата заходу">
           </div>
         </div>
         <div class="col-md-1">

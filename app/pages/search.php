@@ -24,12 +24,16 @@
                             UNION   
                             SELECT `id`,`title_post` as title,`date_post` as add_event, 'blog' as subj  
                             FROM `blog`   
-                            WHERE `title_post` LIKE '%$query%' AND `date_post` LIKE '%$query_date%'";
+                            WHERE `title_post` LIKE '%$query%' AND `date_post` LIKE '%$query_date%'
+                            UNION   
+                            SELECT `id`,`title_location` as title,`adress` as add_event, 'location' as subj  
+                            FROM `location`   
+                            WHERE `title_location` LIKE '%$query%' AND `adress` LIKE '%$query_date%'";
                             $raw_results = mysqli_query($conn,$search_query) or die(mysqli_error($conn));
                             if(mysqli_num_rows($raw_results) > 0){ 
                                 while($results = mysqli_fetch_array($raw_results)){?>
                                     <div class="result_seart_be">
-                                        Захід - <a href="<?php if($results['id']){ ?>../pages/big_events?event<?php }else{ ?>../pages/big_blog?id<?php  }?>=<?php echo $results['id']; ?>"><?php echo $results['title']; ?></a><span>Дата публікації заходу - <?php echo $results['add_event']; ?></span>
+                                        <a href="<?php if($results['id']){ ?>../pages/big_events?event<?php }else{ ?>../pages/big_blog?id<?php  }?>=<?php echo $results['id']; ?>"><?php echo $results['title']; ?></a><span>Дата публікації заходу/Aдреса - <?php echo $results['add_event']; ?></span>
                                     </div>
                                 <?php } 
                             }

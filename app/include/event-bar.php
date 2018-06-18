@@ -41,7 +41,7 @@
                     </p>
                 </div>
                 <div class="MoreEventCategory">
-                    <?php $sql_category_events = "SELECT * FROM `category_events` WHERE `id`";  
+                    <?php $sql_category_events = "SELECT * FROM `category_events` WHERE `id` LIMIT 6";  
                     $result_category_events = mysqli_query($conn,$sql_category_events); 
                     while($result = mysqli_fetch_array($result_category_events)){
                        ?>

@@ -16,7 +16,7 @@
                         ?>  
                         <div class="CommentEventOne">
                             <p><?php echo $result['text'] ?>
-                            <br><b><?php echo $result['author'] ?></b>
+                            <br><b><a href="../user/user?id=<?php echo $result['id_user'] ?>"><?php echo $result['author'] ?></a></b>
                             <br><span>Дата - <?php echo $result['date'] ?></span>
                         </p>
                     </div>

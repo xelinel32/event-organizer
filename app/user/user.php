@@ -48,7 +48,11 @@ include '../function/configdb.php';
                   <?php } else { ?>
                    <div class="my_events_user"> 
                      <b>Мої заходи</b><br>   
-                     <?php $results = mysqli_query($conn, "SELECT * FROM `category_events`,`location`, `events` WHERE `events`.id_cat_event = `category_events`.id AND `events`.id_loc_event = `location`.id AND `events`.id_user = ".$_SESSION['user']['id'].""); ?>
+                     <?php 
+                     $limit = 5;  
+                     if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
+                     $start_from = ($page-1) * $limit; 
+                     $results = mysqli_query($conn, "SELECT * FROM `category_events`,`location`, `events` WHERE `events`.id_cat_event = `category_events`.id AND `events`.id_loc_event = `location`.id AND `events`.id_user = ".$_SESSION['user']['id'].""); ?>
                      <div class="table-responsive-md">
                      <br><table style="text-align: center;" class="table table-sm table-bordered">
                       <thead class="thead-light">
