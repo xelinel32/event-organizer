@@ -14,14 +14,14 @@
             <?php 
             if(isset($_GET['event'])){
               $event_loc_id_second = $_GET['event'];
-              $sql = mysqli_query($conn,"SELECT * FROM events, `category_events` WHERE `events`.id_cat_event = `category_events`.id AND `events`.id = '$event_loc_id_second'") or die(mysqli_error($conn)); 
+              $sql = mysqli_query($conn,"SELECT * FROM `events`, `category_events` WHERE `events`.id_cat_event = `category_events`.id AND `events`.id = '$event_loc_id_second'") or die(mysqli_error($conn)); 
               while($result = mysqli_fetch_array($sql)){
                 ?>
                 <h2 class="post_title"><?php echo $result['title']; ?></h2>
                 <div class="post_meta">
                   <ul>
                     <li><a href="../pages/events?category_events_id=<?php echo $result['id_cat_event'] ?>"><?php echo $result['category']; ?></a></li>
-                    <li><i class="fa fa-user" aria-hidden="true"></i> <a href="../user/user.php?id=<?php echo $result['id_user'] ?>"><?php echo $result['post_event']; ?></a></li>
+                    <li><i class="fa fa-user" aria-hidden="true"></i> <a href="../user/user?id=<?php echo $result['id_user'] ?>"><?php echo $result['post_event']; ?></a></li>
                     <li><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> <?php echo $result['start_event']; ?></li>
                     <li><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> <?php echo $result['end_event']; ?></li>
                     <li>Додано - <i class="fa fa-calendar-check-o" aria-hidden="true"></i> <?php echo $result['add_event']; ?></li>
@@ -32,6 +32,10 @@
                   <p><h5><b><?php echo $result['pre_event']; ?></b></h5></p>
                   <p><?php echo $result['big_event']; ?></p>
                 </div>
+                <?php if($_SESSION['user']['id'] == $result['id_user']){ ?>
+                <a class="btn btn-warning btn-sm" href="../user/user?id=<?php echo $result['id_user'] ?>">Редагувати захід</a><br><br>
+                <?php } else { ?>
+                <?php } ?>
                 <div class="LocationEventPage">
                 <?php }} else {
                   echo "<script>window.location = '404.php';</script>";

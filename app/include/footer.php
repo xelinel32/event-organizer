@@ -18,7 +18,7 @@
             $sql = "SELECT * FROM `events` ORDER BY `add_event` DESC LIMIT 2";  
             $row = mysqli_query($conn,$sql); 
             while($result = mysqli_fetch_array($row)){
-                ?>
+            ?>
                 <img src="<?php echo $result['image']; ?>" alt="ava">
                 <b><a href="../pages/big_events?event=<?php echo $result['id']; ?>"><?php echo $result['title']; ?></a></b>
                 <br><span><?php echo $result['add_event'] ?></span><br>

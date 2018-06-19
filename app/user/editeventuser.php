@@ -4,7 +4,7 @@ if($_GET['id'] == $_SESSION['user']['id']){
 echo "<script>location='../pages/404'</script>";
 }
 ?>
-<body>
+<body onload="initMap()">
 <header class="top_header">
 <?php include("../include/header.php") ?>
 </header>
@@ -49,31 +49,82 @@ echo "<script>location='../pages/404'</script>";
 					<?php $event_id_edit_user = $_GET['user_event_id'];
              		 $sql = mysqli_query($conn,"SELECT * FROM `events` WHERE `id` = '$event_id_edit_user'") or die(mysqli_error($conn)); 
               		while($result = mysqli_fetch_array($sql)){ ?>
+					<?php if ($result['id_user'] == $_SESSION['user']['id'] || $result['id_user'] !== " ") {
+					} else {
+						echo "<script>location='../pages/404'</script>";
+					} ?>
 					<label>Довгота для Google Maps</label>
 					<input class="form-control" type="text" id="lat" name="lat_name" required placeholder="<?php echo $result['lat'] ?>"><br>
 					<label>Широта для Google Maps</label>
 					<input class="form-control" id="long" type="text" name="lng_name" required placeholder="<?php echo $result['lng'] ?>">
 					<label><br>
 					Виберіть координати клікнувши на карту</label>
-					<div id="map" style="width:100%; height:350px; border:2px solid #00ff00;"></div><br>
 					<script type="text/javascript">
-						function initMap() {
-							var bogor = {lat: <?php echo $result['lat'] ?>, lng: <?php echo $result['lng'] ?>};
-							var map = new google.maps.Map(document.getElementById('map'), {
-								center: bogor,
-								scrollwheel: false,
-								zoom: 12
-							});
-                        	var companyMarker = new google.maps.Marker({
-                          	position: bogor,
-                          	map: map
-                        	});
-							google.maps.event.addListener(map, 'click', function(event){
-								document.getElementById('lat').value = event.latLng.lat();
-								document.getElementById('long').value = event.latLng.lng();
-							});
-						}
-					</script>
+											function initMap() {
+												var map = new google.maps.Map(document.getElementById('map'), {
+													center: {lat: <?php echo $result['lat'] ?>, lng: <?php echo $result['lng'] ?>},
+													zoom: 13,
+													mapTypeId: 'roadmap'
+												});
+												var input = document.getElementById('pac-input');
+												var searchBox = new google.maps.places.SearchBox(input);
+												map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+												map.addListener('bounds_changed', function() {
+													searchBox.setBounds(map.getBounds());
+												});
+												var markers = [];
+												searchBox.addListener('places_changed', function() {
+													var places = searchBox.getPlaces();
+
+													if (places.length == 0) {
+														return;
+													}
+													markers.forEach(function(marker) {
+														marker.setMap(null);
+													});
+													markers = [];
+													var bounds = new google.maps.LatLngBounds();
+													places.forEach(function(place) {
+														if (!place.geometry) {
+															console.log("Net znaka");
+															return;
+														}
+														var icon = {
+															url: place.icon,
+															size: new google.maps.Size(71, 71),
+															origin: new google.maps.Point(0, 0),
+															anchor: new google.maps.Point(17, 34),
+															scaledSize: new google.maps.Size(25, 25)
+														};
+														markers.push(new google.maps.Marker({
+															map: map,
+															icon: icon,
+															title: place.name,
+															position: place.geometry.location
+														}));
+
+														if (place.geometry.viewport) {
+															bounds.union(place.geometry.viewport);
+														} else {
+															bounds.extend(place.geometry.location);
+														}
+													});
+													map.fitBounds(bounds);
+												});
+												var companyPos = new google.maps.LatLng(<?php echo $result['lat'] ?>, <?php echo $result['lng'] ?>);
+                         						var companyMarker = new google.maps.Marker({
+                          						position: companyPos,
+                          						map: map,
+                          						title:"<?php echo $result['title'] ?>"
+                       							});
+												google.maps.event.addListener(map, 'click', function(event){
+													document.getElementById('lat').value = event.latLng.lat();
+													document.getElementById('long').value = event.latLng.lng();
+												});
+											}
+										</script>
+										<input id="pac-input" class="controls" type="text" placeholder="Пошук на карті">
+										<div id="map" style="width:100%; height:450px; border:1px solid black;"></div><br>
 					<br><label for="exampleFormControlTextarea1">Короткий опис</label>
 					<textarea required name="preview_event" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Що буде за захід?"><?php echo $result['pre_event'] ?></textarea><br>
 					<label>Повний опис</label><br>

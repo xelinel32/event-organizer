@@ -33,7 +33,7 @@
                             if(mysqli_num_rows($raw_results) > 0){ 
                                 while($results = mysqli_fetch_array($raw_results)){?>
                                     <div class="result_seart_be">
-                                        <a href="<?php if($results['id']){ ?>../pages/big_events?event<?php }else{ ?>../pages/big_blog?id<?php  }?>=<?php echo $results['id']; ?>"><?php echo $results['title']; ?></a><span>Дата публікації заходу/Aдреса - <?php echo $results['add_event']; ?></span>
+                                        Назва - <a href="<?php if($results['id']){ ?>../pages/big_events?event<?php }else{ ?>../pages/big_blog?id<?php  }?>=<?php echo $results['id']; ?>"><?php echo $results['title']; ?></a><span>Дата публікації заходу/Aдреса - <?php echo $results['add_event']; ?></span>
                                     </div>
                                 <?php } 
                             }

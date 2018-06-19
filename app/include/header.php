@@ -79,7 +79,13 @@ function activemenu($activemenu)
            <li><a <?=activemenu("location.php")?> href="../pages/location">Місця</a></li>
            <li><a <?=activemenu("blog.php")?> href="../pages/blog">Блог</a></li>
            <li><a <?=activemenu("moreinfo.php")?> href="../pages/moreinfo">Інше</a></li>
-         </ul>
+           <li><a id="logmobile" data-toggle="modal" data-target="#SearchModal" href="">Пошук</a></li>
+           <?php if(!isset($_SESSION["user"])){ ?>
+           <li><a id="logmobile" data-toggle="modal" data-target="#CustomerModal" href="">Вхід</a></li>
+           <?php }else{ ?>
+            <li><a id="logmobile"  href="../user/user?id=<?php echo $_SESSION['user']['id'];?>">Мій профіль</a></li>
+           <?php } ?>
+          </ul>
          <div class="search_menu">
           <a data-toggle="modal" data-target="#SearchModal" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
         </div>

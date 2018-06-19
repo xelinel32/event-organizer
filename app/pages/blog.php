@@ -13,7 +13,7 @@
         $limit = 2;  
         if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
         $start_from = ($page-1) * $limit;  
-        $sql = "SELECT * FROM blog WHERE id ORDER BY date_post ASC LIMIT $start_from, $limit";  
+        $sql = "SELECT * FROM `blog` WHERE `id` ORDER BY `date_post` DESC LIMIT $start_from, $limit";  
         $rs_result = mysqli_query ($conn,$sql); 
         while($result = mysqli_fetch_array($rs_result)){
           ?>

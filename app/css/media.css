@@ -122,6 +122,9 @@
 	#ln,#le{
 		margin-left: 0;
 	}
+	.RegisterModal button{
+		display: none;
+	}
 }
 
 /* Extra Small Devices, Phones */
@@ -179,10 +182,10 @@
 	html.mm-opening .mm-slideout {
 		transform: translate(0px, 0px);
 	}
-	#log_mob{
+	#cat_event_menu {
 		display: none;
 	}
-	#cat_event_menu {
+	#logmobile{
 		display: none;
 	}
 }

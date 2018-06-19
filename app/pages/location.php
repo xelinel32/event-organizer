@@ -14,7 +14,7 @@
           $limit = 6;  
           if (isset($_GET["page_loc"])) { $page  = $_GET["page_loc"]; } else { $page=1; };  
           $start_from = ($page-1) * $limit;  
-          $sql = "SELECT * FROM `location` WHERE `id` ORDER BY `id` ASC LIMIT $start_from, $limit";  
+          $sql = "SELECT * FROM `location` WHERE `id` ORDER BY `id` DESC LIMIT $start_from, $limit";  
           $rs_result_location = mysqli_query ($conn,$sql); 
           while($result = mysqli_fetch_array($rs_result_location)){
             ?>

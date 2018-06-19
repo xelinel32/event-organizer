@@ -35,9 +35,9 @@
 						} else { $page=1; $ideventcat = $_GET['category_events_id'];};  
 						$start_from = ($page-1) * $limit; 
 						if(!empty($ideventcat)){ 
-							$sql = "SELECT * FROM `events` WHERE `id_cat_event` = '$ideventcat' AND `status` = 'active' ORDER BY `add_event` ASC LIMIT $start_from, $limit";
+							$sql = "SELECT * FROM `events` WHERE `id_cat_event` = '$ideventcat' AND `status` = 'active' ORDER BY `add_event` DESC LIMIT $start_from, $limit";
 						}else {
-							$sql = "SELECT * FROM `events` WHERE `status` = 'active' ORDER BY `add_event` ASC LIMIT $start_from, $limit";
+							$sql = "SELECT * FROM `events` WHERE `status` = 'active' ORDER BY `add_event` DESC LIMIT $start_from, $limit";
 						}  
 						$rs_result = mysqli_query ($conn,$sql); 
 						while($g_result = mysqli_fetch_array($rs_result)){

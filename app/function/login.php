@@ -8,7 +8,7 @@ if(isset($_POST['login_btn'])){
     header('location:../index');
   }else{
  //chek login
-   $result=mysqli_query($conn,"SELECT * FROM multi_login WHERE username='$username' AND password='$password'");
+   $result=mysqli_query($conn,"SELECT * FROM `multi_login` WHERE `username`='$username' AND password='$password'");
    $row=mysqli_fetch_assoc($result);
    $count=mysqli_num_rows($result);
    if($count==1){
