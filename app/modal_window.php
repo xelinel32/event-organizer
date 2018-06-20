@@ -130,29 +130,20 @@
 </div>
 <!-- Send Admin -->
 <div class="modal fade" id="SendAdmin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" style="margin: auto;" id="exampleModalLabel">Повідомлення адміністрації</h5>
-      </div>
-      <div class="modal-body">
-        <form method="post" action="">
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Ваше ім'я:</label>
-            <input placeholder="<?php echo $_SESSION['user']['username']; ?>" type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Повідомлення:</label>
-            <textarea style="resize: none;height: 100px;" class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Закрити</button>
-        <button type="button" class="btn btn-primary btn-sm">Відправити</button>
-      </div>
-    </div>
-  </div>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+				<div class="modal-body">
+					<form method="post" action="../user/modules/messageadmin.php">
+						<label for="recipient-name" class="col-form-label">Ім'я:</label>
+            			<input type="text" value="<?php echo $_SESSION['user']['username'] ?>" name="send_name" class="form-control" id="recipient-name" required>
+						<label for="message-text" class="col-form-label">Повідомлення:</label>
+           				<textarea class="form-control" style="height: 100px;resize:none" name="send_text" id="message-text" required ></textarea><br>
+						<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Закрити</button>
+						<input type="submit" name="send_btn_message" class="btn btn-primary btn-sm float-right" value="Відправити"><br><br>
+					</form>
+				</div>
+		</div>
+	</div>
 </div>
 <!-- calendar modal -->
 <div id="calendarModal" class="modal fade">
@@ -167,7 +158,11 @@
 			<b>Кінець</b> - <span id="endTime"></span>
 			</div>
 			<div class="modal-footer">
+			<?php if($_SESSION['user']['user_type'] == "Адміністрація") { ?>
+			<a class="btn btn-warning btn-sm" href="../admin/admin">До панелі керування</a>
+			<?php } else { ?>
 			<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Закрити</button>
+			<?php } ?>
 			<a class="btn btn-info btn-sm" id="eventUrl" href="">Перейти</a>
 			</div>
 		</div>

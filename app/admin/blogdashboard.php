@@ -10,7 +10,8 @@ if($_SESSION['user']['user_type']=='Юзер'){
 }
 ?>
 <?php include("../include/up_style.php") ?>
-<body>	
+<body>
+<hr class="hrline">	
 	<?php require_once('admin_include/admin_header.php'); ?>
 	<div class="main_content_news">
 		<div class="container">
@@ -19,22 +20,24 @@ if($_SESSION['user']['user_type']=='Юзер'){
 					<div class="admin_content">
 						<h5>Керування всіма статтями</h5><br>
 						<?php 
-						$limit = 2;  
+						$limit = 10;  
 						if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
 						$start_from = ($page-1) * $limit;  
 
 						$sql = "SELECT * FROM `blog` ORDER BY `date_post` ASC LIMIT $start_from, $limit";  
 						$rs_result = mysqli_query($conn,$sql);  
-						?> 
-						<div class="table-responsive"> 
+						?>
+						<a href="BlogModal" class="btn btn-success btn-sm"><i class="fa fa-plus-circle" aria-hidden="true"></i> Додати статтю</a><br><br>  
+						<div class="table-responsive-md">
 						<table class="table table-bordered table-striped">  
 							<thead>  
 								<tr>  
 									<th>№</th>  
 									<th>Назва</th> 
-									<th>Дата</th>
+									<th>Додано</th>
 									<th>Юзер</th>
-									<th colspan="3">Операції</th>       
+									<th>Додано</th>
+									<th colspan="2">Операції</th>       
 								</tr>  
 							</thead>  
 							<tbody>  
@@ -43,32 +46,39 @@ if($_SESSION['user']['user_type']=='Юзер'){
 									?>  
 									<tr>  
 										<td><? echo $row["id"]; ?></td> 
-										<td><a href="../pages/big_blog?id=<?php echo $row['id']; ?>"><? echo $row["title_post"]; ?></a></td>    
-										<td><? echo $row["date_post"]; ?></td>  
-										<td><? echo $row["user_post"]; ?></td>     
-										<td><a href="" class="btn btn-success btn-sm">Додати</a></td>
-										<td><a href="" class="btn btn-primary btn-sm">Змінити</a></td>
-										<td><a href="" class="btn btn-danger btn-sm">Видалити</a></td>
+										<td><a href="../pages/big_events?event=<?php echo $row['id'] ?>"><? echo $row["title_post"]; ?></a></td>    
+										<td><? echo $row["date_post"]; ?></td>   
+										<td><a href="../user/user?id=<?php echo $row['id_user'] ?>"><? echo $row["user_post"]; ?></a></td>
+										<td><a href="../user/editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Змінити</a></td>
+										<td><a href="module/deletedblogbage?del_blog=<?php echo $row['id']; ?>" OnClick="return confirm('Ви хочете видалити цю статтю?')" class="btn btn-danger btn-sm"><i class="fa fa-minus-circle" aria-hidden="true"></i> Видалити</a></td>  
 									</tr>  
-									<?php  }  ?>  
+									<?php  
+								};  
+								?>  
 							</tbody>  
 						</table>
 					</div>
-						<nav> 
+						<nav aria-label="Page navigation example"> 
 							<?php  
 							$sql = "SELECT COUNT(id) FROM `blog`";  
 							$rs_result = mysqli_query($conn,$sql);  
 							$row = mysqli_fetch_row($rs_result);  
 							$total_records = $row[0];  
 							$total_pages = ceil($total_records / $limit);  
-							$pagLink = "<ul class='pagination justify-content-center pagination-sm'>";  
+							$pagLink = "<ul class='pagination justify-content-center pagination-sm'>"; 
+							if($page != 1){
+								$pagLink .= "<li class='page-item'><a class='page-link' href='blogdashboard?page=1'>Перша</a></li>";  
+							}  
 							for ($i=1; $i<=$total_pages; $i++) {
 								if($page == $i) {  
-									$pagLink .= "<a class='page-link' href='blogdashboard?page=".$i."'>".$i."</a>";  
+									$pagLink .= "<li class='page-item'><a class='page-link' href='blogdashboard?page=".$i."'>".$i."</a></li>";  
 								} else {
-									$pagLink .= "<a class='page-link' href='blogdashboard?page=".$i."'>".$i."</a>"; 
+									$pagLink .= "<li class='page-item'><a class='page-link' href='blogdashboard?page=".$i."'>".$i."</a></li>"; 
 								}
-							};  
+							}; 
+							if($page != $total_pages){
+								$pagLink .= "<li class='page-item'><a class='page-link' href='blogdashboard?page=".$total_pages."'>Остання</a></li>";  
+							} 
 							echo $pagLink . "</ul>";  
 							?>
 						</nav>
@@ -77,6 +87,7 @@ if($_SESSION['user']['user_type']=='Юзер'){
 			</div>
 		</div>
 	</div>
+	<hr class="hrlinebot">	
 </body>
-
+</html>
 <?php include("../include/bot_script.php") ?>

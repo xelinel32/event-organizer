@@ -447,7 +447,7 @@ img {
   transition: .4s ease;
 }
 #left {
-  margin-left: 6px;
+  margin-left: 0px;
 }
 /* NewsOther */
 .NewsOther {
@@ -775,6 +775,7 @@ h2.post_title{
   margin-right: 4px;
 }
 .mini_log{
+  border-radius: 10px;
   padding-bottom: 10px;
   max-height: 459px;
   width: 100%;
@@ -1196,6 +1197,9 @@ h2.post_title{
 .profile_user {
   padding-bottom: 20px;
 }
+.profile_user img{
+border-radius: 50px;
+}
 .profile_user h2{
   font-size: 24px;
   font-family: "RobotoBold";
@@ -1210,6 +1214,9 @@ h2.post_title{
   margin: 0;
   display: inline-block;
   margin-left: 55px;
+}
+.profile_user ul li{
+  margin-top: 1.4px;
 }
 .user_info{
   display: block;
@@ -1385,6 +1392,13 @@ h2.post_title{
 }
 .hrline{
   height: 20px;
+  padding: 0;
+  margin: 0;
+  background-color: #3a4e61;
+}
+.hrlinebot{
+  margin-top: 100px;
+  height: 70px;
   padding: 0;
   margin: 0;
   background-color: #3a4e61;

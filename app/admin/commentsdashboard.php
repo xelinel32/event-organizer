@@ -10,17 +10,18 @@ if($_SESSION['user']['user_type']=='Юзер'){
 }
 ?>
 <?php include("../include/up_style.php") ?>
-<body>	
+<body>
+<hr class="hrline">		
 	<?php require_once('admin_include/admin_header.php'); ?>
 	<div class="main_content_news">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="admin_content">
-						<h5>Керування всіма відгуками та коментарами</h5><br>
-						<span><b>Відгуки з заходів</b></span><br><br>
+						<h5>Керування всіма відгуками та коментарями</h5><br>
+						<span><b>Відгуки з проведення виховних робіт</b></span><br><br>
 						<?php 
-						$limit = 2;  
+						$limit = 4;  
 						if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
 						$start_from = ($page-1) * $limit;  
 
@@ -49,7 +50,7 @@ if($_SESSION['user']['user_type']=='Юзер'){
 										<td><? echo $row["date"]; ?></td>  
 										<td><? echo $row["comments_user_type"]; ?></td>
 										<td><a href="../pages/big_events?event=<?php echo $row["id_events"]; ?>"><? echo $row["text"]; ?></a></td>       
-										<td><a href="" class="btn btn-danger btn-sm">Видалити</a></td>
+										<td><a href="module/commentsvidel?del_vid=<?php echo $row['id']; ?>" OnClick="return confirm('Ви хочете видалити відгук?')" class="btn btn-danger btn-sm"><i class="fa fa-minus-circle" aria-hidden="true"></i> Видалити</a></td>  	
 									</tr>  
 									<?php  }  ?>  
 							</tbody>  
@@ -57,7 +58,7 @@ if($_SESSION['user']['user_type']=='Юзер'){
 						</div>
 						<span><b>Коментарі з блогу</b></span><br><br>
 						<?php 
-						$limit = 2;  
+						$limit = 4;  
 						if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
 						$start_from = ($page-1) * $limit;  
 
@@ -85,26 +86,32 @@ if($_SESSION['user']['user_type']=='Юзер'){
 										<td><? echo $row["date"]; ?></td>  
 										<td><? echo $row["comments_user_type"]; ?></td>
 										<td><a href="../pages/big_blog?event=<?php echo $row["id_blog"]; ?>"><? echo $row["text"]; ?></a></td>       
-										<td><a href="" class="btn btn-danger btn-sm">Видалити</a></td>
+										<td><a href="module/commentsvidel?del_com=<?php echo $row['id']; ?>"  OnClick="return confirm('Ви хочете видалити коментар?')" class="btn btn-danger btn-sm"><i class="fa fa-minus-circle" aria-hidden="true"></i> Видалити</a></td>
 									</tr>  
 									<?php  }  ?>  
 							</tbody>  
 						</table>
-						<nav> 
+						<nav aria-label="Page navigation example"> 
 							<?php  
-							$sql = "SELECT COUNT(id) FROM `comments_event`";  
+							$sql = "SELECT COUNT(id) FROM `location`";  
 							$rs_result = mysqli_query($conn,$sql);  
 							$row = mysqli_fetch_row($rs_result);  
 							$total_records = $row[0];  
 							$total_pages = ceil($total_records / $limit);  
-							$pagLink = "<ul class='pagination justify-content-center pagination-sm'>";  
+							$pagLink = "<ul class='pagination justify-content-center pagination-sm'>"; 
+							if($page != 1){
+								$pagLink .= "<li class='page-item'><a class='page-link' href='commentsdashboard?page=1'>Перша</a></li>";  
+							}  
 							for ($i=1; $i<=$total_pages; $i++) {
 								if($page == $i) {  
-									$pagLink .= "<a class='page-link' href='commentsdashboard?page=".$i."'>".$i."</a>";  
+									$pagLink .= "<li class='page-item'><a class='page-link' href='commentsdashboard?page=".$i."'>".$i."</a></li>";  
 								} else {
-									$pagLink .= "<a class='page-link' href='commentsdashboard?page=".$i."'>".$i."</a>"; 
+									$pagLink .= "<li class='page-item'><a class='page-link' href='commentsdashboard?page=".$i."'>".$i."</a></li>"; 
 								}
-							};  
+							}; 
+							if($page != $total_pages){
+								$pagLink .= "<li class='page-item'><a class='page-link' href='commentsdashboard?page=".$total_pages."'>Остання</a></li>";  
+							} 
 							echo $pagLink . "</ul>";  
 							?>
 						</nav>
@@ -113,6 +120,6 @@ if($_SESSION['user']['user_type']=='Юзер'){
 			</div>
 		</div>
 	</div>
+	<hr class="hrlinebot">	
 </body>
-
 <?php include("../include/bot_script.php") ?>

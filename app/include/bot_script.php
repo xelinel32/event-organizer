@@ -12,4 +12,5 @@
 <script src="../libs/fullcalendar/moment.min.js"></script>
 <script src="../libs/fullcalendar/fullcalendar.js" ></script>
 <script src='../libs/fullcalendar/uk.js'></script>
+<script src="https://cdn.ckeditor.com/4.9.2/basic/ckeditor.js"></script>
 <script src="../script/common.js"></script>

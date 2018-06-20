@@ -1,6 +1,6 @@
 <?php 
 // add event
-include '../function/configdb.php';
+include '../../function/configdb.php';
 
 if(isset($_POST['btn_new_event'])){
 	$id_user = $_SESSION['user']['id'];
@@ -16,8 +16,9 @@ if(isset($_POST['btn_new_event'])){
 	$full_event = mysqli_real_escape_string($conn,trim($_POST['full_event']));
 	$lat_name = trim($_POST['lat_name']);
 	$lng_name = trim($_POST['lng_name']);
+	$status = "deactive";
 	// image
-	$uploaddirs= '../img/eventimg/'; 
+	$uploaddirs= '../../img/eventimg/'; 
 	$fots = $_FILES['img_event']['name'];
 	$fots_dir = $uploaddirs.$fots;
 	$photo_size_events  = $_FILES['img_event']['size'];
@@ -40,34 +41,34 @@ if(isset($_POST['btn_new_event'])){
 						if($photo_size_events < 5*MB) {
 
 							if (move_uploaded_file($_FILES['img_event']['tmp_name'], $fots_dir)) {
-								$result_query_ev = "INSERT INTO `events` (`title`, `pre_event`, `image`, `id_cat_event`, `post_event`, `start_event`, `end_event`, `add_event`, `big_event`, `id_loc_event`,`id_user`, `lat`,`lng`,`tag`) VALUES ('$title','$preview_event', '$fots_dir','$id_cat', '$post_event', '$start_date_event', '$end_date_event', '$add_date_event', '$full_event', '$id_loc', '$id_user','$lat_name','$lng_name','$tag')";
+								$result_query_ev = "INSERT INTO `events` (`title`, `pre_event`, `image`, `id_cat_event`, `post_event`, `start_event`, `end_event`, `add_event`, `big_event`, `id_loc_event`,`id_user`, `lat`,`lng`,`tag`,`status`) VALUES ('$title','$preview_event', '$fots_dir','$id_cat', '$post_event', '$start_date_event', '$end_date_event', '$add_date_event', '$full_event', '$id_loc', '$id_user','$lat_name','$lng_name','$tag','$status')";
 								$result_add = mysqli_query($conn,$result_query_ev) or die(mysqli_error($conn));
 								if($result_add) {
-									echo "<script>alert('Захід опубліковано!');location='user?id=".$id_user."'</script>"; 
+									echo "<script>alert('Захід опубліковано!');location='../user?id=".$id_user."'</script>"; 
 								} else {
-									echo "<script>alert('Захід не опубліковано!');location='user?id=".$id_user."'</script>";
+									echo "<script>alert('Захід не опубліковано!');location='../user?id=".$id_user."'</script>";
 								}
 							}
 						}else{
-							echo "<script>alert('Зображення заходу дуже велике!(>5MB)');location='neweventuser'</script>";
+							echo "<script>alert('Зображення заходу дуже велике!(>5MB)');location='../neweventuser'</script>";
 						}
 					}else{
-						echo "<script>alert('Зображення іншого формату!');location='neweventuser'</script>";
+						echo "<script>alert('Зображення іншого формату!');location='../neweventuser'</script>";
 					}
 				}else{
-					echo "<script>alert('Некоректна дата!');location='neweventuser'</script>";
+					echo "<script>alert('Некоректна дата!');location='../neweventuser'</script>";
 				}
 			}else{
-				echo "<script>alert('Заповніть всі поля!');location='neweventuser'</script>";
+				echo "<script>alert('Заповніть всі поля!');location='../neweventuser'</script>";
 			}
 		}else{
-			echo "<script>alert('Мало символів мін(10)!');location='neweventuser'</script>";
+			echo "<script>alert('Мало символів мін(10)!');location='../neweventuser'</script>";
 		}
 	}else{
-		echo "<script>alert('Назва заходу не повинна мати числа!');location='neweventuser'</script>";
+		echo "<script>alert('Назва заходу не повинна мати числа!');location='../neweventuser'</script>";
 	}
 	}else{
-		echo "<script>alert('Така назва заходу вже існує!');location='neweventuser'</script>";
+		echo "<script>alert('Така назва заходу вже існує!');location='../neweventuser'</script>";
 	}
 }		
 ?>

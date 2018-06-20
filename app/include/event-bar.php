@@ -5,8 +5,8 @@
             <div class="col-md-12">
                 <div class="SpecialOffers">
                     <p>
-                        <span>Найближчі заходи</span><br>
-                        <span>Останні заходи за цей місяць</span>
+                        <span>Найближчі виховні роботи</span><br>
+                        <span>Останні виховні роботи за цей місяць</span>
                     </p>
                 </div>
                 <div class="EventPageBig">
@@ -36,8 +36,8 @@
             <div class="row"> 
                 <div class="HolidaysType">
                     <p>
-                        <span>Типи заходів</span><br>
-                        <span>Всі категорії заходів</span>
+                        <span>Типи виховних робіт</span><br>
+                        <span>Всі категорії виховних робіт</span>
                     </p>
                 </div>
                 <div class="MoreEventCategory">

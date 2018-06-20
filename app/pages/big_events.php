@@ -40,7 +40,7 @@
                 <?php }} else {
                   echo "<script>window.location = '404.php';</script>";
                 } ?> 
-                <p><b>Місце проходження заходу:</b></p>
+                <p><b>Місце проходження виховної роботи:</b></p>
                 <?php 
                 if(isset($_GET['event'])){
                   $event_loc_id_first = $_GET['event'];
@@ -50,9 +50,9 @@
                     <a href="../pages/singl_location?location=<?php echo $result['id_loc_event']; ?>"><?php echo $result['title_location']; ?></a><br><br>
                   <!-- tags -->
                   <?php if($result['tag'] == "Обов'язкове"){ ?>
-                  <p><b>Рекомендації до відвідування заходу -</b> <span style="color:red"><?php echo $result['tag']; ?></span></p>
+                  <p><b>Відвідування виховної роботи -</b> <span style="color:red"><?php echo $result['tag']; ?></span></p>
                 <?php } else { ?>
-                   <p><b>Рекомендації до відвідування заходу -</b> <span style="color:green"><?php echo $result['tag']; ?></span></p>
+                   <p><b>Відвідування виховної роботи -</b> <span style="color:green"><?php echo $result['tag']; ?></span></p>
                   <?php }}} ?>
                   <hr>
                   <?php if(isset($_GET['event'])){ 
@@ -98,10 +98,10 @@
                    <? } }?>
                    <!-- Google Maps -->
                    <div class="CommentsToEventPage">
-                    <h4>Залишіть свій відгук про захід!</h4><br>
+                    <h4>Залишіть свій відгук!</h4><br>
                     <?php include('../function/comments_event_view.php') ?>
                     <?php if(!isset($_SESSION["user"])){ ?>
-                      <p style="text-align: center; color: red;">Для того щоб залишати коментарi треба авторизуватись!</p>
+                      <p style="text-align: center; color: red;">Для того щоб залишати відгуки треба авторизуватись!</p>
                     <?php }else{ ?>
                       <div class="form-group">
                         <form method="post"action="../function/comments_event.php">

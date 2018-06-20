@@ -20,15 +20,15 @@ include '../function/configdb.php';
               while($result = mysqli_fetch_array($sql)){
                 ?>
                 <h2>Профіль користувача  - <span><?php echo $result['username']; ?></span></h2><br>
-                <img src="<?php echo $result['image']; ?>" alt="userlogo">
+                <img src="<?php echo $result['image']; ?>" class="img-thumbnail" alt="userlogo">
                 <div class="profile_user">
-                 <ul> </li>
+                <ul>
                   <li>E-mail - <span><?php echo $result['email']; ?></span></li>
                   <li>Нікнейм - <span><?php echo $result['username']; ?></span></li>
                   <li>ПІБ - <span><?php echo $result['pib']; ?></span></li>
                   <li>Номер телефону - <span><?php echo $result['phone_number']; ?></span></li>
-                  <li>Тип облікового запису - <span><?php echo $result['user_type']; ?></li>
-                  </ul>
+                  <li>Тип облікового запису - <span style="color:red;"><?php echo $result['user_type']; ?></li>
+                </ul>
                 </div>
               <?php }} else {
                 echo "<script>location='../pages/404'</script>";
@@ -46,8 +46,17 @@ include '../function/configdb.php';
                   </div><br>
                     <a class="btn btn-outline-danger btn-sm" href="../admin/admin">Перейти до панелі адміністратора</a> 
                   <?php } else { ?>
-                   <div class="my_events_user"> 
-                     <b>Мої заходи</b><br>   
+                    <div class="operation_profile">
+                    <b>Операції з профілем</b><br><br>
+                    <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfilePass" href="">Змінити пароль</a> 
+                    <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfile" href="">Змінити дані</a> 
+                    <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfilePhoto" href="">Змінити зображення</a><br>
+                    <br><a class="btn btn-outline-primary btn-sm" href="neweventuser"> Організувати вих. роботу</a>
+                    <a class="btn btn-outline-primary btn-sm" href="newlocationuser"> Додати місце проходження вих. роботи</a>
+                    <a class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#SendAdmin" href=""> Зв'язок з адміністрацією</a>
+                  </div><br> 
+                   <div class="my_events_user">
+                     <b>Мої виховні роботи</b><br>   
                      <?php
                      $results = mysqli_query($conn, "SELECT * FROM `category_events`,`location`, `events` WHERE `events`.id_cat_event = `category_events`.id AND `events`.id_loc_event = `location`.id AND `events`.id_user = ".$_SESSION['user']['id'].""); ?>
                      <div class="table-responsive-md">
@@ -73,15 +82,6 @@ include '../function/configdb.php';
                       <?php } ?>
                     </table>
                   </div>
-                  </div>
-                  <div class="operation_profile">
-                    <b>Операції з профілем</b><br><br>
-                    <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfilePass" href="">Змінити пароль</a> 
-                    <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfile" href="">Змінити дані</a> 
-                    <a class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#EditeProfilePhoto" href="">Змінити зображення</a><br>
-                    <br><a class="btn btn-outline-primary btn-sm" href="neweventuser"> Організувати захід</a>
-                    <a class="btn btn-outline-primary btn-sm" href="newlocationuser"> Додати місце проходження заходів</a>
-                    <a class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#SendAdmin" href=""> Зв'язатись з адміністрацією</a>
                   </div>
                 <?php } ?> 
               </div>

@@ -14,13 +14,13 @@ echo "<script>location='../pages/404'</script>";
 <div class="col-md-8">
 <div class="box_news">
 	<div class="newevent">
-		<h3>Форма редагування заходу</h3>
+		<h3>Форма редагування вих. роботи</h3>
 		<div class="formnewevent">
-			<form action="editeventprocess.php" method="post" enctype="multipart/form-data">
+			<form action="modules/editeventprocess.php" method="post" enctype="multipart/form-data">
 				<div class="form-group">
-					<label>Назва заходу</label><br>
+					<label>Назва</label><br>
 					<input class="form-control" type="text" name="name_event" required placeholder="Назва виховної роботи"><br>
-					<label for="exampleFormControlSelect1">Категорія заходу</label><br>
+					<label for="exampleFormControlSelect1">Категорія вих. роботи</label><br>
 					<select class="form-control" id="exampleFormControlSelect1" name="cat_event">
 						<?php $query = "SELECT `id`,`category` FROM `category_events`"; 
 						$categories =  mysqli_query($conn,$query);
@@ -30,7 +30,7 @@ echo "<script>location='../pages/404'</script>";
 							<option value="<?php echo $row['id'] ?>"><?php echo $row['category']?></option>
 						<?php } ?>
 					</select></br>
-					<label for="exampleFormControlSelect1">Місце проходження заходу(<a style="text-decoration:none;" href="newlocationuser">Створити</a></a>)</label><br>
+					<label for="exampleFormControlSelect1">Місце проходження(<a style="text-decoration:none;" href="newlocationuser">Створити</a></a>)</label><br>
 					<select class="form-control" id="exampleFormControlSelect1" name="location_event">
 						<?php $query = "SELECT `id`,`title_location` FROM `location`"; 
 						$locations =  mysqli_query($conn,$query);
@@ -42,9 +42,9 @@ echo "<script>location='../pages/404'</script>";
 					</select></br>
 					<label for="exampleFormControlFile1">Зображення</label><br>
 					<input class="form-control-file" id="exampleFormControlFile1" required type="file" type="file" name="img_event" multiple accept="image/*,image/jpeg"><br>
-					<label>Початок заходу</label>
+					<label>Початок вих. роботи</label>
 					<input class="form-control" value="2018-08-19T13:45:00" step="1" id="example-date-input" required type="datetime-local" name="start_event"><br>
-					<label>Кінець заходу</label>
+					<label>Кінець вих. роботи</label>
 					<br><input value="2018-08-19T13:45:00" step="1" id="example-date-input" class="form-control" required type="datetime-local" name="end_event"><br>
 					<?php $event_id_edit_user = $_GET['user_event_id'];
              		 $sql = mysqli_query($conn,"SELECT * FROM `events` WHERE `id` = '$event_id_edit_user'") or die(mysqli_error($conn)); 
@@ -53,9 +53,9 @@ echo "<script>location='../pages/404'</script>";
 					} else {
 						echo "<script>location='../pages/404'</script>";
 					} ?>
-					<label>Довгота для Google Maps</label>
+					<label>Довжина для Google Maps</label>
 					<input class="form-control" type="text" id="lat" name="lat_name" required placeholder="<?php echo $result['lat'] ?>"><br>
-					<label>Широта для Google Maps</label>
+					<label>Ширина для Google Maps</label>
 					<input class="form-control" id="long" type="text" name="lng_name" required placeholder="<?php echo $result['lng'] ?>">
 					<label><br>
 					Виберіть координати клікнувши на карту</label>
@@ -125,10 +125,10 @@ echo "<script>location='../pages/404'</script>";
 										</script>
 										<input id="pac-input" class="controls" type="text" placeholder="Пошук на карті">
 										<div id="map" style="width:100%; height:450px; border:1px solid black;"></div><br>
-					<br><label for="exampleFormControlTextarea1">Короткий опис</label>
-					<textarea required name="preview_event" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Що буде за захід?"><?php echo $result['pre_event'] ?></textarea><br>
+					<br><label for="exampleFormControlTextarea1">Примітка*</label>
+					<textarea required name="preview_event" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Що буде за вих. робота?"><?php echo $result['pre_event'] ?></textarea><br>
 					<label>Повний опис</label><br>
-					<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_event" cols="80" rows="10" placeholder="Повний опис заходу"><?php echo $result['big_event'] ?></textarea><br>
+					<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_event" cols="80" rows="10" placeholder="Повний опис вих. роботи"><?php echo $result['big_event'] ?></textarea><br>
 					<label>Мітка відвідування</label><br>
 					<select name="tag" class="form-control" id="exampleFormControlSelect1">
 						<option>Обов'язкове</option> 
@@ -142,15 +142,15 @@ echo "<script>location='../pages/404'</script>";
 			</form>
 			<div style="clear: both;border-top: 1px solid black"><br></div>
 			<div class="infoevents">
-				<h5>Правила оформлення заходу</h5>
+			<h5>Правила оформлення вих. роботи</h5>
 				<ul class="list-group list-group-flush">
-					<li class="list-group-item">Всі заходи перевіряються та редагуються адміністратором.</li>
+					<li class="list-group-item">Всі виховні роботи перевіряються та редагуються адміністратором.</li>
 					<li class="list-group-item">Текстові поля повинні мати не менше 10 символі.</li>
-					<li class="list-group-item">Назва заходу не повинна містити цифр.</li>
-					<li class="list-group-item">Свої заходи можна редагувати та видаляти у профілі.</li>
-					<li class="list-group-item">Якщо не знайшли підходящого місця заходу, можна його додати.</li>
-					<li class="list-group-item">Довготу та широту задавати через крапку(52.323324, 30.245455)</li>
-					<li class="list-group-item">У полі можна використовувати теги для форматування тексту(&lt;p&gt;&lt/p&gt;,&lth1&gt;&lt/h1&gt,&ltbr&gt)</li>
+					<li class="list-group-item">Назва не повинна містити цифр.</li>
+					<li class="list-group-item">Свої вихо. роботи можна редагувати та видаляти у профілі.</li>
+					<li class="list-group-item">Якщо не знайшли підходящого місця , можна його додати.</li>
+					<li class="list-group-item">Довжину та ширину задавати через крапку(52.323324, 30.245455)</li>
+					<li class="list-group-item">Можна використовувати теги для форматування тексту(&lt;p&gt;&lt/p&gt;,&lth1&gt;&lt/h1&gt,&ltbr&gt)</li>
 				</ul>
 			</div>
 		</div>
@@ -173,3 +173,6 @@ echo "<script>location='../pages/404'</script>";
 </body>
 <?php include("../modal_window.php") ?>
 </html>
+<script>
+CKEDITOR.replace('full_event');
+</script>

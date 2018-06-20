@@ -7,39 +7,33 @@
       <div class="carousel-item active">
         <img src="../img/travel.jpg">
         <div class="carousel-caption">
-          <div class="slider-info"><h3>Відвідуй кращі заходи</h3>
-            <p>Вибери підходящий захід та відвідай його у компанії з друзями</p>
+          <div class="slider-info"><h3>COLEVENTS</h3>
+            <p>Сайт для організації виховної роботи навчального закладу</p>
             <div class="slider-btn">
-              <a href="../pages/location">Дивитись місця заходів</a>
+              <a href="../pages/location">Місця проходження</a>
               <a href="../pages/full_calendar">Календар</a>
             </div>
           </div>
         </div>
       </div>
+      <?php 
+      $sql = "SELECT * FROM `events` ORDER BY RAND() DESC";  
+      $row = mysqli_query($conn,$sql); 
+      while($result = mysqli_fetch_array($row)){
+      ?>
       <div class="carousel-item">
-        <img src="../img/travel_1.jpg">
+        <img src="<?php echo $result['image']; ?>">
         <div class="carousel-caption">
-          <div class="slider-info"><h3>Відвідуй кращі заходи</h3>
-            <p>Вибери підходящий захід та відвідай його у компанії з друзями</p>
+          <div class="slider-info"><h3><a style="color:white;" href="../pages/big_events?event=<?php echo $result['id']; ?>"><?php echo $result['title']; ?></a></h3>
+            <p><?php echo $result['pre_event']; ?></p>
             <div class="slider-btn">
-              <a href="../pages/location">Дивитись місця заходів</a>
+              <a href="../pages/location">Місця проходження</a>
               <a href="../pages/full_calendar">Календар</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="../img/travel_2.jpg">
-        <div class="carousel-caption">
-          <div class="slider-info"><h3>Відвідуй кращі заходи</h3>
-            <p>Вибери підходящий захід та відвідай його у компанії з друзями</p>
-            <div class="slider-btn">
-              <a href="../pages/location">Дивитись місця заходів</a>
-              <a href="../pages/full_calendar">Календар</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <?php } ?>
     </div>
 
     <!-- Left and right controls -->
@@ -69,8 +63,8 @@
       <div class="col-md-6">
         <div class="SearchMenu-Search">
           <form action="../pages/search.php" method="get">
-            <input type="text" name="search" placeholder="Назва заходу">
-            <input type="date" name="search_date" required placeholder="Дата заходу">
+            <input type="text" name="search" placeholder="Назва вих. роботи">
+            <input type="date" name="search_date" required placeholder="Дата вих. роботи">
           </div>
         </div>
         <div class="col-md-1">

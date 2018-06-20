@@ -25,7 +25,7 @@
               <?php }} else {
                 echo "<script>window.location = '404.php';</script>";
               } ?> 
-              <h2 class="post_title">Заходи на це місце:</h2>
+              <h2 class="post_title">Виховні роботи які зареєстровані на це місце:</h2>
               <ul class="location_event_bit_page">      
                 <?php 
                 if(isset($_GET['location'])){

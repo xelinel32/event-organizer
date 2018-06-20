@@ -1,6 +1,6 @@
 <?php 
 // edit event
-include '../function/configdb.php';
+include '../../function/configdb.php';
 
 if(isset($_POST['btn_edit_event'])){
 	$id_user = $_SESSION['user']['id'];
@@ -12,7 +12,7 @@ if(isset($_POST['btn_edit_event'])){
 	$lat_name = trim($_POST['lat_name']);
 	$lng_name = trim($_POST['lng_name']);
 	// image
-	$uploaddir= '../img/eventimg/'; 
+	$uploaddir= '../../img/eventimg/'; 
 	$fot = $_FILES['img_event']['name'];
 	$fot_dir = $uploaddir.$fot;
 
@@ -31,6 +31,7 @@ if(isset($_POST['btn_edit_event'])){
 	$str_full_event = strlen($full_event);
 	$str_lat_name = strlen($lat_name);
 	$str_lng_name = strlen($lng_name);
+	$status = "deactive";
 	// oper
 	$query_title_event_prev = mysqli_query($conn,"SELECT * FROM `events` WHERE `title`='$title'") or die(mysqli_error($conn));
 	$numrows_pre_event=mysqli_num_rows($query_title_event_prev);
@@ -44,34 +45,34 @@ if(isset($_POST['btn_edit_event'])){
 						if($photo_size_events < 5*MB) {
 
 							if (move_uploaded_file($_FILES['img_event']['tmp_name'], $fot_dir)) {
-								$result_query_ev = "UPDATE `events` SET `title` = '$title' , `pre_event` = '$preview_event', `image` = '$fot_dir', `id_cat_event` = '$id_cat' , `post_event` = '$post_event' , `start_event` = '$start_date_event', `end_event` = '$end_date_event' , `add_event` = '$add_date_event', `big_event` = '$full_event' , `id_loc_event` = '$id_loc',`id_user` = '$id_user', `lat` = '$lat_name' , `lng` = '$lng_name', `tag` = '$tag' WHERE  `id` = '$id_post_evet_edit'";
+								$result_query_ev = "UPDATE `events` SET `title` = '$title' , `pre_event` = '$preview_event', `image` = '$fot_dir', `id_cat_event` = '$id_cat' , `post_event` = '$post_event' , `start_event` = '$start_date_event', `end_event` = '$end_date_event' , `add_event` = '$add_date_event', `big_event` = '$full_event' , `id_loc_event` = '$id_loc',`id_user` = '$id_user', `lat` = '$lat_name' , `lng` = '$lng_name', `tag` = '$tag', `status` = '$status' WHERE  `id` = '$id_post_evet_edit'";
 								$result_add = mysqli_query($conn,$result_query_ev) or die(mysqli_error($conn));
 								if($result_add) {
-									echo "<script>alert('Захід змінено!');location='user?id=".$id_user."'</script>"; 
+									echo "<script>alert('Захід змінено!');location='../user?id=".$id_user."'</script>"; 
 								} else {
-									echo "<script>alert('Захід не змінено!');location='user?id=".$id_user."'</script>";
+									echo "<script>alert('Захід не змінено!');location='../user?id=".$id_user."'</script>";
 								}
 							}
 						}else{
-							echo "<script>alert('Зображення заходу дуже велике!(>5MB)');location='user?id=".$id_user."'</script>";
+							echo "<script>alert('Зображення заходу дуже велике!(>5MB)');location='../user?id=".$id_user."'</script>";
 						}
 					}else{
-						echo "<script>alert('Зображення іншого формату!');location='user?id=".$id_user."'</script>";
+						echo "<script>alert('Зображення іншого формату!');location='../user?id=".$id_user."'</script>";
 					}
 				}else{
-					echo "<script>alert('Некоректна дата!');location='editeventprocess'</script>";
+					echo "<script>alert('Некоректна дата!');location='../editeventprocess'</script>";
 				}
 			}else{
-				echo "<script>alert('Заповніть всі поля!');location='editeventprocess'</script>";
+				echo "<script>alert('Заповніть всі поля!');location='../editeventprocess'</script>";
 			}
 		}else{
-			echo "<script>alert('Мало символів мін(10)!');location='editeventprocess'</script>";
+			echo "<script>alert('Мало символів мін(10)!');location='../editeventprocess'</script>";
 		}
 	}else{
-		echo "<script>alert('Назва заходу не повинна мати числа!');location='editeventprocess'</script>";
+		echo "<script>alert('Назва заходу не повинна мати числа!');location='../editeventprocess'</script>";
 	}
 	}else{
-		echo "<script>alert('Така назва заходу вже існує!');location='editeventprocess'</script>";
+		echo "<script>alert('Така назва заходу вже існує!');location='../editeventprocess'</script>";
 	}
 }
 ?>

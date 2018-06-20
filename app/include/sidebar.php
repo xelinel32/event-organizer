@@ -1,6 +1,6 @@
 <div class="col-md-4">
     <div class="sidebar_my">
-        <h3>Випадкові заходи</h3>
+        <h3>Випадкові вих. роботи</h3>
         <div class="sidebarevent">
             <div class="sidebareventsmall">
                 <?php 
@@ -8,7 +8,7 @@
                 $row = mysqli_query($conn,$sql); 
                 while($result = mysqli_fetch_array($row)){
                     ?>
-                    <img src="<?php echo $result['image']; ?>" alt="logo_event">
+                    <img src="<?php echo $result['image']; ?>" class="img-thumbnail" alt="logo_event">
                     <ul>
                         <li><a href="../pages/big_events?event=<?php echo $result['id']; ?>"><?php echo $result['title']; ?></a></li>
                         <li><?php echo $result['add_event']; ?></li>
@@ -24,7 +24,7 @@
             $row = mysqli_query($conn,$sql); 
             while($result = mysqli_fetch_array($row)){
                 ?>
-                <img src="<?php echo $result['image']; ?>" alt="location_event">
+                <img src="<?php echo $result['image']; ?>" class="img-thumbnail" alt="location_event">
                 <ul>
                     <li><a href="../pages/singl_location?location=<?php echo $result['id']; ?>"><?php echo $result['title_location']; ?></a></li>
                     <li><?php echo $result['adress']; ?></li>
@@ -39,7 +39,7 @@
             $row = mysqli_query($conn,$sql); 
             while($result = mysqli_fetch_array($row)){
                 ?>
-                <img src="<?php echo $result['image_post']; ?>" alt="location_event">
+                <img src="<?php echo $result['image_post']; ?>" class="img-thumbnail" alt="location_event">
                 <ul>
                     <li><a href="../pages/big_blog?id=<?php echo $result['id']; ?>"><?php echo $result['title_post']; ?></a></li>
                     <li><?php echo $result['date_post']; ?></li>

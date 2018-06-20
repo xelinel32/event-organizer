@@ -12,7 +12,7 @@
           </div>
       </div>
       <div class="col-sm-3">
-        <h3 id="le">Останні заходи</h3>
+        <h3 id="le">Вих. роботи</h3>
         <div class="LatestNews">
             <?php 
             $sql = "SELECT * FROM `events` ORDER BY `add_event` DESC LIMIT 2";  

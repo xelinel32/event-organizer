@@ -20,7 +20,7 @@ function activemenu($activemenu)
 				<a <?=activemenu("locdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="locdashboard">Місця заходів</a>
 				<a <?=activemenu("userdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="userdashboard">Юзери</a>
 				<a <?=activemenu("commentsdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="commentsdashboard">Коментарі та відгуки</a>
-				<a <?=activemenu("commentsdashboard.php")?> class="btn btn-sm btn-warning" role="button" href="commentsdashboard">Повідомлення</a>
+				<a <?=activemenu("mymessage.php")?> class="btn btn-sm btn-warning" role="button" href="mymessage">Повідомлення</a>
 				<a <?=activemenu("index.php")?> class="btn btn-info" role="button" href="../user/user?id=<?php echo $_SESSION['user']['id']; ?>">Мій профіль</a>
 			</li>
 		</ul>

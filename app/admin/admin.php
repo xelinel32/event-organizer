@@ -20,13 +20,14 @@ if($_SESSION['user']['user_type']=='Юзер'){
 					<div class="admin_content">
 						<h5>Керування всіма заходами</h5><br>
 						<?php 
-						$limit = 2;  
+						$limit = 10;  
 						if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
 						$start_from = ($page-1) * $limit;  
 
 						$sql = "SELECT * FROM `events` ORDER BY `add_event` ASC LIMIT $start_from, $limit";  
 						$rs_result = mysqli_query($conn,$sql);  
-						?>  
+						?>
+						<a href="../user/neweventuser" class="btn btn-success btn-sm"><i class="fa fa-plus-circle" aria-hidden="true"></i> Організувати виховну роботу</a><br><br>  
 						<div class="table-responsive-md">
 						<table class="table table-bordered table-striped">  
 							<thead>  
@@ -36,8 +37,9 @@ if($_SESSION['user']['user_type']=='Юзер'){
 									<th>Початок</th>
 									<th>Кінець</th>
 									<th>Додано</th>
-									<th>Ім'я юзера</th> 
-									<th colspan="4">Операції</th>       
+									<th>Ім'я юзера</th>
+									<th>Статус</th> 
+									<th colspan="3">Операції</th>       
 								</tr>  
 							</thead>  
 							<tbody>  
@@ -51,10 +53,13 @@ if($_SESSION['user']['user_type']=='Юзер'){
 										<td><? echo $row["end_event"]; ?></td>  
 										<td><? echo $row["add_event"]; ?></td>  
 										<td><a href="../user/user?id=<?php echo $row['id_user'] ?>"><? echo $row["post_event"]; ?></a></td>  
-										<td><a href="../user/neweventuser" class="btn btn-success btn-sm">Дод.</a></td>
-										<td><a href="" class="btn btn-success btn-sm">Активувати</a></td>
-										<td><a href="../user/editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Змі.</a></td>
-										<td><a href="../user/editprofile?del=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">Вид.</a></td>  
+										<td><? echo $row["status"]; ?></td> 
+										<?php if ($row['status'] == "active") { ?>
+										<?php } else { ?> 
+										<td><a href="module/activeventuser?active=<?php echo $row['id']; ?>" class="btn btn-success btn-sm"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Активувати</a></td>
+										<?php } ?>
+										<td><a href="../user/editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Змінити</a></td>
+										<td><a href="../user/editprofile?del=<?php echo $row['id']; ?>" OnClick="return confirm('Ви хочете видалити цей запис?')" class="btn btn-danger btn-sm"><i class="fa fa-minus-circle" aria-hidden="true"></i> Видалити</a></td>  
 									</tr>  
 									<?php  
 								};  
@@ -91,6 +96,7 @@ if($_SESSION['user']['user_type']=='Юзер'){
 			</div>
 		</div>
 	</div>
+	<hr class="hrlinebot">	
 </body>
 </html>
 <?php include("../include/bot_script.php") ?>

@@ -1,12 +1,12 @@
 <?php
 // add location user
-include '../function/configdb.php';
+include '../../function/configdb.php';
 
 if(isset($_POST['btn_new_loc'])){
 	$title = trim($_POST['name_loc']);
 	$id_cat_loc = $_POST['cat_loc'];
 	// image
-	$uploaddir= '../img/locimg/'; 
+	$uploaddir= '../../img/locimg/'; 
 	$fot = $_FILES['img_loc']['name'];
 	$fot_dir = $uploaddir.$fot;
 
@@ -35,28 +35,28 @@ if(isset($_POST['btn_new_loc'])){
 							$result_query_loc = "INSERT INTO `location` (`title_location`, `image`, `pre_text`, `big_text`, `adress`, `cat_loc`, `loc_url`) VALUES ('$title','$fot_dir','$preview_loc','$full_loc','$adress_loc','$id_cat_loc','$url_loc')";
 							$result_add = mysqli_query($conn,$result_query_loc) or die(mysqli_error($conn));
 							if($result_add) {
-								echo "<script>alert('Місце опубліковано!');location='user?id=".$id_user."'</script>"; 
+								echo "<script>alert('Місце опубліковано!');location='../user?id=".$id_user."'</script>"; 
 							} else {
-								echo "<script>alert('Місце не опубліковано!');location='user?id=".$id_user."'</script>";
+								echo "<script>alert('Місце не опубліковано!');location='../user?id=".$id_user."'</script>";
 							}
 						}
 					}else{
-						echo "<script>alert('Зображення заходу дуже велике!(>5MB)');location='user?id=".$id_user."'</script>";
+						echo "<script>alert('Зображення дуже велике!(>5MB)');location='../user?id=".$id_user."'</script>";
 					}
 				}else{
-					echo "<script>alert('Зображення іншого формату!');location='user?id=".$id_user."'</script>";
+					echo "<script>alert('Зображення іншого формату!');location='../user?id=".$id_user."'</script>";
 				}
 			}else{
-				echo "<script>alert('Заповніть всі поля!');location='newlocationuser'</script>";
+				echo "<script>alert('Заповніть всі поля!');location='../newlocationuser'</script>";
 			}
 		}else{
-			echo "<script>alert('Мало символів мін(10)!');location='newlocationuser'</script>";
+			echo "<script>alert('Мало символів мін(10)!');location='../newlocationuser'</script>";
 		}
 	}else{
-		echo "<script>alert('Назва заходу не повинна мати числа!');location='newlocationuser'</script>";
+		echo "<script>alert('Назва не повинна мати числа!');location='../newlocationuser'</script>";
 	}
 	}else{
-		echo "<script>alert('Невірне посилання на карти!');location='newlocationuser'</script>";
+		echo "<script>alert('Невірне посилання на карти!');location='../newlocationuser'</script>";
 	}
 }	
 ?>

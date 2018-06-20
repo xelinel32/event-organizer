@@ -125,6 +125,9 @@
 	.RegisterModal button{
 		display: none;
 	}
+	.category_prev h3{
+		font-size: 22px;
+	}
 }
 
 /* Extra Small Devices, Phones */

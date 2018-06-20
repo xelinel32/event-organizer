@@ -14,12 +14,12 @@
 				<div class="col-md-8">
 					<div class="box_news">
 						<div class="newevent">
-							<h3>Форма додавання місця проходження заходу</h3>
+							<h3>Форма додавання місця проходження вих. роботи</h3>
 							<div class="formnewevent">
-								<form action="newlocationuserprocess.php" method="post" enctype="multipart/form-data">
+								<form action="modules/newlocationuserprocess.php" method="post" enctype="multipart/form-data">
 								<div class="form-group">
-								<label>Назва місця</label><br>
-								<input class="form-control" type="text" name="name_loc" required placeholder="Назва місця проходження заходів"><br>
+								<label>Назва</label><br>
+								<input class="form-control" type="text" name="name_loc" required placeholder="Назва місця проходження"><br>
 								<label>Адреса</label><br>
 								<input class="form-control" type="text" name="adres_loc" required placeholder="Точна адреса"><br>
 								<label>Посилання для Google Maps</label><br>
@@ -37,7 +37,7 @@
                       	</select></br>
 								<label for="exampleFormControlFile1">Зображення</label><br>
 								<input class="form-control-file" id="exampleFormControlFile1" required type="file" type="file" name="img_loc" multiple accept="image/*,image/jpeg"><br>
-								<label for="exampleFormControlTextarea1">Короткий опис</label><br>
+								<label for="exampleFormControlTextarea1">Примітка*</label><br>
 								<textarea required name="preview_loc" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Короткий опис основної інформації"></textarea><br>
 								<label>Повний опис</label><br>
 								<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_loc" cols="80" rows="10" placeholder="Повний опис основної інформації та місцезнаходження"></textarea><br>
@@ -65,3 +65,6 @@
 </body>
 <?php include("../modal_window.php") ?>
 </html>
+<script>
+CKEDITOR.replace('full_loc');
+</script>

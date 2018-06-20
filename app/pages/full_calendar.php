@@ -13,8 +13,8 @@ $events = get_json($events);
 			<div class="row">
 				<div class="col-md-12">
 					<div class="info_cal">
-						<h4>Календар заходів</h4>
-						<p>Тут ви можете подивитись графік проходження заходів</p>
+						<h4>Календар виховних робіт</h4>
+						<p>Тут ви можете подивитись графік проходження виховних робіт</p>
 					</div>
 					<div class="content_cal">
 						<script>var events = <?php echo $events ?>;</script>

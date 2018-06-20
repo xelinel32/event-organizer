@@ -9,13 +9,13 @@
 				<div class="col-md-12">
 					<div class="SpecialOffers">
 						<p>
-							<span>Всі заходи</span><br>
-							<span>Вибери свій захід та відвідай його в своєму місті</span>
+							<span>Всі виховні роботи</span><br>
+							<span>Вибери виховну роботу навчального закладу</span>
 						</p>
 					</div>
 					<div class="category">
 						<div class="category_prev">
-							<h3>- Категорії заходів -</h3>
+							<h3>- Категорії виховних робіт -</h3>
 						</div>
 						<div class="category_item">
 							<?php $sql_category_events = "SELECT * FROM `category_events` WHERE `id`";  
