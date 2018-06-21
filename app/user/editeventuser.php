@@ -54,9 +54,9 @@ echo "<script>location='../pages/404'</script>";
 						echo "<script>location='../pages/404'</script>";
 					} ?>
 					<label>Довжина для Google Maps</label>
-					<input class="form-control" type="text" id="lat" name="lat_name" required placeholder="<?php echo $result['lat'] ?>"><br>
+					<input class="form-control" type="text" id="lat" name="lat_name" required value="<?php echo $result['lat'] ?>"><br>
 					<label>Ширина для Google Maps</label>
-					<input class="form-control" id="long" type="text" name="lng_name" required placeholder="<?php echo $result['lng'] ?>">
+					<input class="form-control" id="long" type="text" name="lng_name" required value="<?php echo $result['lng'] ?>">
 					<label><br>
 					Виберіть координати клікнувши на карту</label>
 					<script type="text/javascript">

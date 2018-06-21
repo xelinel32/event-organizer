@@ -18,22 +18,12 @@
                         $query = mysqli_real_escape_string($conn,$query);
                         $min_length = 3;
                         if(strlen($query) >= $min_length || strlen($query_date) >= $min_length){ 
-                            $search_query = "SELECT `id`,`title`,`add_event`, 'article' as subj   
-                            FROM `events`   
-                            WHERE `title` LIKE '%$query%' AND `add_event` LIKE '%$query_date%' AND `status` = 'active'  
-                            UNION   
-                            SELECT `id`,`title_post` as title,`date_post` as add_event, 'blog' as subj  
-                            FROM `blog`   
-                            WHERE `title_post` LIKE '%$query%' AND `date_post` LIKE '%$query_date%'
-                            UNION   
-                            SELECT `id`,`title_location` as title,`adress` as add_event, 'location' as subj  
-                            FROM `location`   
-                            WHERE `title_location` LIKE '%$query%' AND `adress` LIKE '%$query_date%'";
+                            $search_query = "SELECT `id`,`title`,`add_event`,`pre_event` FROM `events` WHERE `title` LIKE '%$query%' AND `add_event` LIKE '%$query_date%' AND `status` = 'active'";
                             $raw_results = mysqli_query($conn,$search_query) or die(mysqli_error($conn));
                             if(mysqli_num_rows($raw_results) > 0){ 
                                 while($results = mysqli_fetch_array($raw_results)){?>
                                     <div class="result_seart_be">
-                                        Назва - <a href="<?php if($results['id']){ ?>../pages/big_events?event<?php }else{ ?>../pages/big_blog?id<?php  }?>=<?php echo $results['id']; ?>"><?php echo $results['title']; ?></a><span>Дата публікації - <?php echo $results['add_event']; ?></span>
+                                        Назва - <a href="../pages/big_events?event=<?php echo $results['id']; ?>"><?php echo $results['title']; ?></a><span>Дата публікації вих.роботи - <?php echo $results['add_event']; ?></span>
                                     </div>
                                 <?php } 
                             }

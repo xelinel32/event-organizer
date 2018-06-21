@@ -27,7 +27,7 @@ if($_SESSION['user']['user_type']=='Юзер'){
 						$sql = "SELECT * FROM `blog` ORDER BY `date_post` ASC LIMIT $start_from, $limit";  
 						$rs_result = mysqli_query($conn,$sql);  
 						?>
-						<a href="BlogModal" class="btn btn-success btn-sm"><i class="fa fa-plus-circle" aria-hidden="true"></i> Додати статтю</a><br><br>  
+						<a href="addingpageblog" class="btn btn-success btn-sm"><i class="fa fa-plus-circle" aria-hidden="true"></i> Додати статтю</a><br><br>  
 						<div class="table-responsive-md">
 						<table class="table table-bordered table-striped">  
 							<thead>  
@@ -46,10 +46,10 @@ if($_SESSION['user']['user_type']=='Юзер'){
 									?>  
 									<tr>  
 										<td><? echo $row["id"]; ?></td> 
-										<td><a href="../pages/big_events?event=<?php echo $row['id'] ?>"><? echo $row["title_post"]; ?></a></td>    
+										<td><a href="../pages/big_blog?id=<?php echo $row['id'] ?>"><? echo $row["title_post"]; ?></a></td>    
 										<td><? echo $row["date_post"]; ?></td>   
 										<td><a href="../user/user?id=<?php echo $row['id_user'] ?>"><? echo $row["user_post"]; ?></a></td>
-										<td><a href="../user/editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Змінити</a></td>
+										<td><a href="editblogpage?user_blog_id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Змінити</a></td>
 										<td><a href="module/deletedblogbage?del_blog=<?php echo $row['id']; ?>" OnClick="return confirm('Ви хочете видалити цю статтю?')" class="btn btn-danger btn-sm"><i class="fa fa-minus-circle" aria-hidden="true"></i> Видалити</a></td>  
 									</tr>  
 									<?php  

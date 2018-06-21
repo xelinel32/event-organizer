@@ -50,7 +50,7 @@ if($_SESSION['user']['user_type']=='Юзер'){
 										<td><? echo $row["adress"]; ?></td>   
 										<td><? echo $row["cat_loc"]; ?></td>
 										<td><? echo $row["loc_url"]; ?></td>
-										<td><a href="../user/editeventuser?user_event_id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Змінити</a></td>
+										<td><a href="editlocpage?loc_page_id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Змінити</a></td>
 										<td><a href="module/deletedlocpage?del_loc=<?php echo $row['id']; ?>" OnClick="return confirm('Ви хочете видалити це місце?')" class="btn btn-danger btn-sm"><i class="fa fa-minus-circle" aria-hidden="true"></i> Видалити</a></td>  
 									</tr>  
 									<?php  

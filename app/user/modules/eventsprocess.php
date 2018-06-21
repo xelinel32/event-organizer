@@ -16,7 +16,11 @@ if(isset($_POST['btn_new_event'])){
 	$full_event = mysqli_real_escape_string($conn,trim($_POST['full_event']));
 	$lat_name = trim($_POST['lat_name']);
 	$lng_name = trim($_POST['lng_name']);
+	if($_SESSION['user']['username'] == "Адміністрація"){
+	$status = "active";
+	} else {	
 	$status = "deactive";
+	}
 	// image
 	$uploaddirs= '../../img/eventimg/'; 
 	$fots = $_FILES['img_event']['name'];

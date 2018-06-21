@@ -31,7 +31,11 @@ if(isset($_POST['btn_edit_event'])){
 	$str_full_event = strlen($full_event);
 	$str_lat_name = strlen($lat_name);
 	$str_lng_name = strlen($lng_name);
-	$status = "deactive";
+	if($_SESSION['user']['username'] == "Адміністрація"){
+		$status = "active";
+	} else {	
+		$status = "deactive";
+	}
 	// oper
 	$query_title_event_prev = mysqli_query($conn,"SELECT * FROM `events` WHERE `title`='$title'") or die(mysqli_error($conn));
 	$numrows_pre_event=mysqli_num_rows($query_title_event_prev);

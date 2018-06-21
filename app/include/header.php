@@ -14,7 +14,7 @@ function activemenu($activemenu)
     <div class="row">
       <div class="col-md-12">
         <div class="soc_button">
-          <a target="_blank" href="http://vk.com/xelinel32"><i class="fa fa-vk" aria-hidden="true"></i></a>
+          <a target="_blank" href="http://ktkt.stu.cn.ua/"><i class="fa fa-book" aria-hidden="true"></i></a>
           <a target="_blank" href="https://www.facebook.com/artem.sedlyar"><i class="fa fa-facebook" aria-hidden="true"></i></a>
           <a target="_blank" href="https://twitter.com/ArtemSedlar"><i class="fa fa-twitter" aria-hidden="true"></i></a>
           <a target="_blank" href="https://plus.google.com/u/0/103334064496844281082"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>  
