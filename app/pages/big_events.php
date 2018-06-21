@@ -126,7 +126,7 @@
                           var h=d[g]('body')[0];
                           h.appendChild(s);
                         }})();</script>
-                        <div class="pluso" data-background="none;" data-options="big,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,tumblr,myspace"></div></p>
+                        <div class="pluso" data-background="none;" data-options="big,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="facebook,twitter,google,moimir,tumblr,myspace"></div></p>
                       </div>
                       <div class="rating_post_count_comment">
                         <div class="count_comment">

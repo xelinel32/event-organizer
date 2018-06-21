@@ -122,7 +122,7 @@ if($_GET['id'] == $_SESSION['user']['id']){
 											<option>Обов'язкове</option> 
 											<option>Необов'язкове</option>  	
 										</select><br>
-										<input class="btn btn-light" type="submit" value="Додати захід" name="btn_new_event">
+										<input class="btn btn-light" type="submit" value="Додати" name="btn_new_event">
 										<a href="user?id=<?php echo $_SESSION['user']['id'];?>" class="btn btn-light float-right">Назад</a>
 									</div>
 								</form>

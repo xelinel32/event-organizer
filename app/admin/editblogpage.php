@@ -30,7 +30,7 @@ if($_SESSION['user']['user_type']=='Юзер'){
 								<textarea required name="preview_blog" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Короткий опис основної інформації"></textarea><br>
 								<label>Повний опис</label><br>
 								<textarea required class="form-control" id="exampleFormControlTextarea1" name="full_blog" cols="80" rows="10" placeholder="Повний опис основної інформації"></textarea><br>
-                                <input class="btn btn-light" type="submit" value="Додати статтю" name="btn_new_blog">
+                                <input class="btn btn-light" type="submit" value="Редагувати" name="btn_new_blog">
                                 <input type="text" name="user_blog_id_post" hidden value="<?php echo $_GET['user_blog_id'] ?>">
 								<a href="blogdashboard" class="btn btn-light float-right">Назад</a>
                                 </div>
@@ -76,7 +76,7 @@ if(isset($_POST['btn_new_blog'])){
 							} else {
 								echo "<script>alert('Стаття не опублікована!');location='editblogpage'</script>";
 							}
-						    }
+						}
 					}else{
 						echo "<script>alert('Зображення дуже велике!(>5MB)');location='editblogpage'</script>";
 					}

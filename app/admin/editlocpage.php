@@ -86,7 +86,7 @@ if(isset($_POST['btn_new_loc'])){
 	$photo_size_events  = $_FILES['img_loc']['size'];
 	$type_image_events = $_FILES['img_loc']['type'];
 	// parse url
-	if (! preg_match("/\b(?:(?:https?|ftp) :\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$url_loc)) {
+	if (!preg_match("/\b(?:(?:https?|ftp) :\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$url_loc)) {
 
 	$str_adress = strlen($adress_loc);
 	$str_title = strlen($title);

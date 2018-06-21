@@ -758,6 +758,7 @@ h2.post_title{
   font-family: "RobotoMedium";
   text-transform: uppercase;
   font-weight: 500;
+  word-wrap: break-word;
 }
 .post_title a:hover{
   text-decoration: none;
@@ -789,6 +790,9 @@ h2.post_title{
 }
 .news_content{
   margin-bottom: 50px;
+}
+.news_content p,b{
+  word-wrap: break-word;
 }
 .myinfobars{
   padding-top: 60px;
@@ -963,6 +967,7 @@ h2.post_title{
   margin-left: 40px;
   color: black;
   font-family: "RobotoLight";
+  word-wrap: break-word;
 }
 .sidebareventsmall a{
   color: #1dd2af;
